@@ -17,7 +17,7 @@ export const HeaderRight: React.FC = () => (
     <NavLink to="/contact-us" className="whitespace-nowrap hover:text-blue-400">
       CONTACT US
     </NavLink>
-    <div>
+    <div className="flex flex-col gap-1 whitespace-nowrap">
       <div>678-304-9920</div>
       <NavLink to="/contact-us" className="whitespace-nowrap rounded-md bg-blue-500 p-2 text-white hover:bg-blue-300">
         GET QUOTE
