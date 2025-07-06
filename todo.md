@@ -10,5 +10,6 @@
 - instead of pb1 on header buttons, give m-1
 - saturate assets folders
 
--update paths to match old website exactly: our-services to services
--favicon generation: https://realfavicongenerator.net/
+- update paths to match old website exactly: our-services to services
+- favicon generation: https://realfavicongenerator.net/
+- 
