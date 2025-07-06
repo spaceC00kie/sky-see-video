@@ -1,11 +1,11 @@
 {
   "firestore": {
-    "target": "kibble-check",
+    "target": "sky-see-video",
     "rules": "firestore.rules"
   },
   "hosting": [
     {
-      "target": "kibble-check",
+      "target": "sky-see-video",
       "predeploy": "yarn build",
       "public": "dist",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
@@ -16,8 +16,5 @@
         }
       ]
     }
-  ],
-  "storage": {
-    "rules": "storage.rules"
-  }
+  ]
 }

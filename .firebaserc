@@ -1,12 +1,12 @@
 {
   "projects": {
-    "kibble-check": "has-the-dog-been-fed-f9102"
+    "sky-see-video": "sky-see-video"
   },
   "targets": {
-    "has-the-dog-been-fed-f9102": {
+    "sky-see-video": {
       "hosting": {
-        "kibble-check": [
-          "has-the-dog-been-fed-f9102"
+        "sky-see-video": [
+          "sky-see-video"
         ]
       }
     }
