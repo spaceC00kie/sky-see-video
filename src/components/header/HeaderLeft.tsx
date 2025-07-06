@@ -10,7 +10,7 @@ export const HeaderLeft: React.FC = () => {
       {isSmall ? (
         // @todo connect button functionality
         <button className="grid place-content-center p-1"> 
-          <GiHamburgerMenu size={30}/>
+          <GiHamburgerMenu size={25}/>
         </button>
       ) : (
         <Link to="/" className="flex-none py-1">
