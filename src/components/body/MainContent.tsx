@@ -1,7 +1,7 @@
 import "../../index.scss"
 import { Route, Routes } from "react-router-dom"
 import { Home } from "../pages/home/Home"
-import { AboutUs } from "../pages/AboutUs"
+import { AboutUs } from "../pages/about-us/AboutUs"
 import { OurWork } from "../pages/OurWork"
 import { OurServices } from "../pages/OurServices"
 import { ContactUs } from "../pages/ContactUs"
