@@ -13,7 +13,7 @@ export const HomeCard2: React.FC<Props> = ({
   description,
   path,
 }) => (
-  <div className="flex flex-col items-start gap-2 text-lg">
+  <div className="flex max-w-md flex-col items-start gap-2 text-lg">
     <Link
       to={path}
       className="group relative block w-full overflow-hidden rounded"
