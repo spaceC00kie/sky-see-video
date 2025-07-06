@@ -4,6 +4,7 @@ import { HeaderLeft } from "./HeaderLeft"
 import { HeaderMiddle } from "./HeaderMiddle"
 import { HeaderRight } from "./HeaderRight"
 import { NavLink } from "react-router-dom"
+import { IoClose } from "react-icons/io5"
 
 export const Header: React.FC = () => {
   const [open, setOpen] = useState(false)
@@ -31,7 +32,15 @@ export const Header: React.FC = () => {
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-2 pt-10">
+        <div className="flex flex-col gap-2">
+          <div className="h-8 w-full justify-end">
+            <button
+              onClick={close}
+              className="absolute right-2 top-2 rounded-full p-1"
+            >
+              <IoClose size={35} />
+            </button>
+          </div>
           <NavLink
             onClick={close}
             to="/"

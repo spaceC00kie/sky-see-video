@@ -1,3 +1,6 @@
+import { OurServicesCard1 } from "./OurServicesCard1"
+import { OurServicesCard2 } from "./OurServicesCard2"
+
 interface Props {}
 
 export const OurServices: React.FC<Props> = ({}) => {
@@ -14,11 +17,18 @@ export const OurServices: React.FC<Props> = ({}) => {
             Our experience both in the air and on the ground makes us the right
             team for short- and long-form documentaries. These services include:
           </p>
-
-          {/* bullet cards here */}
+          <div className="flex flex-col flex-wrap justify-evenly gap-5 text-center sm:flex-row">
+            <OurServicesCard1 title="" bulletPoints={[]} />
+            <OurServicesCard1 title="" bulletPoints={[]} />
+            <OurServicesCard1 title="" bulletPoints={[]} />
+          </div>
           <p>INDUSTRIES</p>
+          <hr />
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-            {/* industies cards here */}
+            <OurServicesCard2 image="" title="" description="" path="" />
+            <OurServicesCard2 image="" title="" description="" path="" />
+            <OurServicesCard2 image="" title="" description="" path="" />
+            <OurServicesCard2 image="" title="" description="" path="" />
           </div>
         </div>
       </div>

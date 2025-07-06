@@ -23,7 +23,7 @@ export const Home: React.FC<Props> = ({}) => {
         />
       </div>
       <div className="flex max-w-[70em] flex-col gap-4 pb-20">
-        <div className="flex w-full flex-col gap-10 px-6 ">
+        <div className="flex w-full flex-col gap-10 px-6">
           <p className="text-3xl text-blue-500">
             Business Videos That Connect to Your Audience
           </p>

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { Home } from "../pages/home/Home"
 import { AboutUs } from "../pages/about-us/AboutUs"
 import { OurWork } from "../pages/our-work/OurWork"
-import { OurServices } from "../pages/OurServices"
+import { OurServices } from "../pages/our-services/OurServices"
 import { ContactUs } from "../pages/ContactUs"
 
 export const MainContent: React.FC = () => (
