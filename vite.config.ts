@@ -16,9 +16,9 @@ export default defineConfig({
       ],
       manifest: {
         id: "/",
-        name: "KibbleCheck",
-        short_name: "KibbleCheck",
-        description: "Keeping track of your dog's meals",
+        name: "SkySeeVideo",
+        short_name: "SkySeeVideo",
+        description: "Business Videos That Connect to Your Audience",
         theme_color: "#ffffff",
         icons: [
           {
