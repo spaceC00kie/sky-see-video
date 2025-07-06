@@ -1,6 +1,9 @@
 - dynamic navigation, converting to side panel when on mobile width
+- Home page
+  - connect links from HomeCard2
 - About Us page
 - Our Work page
 - Our Services page
 - Contact Us page
 - page dynamics, make text and cards wrap properly
+- Get video size correct or close. Stop letterboxing.

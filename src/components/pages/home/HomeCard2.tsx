@@ -6,8 +6,8 @@ interface Props {
 }
 
 export const HomeCard2: React.FC<Props> = ({ image, title, description, link }) => (
-  <div className="flex sm:w-96 flex-col items-start gap-2 text-lg">
-    <a href={link} className="group relative block w-full overflow-hidden">
+  <div className="flex flex-col items-start gap-2 text-lg">
+    <a href={link} className="group relative block w-full overflow-hidden rounded">
       <div className="aspect-[4/3] w-full">
         <img src={image} alt={title} className="h-full w-full object-cover" />
       </div>

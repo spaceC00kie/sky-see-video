@@ -7,9 +7,9 @@ interface Props {
 }
 
 export const HomeCard1: React.FC<Props> = ({ image, title, description }) => (
-  <div className="sm:w-56 flex flex-col items-center gap-3">
+  <div className="sm:w-56 flex flex-col items-center gap-3 justify-between">
     <div className="grid place-content-center pb-2">
-      <div className="relative group">
+      <div className="relative group ">
         <span className="pointer-events-none absolute inset-0 -z-10 translate-x-0.5 translate-y-0.5 rounded-full bg-black/40 blur-sm transition-transform duration-500 ease-in-out group-hover:scale-110" />
         <div className="grid h-24 w-28 place-content-center rounded-full bg-blue-500">
           {image}

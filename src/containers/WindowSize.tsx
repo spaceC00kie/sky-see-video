@@ -15,7 +15,7 @@ const useWindowSize = () => {
     }
   }, [windowWidth])
 
-  const isSmall = windowWidth < 500
+  const isSmall = windowWidth < 768
 
   return { windowWidth, isSmall }
 }
