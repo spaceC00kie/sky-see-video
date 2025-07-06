@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "kibble-check": "has-the-dog-been-fed-f9102"
+  },
+  "targets": {
+    "has-the-dog-been-fed-f9102": {
+      "hosting": {
+        "kibble-check": [
+          "has-the-dog-been-fed-f9102"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

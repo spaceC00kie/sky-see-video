@@ -1,0 +1,23 @@
+{
+  "firestore": {
+    "target": "kibble-check",
+    "rules": "firestore.rules"
+  },
+  "hosting": [
+    {
+      "target": "kibble-check",
+      "predeploy": "yarn build",
+      "public": "dist",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ],
+  "storage": {
+    "rules": "storage.rules"
+  }
+}

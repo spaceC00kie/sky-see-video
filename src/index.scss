@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  background: rgb(124, 45, 18);
+  background: linear-gradient(
+    314deg,
+    rgba(124, 45, 18, 1) 0%,
+    rgba(153, 68, 28, 1) 51%,
+    rgba(166, 78, 32, 1) 57%,
+    rgba(159, 73, 30, 1) 66%,
+    rgba(225, 125, 51, 1) 84%,
+    rgba(206, 110, 45, 1) 89%,
+    rgba(251, 146, 60, 1) 100%
+  );
+}
+
+$primary: #a8a29e;
+$secondary: #78716c;
+
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: $primary $secondary;
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  @apply bg-stone-600;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-stone-400;
+}
+
+.scrollbar::-webkit-scrollbar-corner {
+  @apply bg-stone-400;
+}
+
+.container {
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+.container::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.color-shift {
+  @apply transition-colors duration-300 ease-in-out;
+}
+
+.clickable:active {
+  transform: translate(0px, 0.1rem);
+  transform: scale(0.98);
+}
+
+// prevnts a layout shift while SWAL popup is visible
+body {
+  padding-right: 0 !important;
+}
