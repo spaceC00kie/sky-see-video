@@ -2,19 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-#app {
-}
 
 $primary: #a8a29e;
-$secondary: #78716c;
+$secondary: #171717;
 
 .scrollbar {
-  scrollbar-width: thin;
+  scrollbar-width: auto;
   scrollbar-color: $primary $secondary;
 }
 
 .scrollbar::-webkit-scrollbar {
-  @apply h-2 w-2;
+  @apply h-2 w-3;
 }
 
 .scrollbar::-webkit-scrollbar-track {

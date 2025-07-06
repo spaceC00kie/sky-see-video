@@ -1,2 +1,6 @@
 - dynamic navigation, converting to side panel when on mobile width
-- 
+- About Us page
+- Our Work page
+- Our Services page
+- Contact Us page
+- page dynamics, make text and cards wrap properly

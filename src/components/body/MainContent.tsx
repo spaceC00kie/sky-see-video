@@ -1,6 +1,6 @@
 import "../../index.scss"
 import { Route, Routes } from "react-router-dom"
-import { Home } from "../pages/Home"
+import { Home } from "../pages/home/Home"
 import { AboutUs } from "../pages/AboutUs"
 import { OurWork } from "../pages/OurWork"
 import { OurServices } from "../pages/OurServices"
