@@ -1,5 +1,6 @@
 import "../../index.scss"
 import { Auth } from "../../containers/Auth"
+import { Route, Routes } from "react-router-dom"
 
 export const MainContent: React.FC = () => {
   const { auth, user, isLoading } = Auth.useContainer()
@@ -10,18 +11,21 @@ export const MainContent: React.FC = () => {
       <div
         className={`${paddingAtTop} flex max-w-[52em] grow flex-col gap-3 px-3`}
       >
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
-        <div className="border w-full h-72 bg-black rounded-md" />
+        <Routes>
+          <Route path="/" element={<div>home</div>} />
+        </Routes>
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
+        <div className="h-72 w-full rounded-md border bg-black" />
       </div>
     </div>
   )

@@ -8,6 +8,7 @@ import { WindowSize } from "./containers/WindowSize"
 import "./index.scss"
 import { Auth } from "./containers/Auth"
 import { Date } from "./containers/Date"
+import { BrowserRouter } from "react-router-dom"
 
 const theme = createTheme({
   palette: {
@@ -28,7 +29,9 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <WindowSize.Provider>
         <Date.Provider>
           <ThemeProvider theme={theme}>
-            <App />
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
           </ThemeProvider>
         </Date.Provider>
       </WindowSize.Provider>
