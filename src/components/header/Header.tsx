@@ -28,58 +28,55 @@ export const Header: React.FC = () => {
       />
 
       <nav
-        className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-stone-100 bg-white shadow-lg transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <div className="flex flex-col gap-2">
-          <div className="h-8 w-full justify-end">
-            <button
-              onClick={close}
-              className="absolute right-2 top-2 rounded-full p-1"
-            >
+        <div className="flex flex-col">
+          <div className="flex w-full justify-end">
+            <button onClick={close} className="p-2">
               <IoClose size={35} />
             </button>
           </div>
           <NavLink
             onClick={close}
             to="/"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             HOME
           </NavLink>
           <NavLink
             onClick={close}
             to="/about-us"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             ABOUT US
           </NavLink>
           <NavLink
             onClick={close}
             to="/our-work"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             OUR WORK
           </NavLink>
           <NavLink
             onClick={close}
             to="/our-services"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             OUR SERVICES
           </NavLink>
           <NavLink
             onClick={close}
             to="/contact-us"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             CONTACT US
           </NavLink>
           <NavLink
             onClick={close}
             to="/contact-us"
-            className="px-6 py-2 text-sm hover:bg-stone-500 hover:text-white"
+            className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             GET QUOTE
           </NavLink>
