@@ -7,3 +7,5 @@
 - Contact Us page
 - page dynamics, make text and cards wrap properly
 - Get video size correct or close. Stop letterboxing.
+- instead of pb1 on header buttons, give m-1
+- saturate assets folders
