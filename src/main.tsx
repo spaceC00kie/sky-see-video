@@ -11,7 +11,7 @@ import { Date } from "./containers/Date"
 
 const theme = createTheme({
   palette: {
-    mode: "dark",
+    mode: "light",
     primary: {
       main: "#93c5fd", // tailwind blue 300
     },
