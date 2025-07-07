@@ -8,4 +8,8 @@
 - favicon generation: https://realfavicongenerator.net/
 - send email from contact form
 - fix format for contact form
--color on hover for facebook and instagram icons
+- maybe? prefetch links for faster navigation 
+  <Link
+    to="/about"
+    prefetch="viewport"   // "none" | "intent" | "render" | "viewport"
+  >
