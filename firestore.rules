@@ -1,7 +1,8 @@
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /{document=**} {
-      allow read, write: if false;
+    match /mail/{docId} {
+      allow create: if true;
+      allow read, update, delete: if false;
     }
   }
 }
