@@ -3,6 +3,7 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
+import { default as contactUsBanner } from "/src/assets/contact-us/contact-us-banner.png"
 
 const db = getFirestore(firebaseApp)
 
@@ -104,8 +105,12 @@ export const ContactUs: React.FC = () => {
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="flex max-w-[70em] flex-col gap-8 px-6 pb-20 md:flex-row md:gap-16">
+    <div className="flex flex-col items-center justify-center">
+      <img
+        src={contactUsBanner}
+        className="h-96 w-full object-cover object-top"
+      />
+      <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
         <div className="grid place-content-center">
           <div className="flex-1 space-y-4">
             <p className="text-xl">Make the most of your time & budget!</p>
