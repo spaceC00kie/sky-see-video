@@ -17,7 +17,7 @@ export const TedsAboutUsCard: React.FC = ({}) => {
       </div>
       <p className="text-sm">
         {
-          "Ted loves stuff that moves. Combined with his passion for the magic of visual communication design, typography, illustration and branding, he has created a unique set of skills that have successfully been employed for clients like Turner Broadcasting, Starz Entertainment, ESPN, NatGeo and Awkward Family Photos. Ted knows design and how to make the most of the limited time and space each video has to make your company shine. You can see his personal website "
+          "Ted loves stuff that moves. Combined with his passion for the magic of visual communication design, typography, illustration, and branding, he has created a unique set of skills that have successfully been employed for clients like Turner Broadcasting, Starz Entertainment, ESPN, NatGeo, and Awkward Family Photos. Ted knows design and how to make the most of the limited time and space each video has to make your company shine. You can see his personal website "
         }
         <a
           href="https://tintorcio.myportfolio.com/"
