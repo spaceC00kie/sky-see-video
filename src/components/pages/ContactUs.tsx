@@ -128,13 +128,13 @@ export const ContactUs: React.FC = () => {
             </div>
             <div className="flex gap-2">
               <a
-                href=""
+                href="https://www.facebook.com/SkySeeVideo/"
                 className="grid h-16 w-16 place-content-center rounded-full border-2 border-blue-700"
               >
                 <RiFacebookFill size="24" color="blue" />
               </a>
               <a
-                href=""
+                href="https://www.instagram.com/skyseevideo/"
                 className="grid h-16 w-16 place-content-center rounded-full border-2 border-blue-700"
               >
                 <RiInstagramLine size="24" color="blue" />
