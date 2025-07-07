@@ -17,3 +17,5 @@
 - remove react player dependency
 
 - fix version of firestore.rules!!
+
+- performance on Our Work page
