@@ -9,9 +9,9 @@ export const OurServices: React.FC<Props> = ({}) => {
     <div className="flex flex-col items-center justify-center">
       <img
         src={ourServicesBanner}
-        className="h-96 w-full object-cover object-top"
+        className="sm:h-96 h-32 w-full object-cover object-top"
       />
-      <div className="flex max-w-[70em] flex-col gap-4 py-20">
+      <div className="flex max-w-[70em] flex-col gap-4 py-20 px-6">
         <div>
           <p>OUR SERVICES</p>
           <p>
