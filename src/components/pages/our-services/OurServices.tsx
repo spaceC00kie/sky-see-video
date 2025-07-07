@@ -62,9 +62,9 @@ export const OurServices: React.FC<Props> = ({}) => {
               description="Stand out at conventions, trade shows, social media and more. SkySee Video helps today’s home builders and developers highlight the uniqueness of their properties and developments with broadcast quality video packaging. Builders who are LEED compliant can take advantage of SkySee Video’s infrared cameras, emphasizing your company’s green commitment to the environment."
               path=""
             />
-            <OurServicesCard2 image="" title="" description="" path="" />
-            <OurServicesCard2 image="" title="" description="" path="" />
-            <OurServicesCard2 image="" title="" description="" path="" />
+            <OurServicesCard2 image="" title="CONTSTRUCTION" description="" path="" />
+            <OurServicesCard2 image="" title="TOURISM & RESORT" description="" path="" />
+            <OurServicesCard2 image="" title="CORPORATE MARKETING" description="" path="" />
           </div>
         </div>
       </div>

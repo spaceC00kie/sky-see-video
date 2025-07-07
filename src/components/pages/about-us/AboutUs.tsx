@@ -11,7 +11,7 @@ export const AboutUs: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <img src={aboutUsBanner} className="" />
-      <div className="flex max-w-[70em] flex-col gap-4 py-5 px-5">
+      <div className="flex max-w-[70em] flex-col gap-4 px-6 py-5">
         <p className="text-2xl text-blue-500">ABOUT US</p>
         <p className="p-2 text-xl">
           You’ve got specific media needs, and SkySee Video has the expertise to
