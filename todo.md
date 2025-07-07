@@ -3,6 +3,7 @@
 - Our Work page
 - Our Services page
 - saturate assets folders
+- fix index.html to align with SkySee Video material
 
 - update paths to match old website exactly: our-services to services
 - favicon generation: https://realfavicongenerator.net/
@@ -14,3 +15,5 @@
     prefetch="viewport"   // "none" | "intent" | "render" | "viewport"
   >
 - remove react player dependency
+
+- fix version of firestore.rules!!
