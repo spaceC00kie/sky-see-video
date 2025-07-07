@@ -8,7 +8,7 @@ import { ContactUs } from "../pages/ContactUs"
 
 export const MainContent: React.FC = () => (
   <div className="flex h-full justify-center">
-    <div className="flex grow flex-col gap-3 px-3">
+    <div className="flex grow flex-col gap-3">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<AboutUs />} />
