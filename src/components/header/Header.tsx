@@ -28,7 +28,7 @@ export const Header: React.FC = () => {
       />
 
       <nav
-        className={`fixed inset-y-0 left-0 z-50 w-64 transform bg-stone-100 bg-white shadow-lg transition-transform duration-300 ${
+        className={`fixed inset-y-0 left-0 z-50 w-64 transform border-r border-stone-300 bg-stone-100 shadow-lg transition-transform duration-300 ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
       >
