@@ -2,6 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react"
 import Swal from "sweetalert2"
 import { RiFacebookFill } from "react-icons/ri"
 import { RiInstagramLine } from "react-icons/ri"
+import { default as contactUsBanner } from "/src/assets/contact-us/contact-us-banner.png"
 
 interface FormData {
   firstName: string
@@ -54,8 +55,12 @@ export const ContactUs: React.FC = () => {
   }
 
   return (
-    <div className="flex justify-center">
-      <div className="flex max-w-[70em] flex-col gap-8 px-6 pb-20 md:flex-row md:gap-16">
+    <div className="flex flex-col items-center justify-center">
+      <img
+        src={contactUsBanner}
+        className="h-96 w-full object-cover object-top"
+      />
+      <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
         <div className="grid place-content-center">
           <div className="flex-1 space-y-4 ">
             <p className="text-xl">Make the most of your time & budget!</p>
@@ -68,8 +73,9 @@ export const ContactUs: React.FC = () => {
             </p>
             <p>Located in Atlanta, Georgia</p>
             <div className="flex flex-col gap-1">
-            <p>Email: info@skyseevideo.com</p>
-            <p>Phone: 678-304-9920</p></div>
+              <p>Email: info@skyseevideo.com</p>
+              <p>Phone: 678-304-9920</p>
+            </div>
             <div className="flex gap-2">
               <a
                 href=""
@@ -181,7 +187,7 @@ export const ContactUs: React.FC = () => {
 
           <button
             type="submit"
-            className="self-start rounded bg-blue-600 px-4 py-2 text-white hover:bg-blue-500 transition-colors duration-300"
+            className="self-start rounded bg-blue-600 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-500"
           >
             Submit
           </button>
