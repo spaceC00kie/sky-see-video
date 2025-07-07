@@ -14,7 +14,9 @@ import { default as cbsnLogo } from "/src/assets/our-work/cbsn-logo.png"
 import { default as emoryLogo } from "/src/assets/our-work/emory-university-logo.png"
 import { default as foxLogo } from "/src/assets/our-work/fox-sports-logo.png"
 import { default as hlnLogo } from "/src/assets/our-work/hln-logo.png"
-
+import { default as natGeoLogo } from "/src/assets/our-work/national-geographic-logo.png"
+import { default as espnLogo } from "/src/assets/our-work/espn-logo.png"
+import { default as pbsLogo } from "/src/assets/our-work/pbs-logo.png"
 
 interface Props {}
 
@@ -22,22 +24,22 @@ export const OurWork: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col gap-4 py-20">
       <div className="flex flex-wrap justify-center gap-4">
-        <img src={cnnLogo} className="border" />
+        <img src={cnnLogo} />
         <img src={horizonLogo} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
-        <img src={""} />
+        <img src={ballyLogo} />
+        <img src={starzLogo} />
+        <img src={hyundaiLogo} />
+        <img src={canesLogo} />
+        <img src={alhurraLogo} />
+        <img src={channel7Logo} />
+        <img src={blueKeyLogo} />
+        <img src={cbsnLogo} />
+        <img src={emoryLogo} />
+        <img src={foxLogo} />
+        <img src={hlnLogo} />
+        <img src={natGeoLogo} />
+        <img src={espnLogo} />
+        <img src={pbsLogo} />
       </div>
       <div className="px-6">
         <p className="text-center text-4xl">
