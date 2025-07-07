@@ -58,7 +58,7 @@ export const ContactUs: React.FC = () => {
       <div className="flex max-w-[70em] flex-col gap-8 px-6 pb-20 md:flex-row md:gap-16">
         <div className="grid place-content-center">
           <div className="flex-1 space-y-4 ">
-            <p>Make the most of your time & budget!</p>
+            <p className="text-xl">Make the most of your time & budget!</p>
             <p>
               It can be overwhelming to start a new video project. SkySee Video
               is here to make the process easy for you. Complete this form to
@@ -67,8 +67,9 @@ export const ContactUs: React.FC = () => {
               and hits your target goals.
             </p>
             <p>Located in Atlanta, Georgia</p>
+            <div className="flex flex-col gap-1">
             <p>Email: info@skyseevideo.com</p>
-            <p>Phone: 678-304-9920</p>
+            <p>Phone: 678-304-9920</p></div>
             <div className="flex gap-2">
               <a
                 href=""

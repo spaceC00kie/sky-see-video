@@ -12,4 +12,4 @@
 
 - update paths to match old website exactly: our-services to services
 - favicon generation: https://realfavicongenerator.net/
-- 
+- send email from contact form
