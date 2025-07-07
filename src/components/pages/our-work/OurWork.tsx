@@ -7,7 +7,24 @@ interface Props {}
 export const OurWork: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col gap-4 py-20">
-      {/* insert a row of items img tags that wrap when the page narrows */}
+      <div className="flex flex-wrap justify-center gap-4 px-6">
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+        <img src={""} />
+      </div>
       <div className=""></div>
       <p className="text-center text-4xl">
         SkySee Video has a wide range of corporate packaging and documentary
@@ -16,7 +33,7 @@ export const OurWork: React.FC<Props> = ({}) => {
       <div className="flex justify-center p-8">
         <hr className="w-1/3 border-t-4 border-black" />
       </div>
-      <div className="grid gap-5 lg:grid-cols-4 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
         <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
@@ -45,7 +62,7 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-                <OurWorkCard
+        <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
           description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service."
@@ -59,7 +76,7 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-                <OurWorkCard
+        <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
           description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service."
@@ -73,7 +90,7 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-                <OurWorkCard
+        <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
           description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service."
@@ -87,7 +104,7 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-                <OurWorkCard
+        <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
           description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service."
@@ -101,7 +118,7 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-                <OurWorkCard
+        <OurWorkCard
           image={kompasThumbnail}
           title="Kompas Communications / Mission"
           description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service."
@@ -115,11 +132,6 @@ export const OurWork: React.FC<Props> = ({}) => {
           // @todo connect path
           path=""
         />
-
-
-
-
-        
       </div>
     </div>
   )
