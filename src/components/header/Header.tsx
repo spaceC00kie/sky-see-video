@@ -12,7 +12,7 @@ export const Header: React.FC = () => {
 
   return (
     <>
-      <div className="sticky top-0 z-50 flex h-20 w-full shrink-0 items-center justify-center bg-white px-4 pb-3 text-xl">
+      <div className="sticky top-0 z-50 flex h-28 w-full shrink-0 items-center justify-center bg-white px-4 text-xl">
         <div className="no-wrap relative flex w-full justify-between">
           <HeaderLeft onMenuClick={() => setOpen(true)} />
           <HeaderMiddle />

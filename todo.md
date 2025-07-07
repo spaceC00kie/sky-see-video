@@ -13,3 +13,4 @@
     to="/about"
     prefetch="viewport"   // "none" | "intent" | "render" | "viewport"
   >
+- remove react player dependency
