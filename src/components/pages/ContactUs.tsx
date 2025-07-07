@@ -57,13 +57,13 @@ export const ContactUs: React.FC = () => {
         .filter(([, v]) => v)
         .map(
           ([k]) =>
-            ((
+            (
               {
                 preProduction: "Pre-Production",
                 production: "Production",
                 postProduction: "Post-Production",
               } as const
-            )[k]),
+            )[k],
         )
         .join(", ")
 
@@ -80,12 +80,8 @@ export const ContactUs: React.FC = () => {
               .replace(/</g, "&lt;")
               .replace(/>/g, "&gt;")
               .replace(/\n/g, "<br/>")}</p>
-            <p><strong>Target Completion Date:</strong> ${
-              data.completionDate
-            }</p>
-            <p><strong>Services Needed:</strong> ${
-              servicesSelected || "N/A"
-            }</p>
+            <p><strong>Target Completion Date:</strong> ${data.completionDate}</p>
+            <p><strong>Services Needed:</strong> ${servicesSelected || "N/A"}</p>
           `,
         },
       })
@@ -128,16 +124,22 @@ export const ContactUs: React.FC = () => {
             </div>
             <div className="flex gap-2">
               <a
-                href="https://www.facebook.com/SkySeeVideo/"
-                className="grid h-16 w-16 place-content-center rounded-full border-2 border-blue-700"
+                href="https://www.instagram.com/skyseevideo/"
+                className="group grid h-16 w-16 place-content-center rounded-full border-2 border-cyan-700 transition-colors hover:bg-cyan-700"
               >
-                <RiFacebookFill size="24" color="blue" />
+                <RiInstagramLine
+                  size={24}
+                  className="text-cyan-700 group-hover:text-white"
+                />
               </a>
               <a
-                href="https://www.instagram.com/skyseevideo/"
-                className="grid h-16 w-16 place-content-center rounded-full border-2 border-blue-700"
+                href="https://www.facebook.com/SkySeeVideo/"
+                className="group grid h-16 w-16 place-content-center rounded-full border-2 border-blue-800 transition-colors hover:bg-blue-800"
               >
-                <RiInstagramLine size="24" color="blue" />
+                <RiFacebookFill
+                  size={24}
+                  className="text-blue-800 group-hover:text-white"
+                />
               </a>
             </div>
           </div>
