@@ -24,22 +24,22 @@ export const OurWork: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col gap-4 py-20">
       <div className="flex flex-wrap justify-center gap-4">
-        <img src={cnnLogo} />
-        <img src={horizonLogo} />
-        <img src={ballyLogo} />
-        <img src={starzLogo} />
-        <img src={hyundaiLogo} />
-        <img src={canesLogo} />
-        <img src={alhurraLogo} />
-        <img src={channel7Logo} />
-        <img src={blueKeyLogo} />
-        <img src={cbsnLogo} />
-        <img src={emoryLogo} />
-        <img src={foxLogo} />
-        <img src={hlnLogo} />
-        <img src={natGeoLogo} />
-        <img src={espnLogo} />
-        <img src={pbsLogo} />
+        <img src={cnnLogo} className="w-32 xl:w-20" />
+        <img src={horizonLogo} className="w-32 xl:w-20" />
+        <img src={ballyLogo} className="w-32 xl:w-20" />
+        <img src={starzLogo} className="w-32 xl:w-20" />
+        <img src={hyundaiLogo} className="w-32 xl:w-20" />
+        <img src={canesLogo} className="w-32 xl:w-20" />
+        <img src={alhurraLogo} className="w-32 xl:w-20" />
+        <img src={channel7Logo} className="w-32 xl:w-20" />
+        <img src={blueKeyLogo} className="w-32 xl:w-20" />
+        <img src={cbsnLogo} className="w-32 xl:w-20" />
+        <img src={emoryLogo} className="w-32 xl:w-20" />
+        <img src={foxLogo} className="w-32 xl:w-20" />
+        <img src={hlnLogo} className="w-32 xl:w-20" />
+        <img src={natGeoLogo} className="w-32 xl:w-20" />
+        <img src={espnLogo} className="w-32 xl:w-20" />
+        <img src={pbsLogo} className="w-32 xl:w-20" />
       </div>
       <div className="px-6">
         <p className="text-center text-4xl">
