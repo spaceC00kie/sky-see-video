@@ -5,7 +5,11 @@ module.exports = {
     listStyleType: {
       square: "square",
     },
-    extend: {},
+    extend: {
+      corePlugins: {
+        contentVisibility: true,
+      },
+    },
   },
   plugins: [],
 }

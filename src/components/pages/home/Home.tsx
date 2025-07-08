@@ -13,7 +13,7 @@ interface Props {}
 export const Home: React.FC<Props> = ({}) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="relative mx-auto aspect-video w-full max-w-[90em]">
+      <div className="relative mx-auto aspect-video w-full max-w-[90em] my-6">
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
           className="absolute left-0 top-0 h-full w-full"

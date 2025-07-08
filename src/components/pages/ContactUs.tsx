@@ -102,10 +102,17 @@ export const ContactUs: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center justify-center">
-      <img
-        src={contactUsBanner}
-        className="h-96 w-full object-cover object-top"
-      />
+      <div className="relative h-96 w-full">
+        <img
+          src={contactUsBanner}
+          className="h-full w-full object-cover object-top"
+        />
+        <div className="absolute inset-0 flex items-end justify-center pb-20">
+          <p className="max-w-[90%] text-center text-3xl text-white drop-shadow-2xl">
+            We'd love to talk with you about your project. Give us a call today!
+          </p>
+        </div>
+      </div>
       <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
         <div className="grid place-content-center">
           <div className="flex-1 space-y-4">
@@ -164,7 +171,6 @@ export const ContactUs: React.FC = () => {
               />
             </div>
           </div>
-
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Email *</label>
             <input
@@ -175,7 +181,6 @@ export const ContactUs: React.FC = () => {
               onChange={input("email")}
             />
           </div>
-
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Company Name</label>
             <input
@@ -184,7 +189,6 @@ export const ContactUs: React.FC = () => {
               onChange={input("company")}
             />
           </div>
-
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Description of Project</label>
             <textarea
@@ -194,7 +198,6 @@ export const ContactUs: React.FC = () => {
               onChange={input("description")}
             />
           </div>
-
           <div className="flex flex-col gap-2">
             <label className="font-semibold">Project Completion Date</label>
             <input
@@ -204,10 +207,8 @@ export const ContactUs: React.FC = () => {
               onChange={input("completionDate")}
             />
           </div>
-
           <fieldset className="flex flex-col gap-2">
             <legend className="font-semibold">Services Needed</legend>
-
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -217,7 +218,6 @@ export const ContactUs: React.FC = () => {
               Pre-Production (Mood Boards, Scripts, Style Framing, Branding &
               Logo Development)
             </label>
-
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -226,7 +226,6 @@ export const ContactUs: React.FC = () => {
               />
               Production – Aerial & On-The-Ground Videography
             </label>
-
             <label className="flex items-center gap-2">
               <input
                 type="checkbox"
@@ -236,7 +235,6 @@ export const ContactUs: React.FC = () => {
               Post-Production – Editing, 2D & 3D Animation and Sound Design
             </label>
           </fieldset>
-
           <button
             type="submit"
             className="self-start rounded bg-blue-600 px-4 py-2 text-white transition-colors duration-300 hover:bg-blue-500"

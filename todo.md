@@ -19,3 +19,4 @@
 - fix version of firestore.rules!!
 
 - performance on Our Work page
+- only future dates on calendar
