@@ -20,3 +20,4 @@
 
 - performance on Our Work page
 - only future dates on calendar
+- adjust font

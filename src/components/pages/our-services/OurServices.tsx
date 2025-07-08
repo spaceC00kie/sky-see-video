@@ -62,7 +62,7 @@ export const OurServices: React.FC<Props> = ({}) => {
         </div>
         <p className="text-2xl text-blue-500">INDUSTRIES</p>
         <hr />
-        <div className="grid sm:place-items-center md:grid-cols-2 lg:grid-cols-4 lg:place-items-start">
+        <div className="grid place-items-start md:grid-cols-2 lg:grid-cols-4 lg:place-items-start">
           <OurServicesCard2
             image={construction}
             title="Construction"
