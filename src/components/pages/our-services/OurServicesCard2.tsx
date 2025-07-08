@@ -13,16 +13,16 @@ export const OurServicesCard2: React.FC<Props> = ({
   path,
 }) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-3 sm:w-56">
+    <div className="flex flex-col items-center justify-start gap-3 p-5 lg:w-64">
       <div className="grid place-content-center pb-2">
         <Link to={path}>
-          <img src={image} className="h-24 w-24 rounded-full" />
+          <img src={image} className="h-36 w-36 rounded-full" />
         </Link>
       </div>
       <Link to={path}>
-        <h2 className="text-2xl text-blue-500">{title}</h2>
+        <h2 className="text-lg text-blue-500 underline">{title}</h2>
       </Link>
-      <p className="text-lg">{description}</p>
+      <p className="text-md text-center">{description}</p>
     </div>
   )
 }

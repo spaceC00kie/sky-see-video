@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom"
-
 interface Props {
   title: string
   bulletPoints: string[]
@@ -7,13 +5,12 @@ interface Props {
 
 export const OurServicesCard1: React.FC<Props> = ({ title, bulletPoints }) => {
   return (
-    <div className="flex flex-col items-center justify-between gap-3 sm:w-56">
-      <h2 className="text-2xl text-blue-500">{title}</h2>
-      <p className="text-lg text-center">
+    <div className="sm:w-62 flex flex-col items-center justify-start gap-3">
+      <h2 className="w-full text-xl text-blue-500">{title}</h2>
+      <p className="text-center text-xl">
         {bulletPoints.map((point, index) => (
-          <div key={index} className="flex">
-            <div className="">•</div>
-            {point}
+          <div key={index} className="flex flex-row ">
+            • {point}
           </div>
         ))}
       </p>
