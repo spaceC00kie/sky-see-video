@@ -1,5 +1,7 @@
 import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
+import { cards } from "../pages/our-work/OurWork"
+import { ProjectPage } from "../pages/our-work/ProjectPage"
 
 const Home = lazy(() =>
   import("../pages/home/Home").then((m) => ({ default: m.Home })),
@@ -29,6 +31,13 @@ export const MainContent: React.FC = () => (
           <Route path="/our-work" element={<OurWork />} />
           <Route path="/our-services" element={<OurServices />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          {cards.map((card) => (
+            <Route
+              key={card.path}
+              path={card.path}
+              element={<ProjectPage {...card} />}
+            />
+          ))}
         </Routes>
       </Suspense>
     </div>
