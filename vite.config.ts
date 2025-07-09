@@ -3,15 +3,18 @@ import react from "@vitejs/plugin-react"
 import preload from "vite-plugin-preload"
 import { VitePWA } from "vite-plugin-pwa"
 
-export default defineConfig({
-  plugins: [
-    react(),
-    preload(),
-    VitePWA({
-      registerType: "autoUpdate",
-      includeAssets: ["favicon.svg","favicon.ico","robots.txt","apple-touch-icon.png"],
-      manifest: {
-        id: "/",
+export default defineConfig(async () => {
+  const { default: tailwindcss } = await import("@tailwindcss/vite")
+  return {
+    plugins: [
+      tailwindcss(),
+      react(),
+      preload(),
+      VitePWA({
+        registerType: "autoUpdate",
+        includeAssets: ["favicon.svg","favicon.ico","robots.txt","apple-touch-icon.png"],
+        manifest: {
+          id: "/",
         name: "SkySeeVideo",
         short_name: "SkySeeVideo",
         description: "Business Videos That Connect to Your Audience",
@@ -33,5 +36,6 @@ export default defineConfig({
         ]
       }
     })
-  ]
+    ]
+  }
 })
