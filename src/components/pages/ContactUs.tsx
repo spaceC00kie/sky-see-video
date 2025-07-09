@@ -4,7 +4,8 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
-import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?format=webp"
+import contactUsBanner from "@/assets/contact-us/contact-us-banner.png?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import { Picture } from "../Picture"
 
 const db = getFirestore(firebaseApp)
 
@@ -115,8 +116,8 @@ Services Needed: ${servicesSelected || "N/A"}`
 
       <div className="flex flex-col items-center justify-center">
         <div className="relative h-96 w-full">
-          <img
-            src={contactUsBanner}
+          <Picture
+            data={contactUsBanner}
             className="h-full w-full object-cover object-top"
             fetchPriority="high"
           />

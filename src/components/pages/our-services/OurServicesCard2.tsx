@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import { Picture, PictureData } from "../../Picture"
 
 interface Props {
-  image: string
+  image: PictureData
   title: string
   description: string
   path: string
@@ -16,7 +17,7 @@ export const OurServicesCard2: React.FC<Props> = ({
     <div className="flex flex-col items-center justify-start gap-3 p-5 lg:w-64">
       <div className="grid place-content-center pb-2">
         <Link to={path}>
-          <img src={image} className="h-36 w-36 rounded-full" />
+          <Picture data={image} className="h-36 w-36 rounded-full" />
         </Link>
       </div>
       <Link to={path}>

@@ -2,6 +2,7 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import preload from "vite-plugin-preload"
 import { VitePWA } from "vite-plugin-pwa"
+import { fileURLToPath, URL } from "node:url"
 import { imagetools } from "vite-imagetools"
 
 export default defineConfig({
@@ -9,7 +10,6 @@ export default defineConfig({
     react(),
     imagetools({
       defaultDirectives: new URLSearchParams({
-        format: "webp",
         quality: "80"
       })
     }),
@@ -40,5 +40,10 @@ export default defineConfig({
         ]
       }
     })
-  ]
+  ],
+  resolve: {
+    alias: {
+      "@": fileURLToPath(new URL("./src", import.meta.url))
+    }
+  }
 })

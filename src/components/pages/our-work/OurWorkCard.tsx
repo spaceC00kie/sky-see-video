@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom"
+import { Picture, PictureData } from "../../Picture"
 
 interface Props {
-  image: string
+  image: PictureData
   title: string
   description: string
   path: string
@@ -20,8 +21,8 @@ export const OurWorkCard: React.FC<Props> = ({
         className="group relative block w-full overflow-hidden rounded"
       >
         <div className="aspect-[4/3] w-full overflow-hidden">
-          <img
-            src={image}
+          <Picture
+            data={image}
             loading="lazy"
             decoding="async"
             className="h-full w-full object-cover"

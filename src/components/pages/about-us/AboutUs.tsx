@@ -2,10 +2,11 @@ import { Helmet } from "react-helmet-async"
 import { AboutUsCard } from "./AboutUsCard"
 import { TedsAboutUsCard } from "./TedsAboutUsCard"
 
-import aboutUsBanner from "/src/assets/about-us/about-us-banner.png?format=webp"
-import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg?format=webp"
-import robinsonVil from "/src/assets/about-us/robinson-vil.jpg?format=webp"
-import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg?format=webp"
+import aboutUsBanner from "@/assets/about-us/about-us-banner.png?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import sorenChristiansen from "@/assets/about-us/soren-christiansen.jpg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import robinsonVil from "@/assets/about-us/robinson-vil.jpg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import charlesFrederick from "@/assets/about-us/charles-frederick.jpg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import { Picture } from "../../Picture"
 
 interface Props {}
 
@@ -24,8 +25,8 @@ export const AboutUs: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <img
-        src={aboutUsBanner}
+      <Picture
+        data={aboutUsBanner}
         className="h-32 w-full object-cover object-top sm:h-96"
         fetchPriority="high"
       />

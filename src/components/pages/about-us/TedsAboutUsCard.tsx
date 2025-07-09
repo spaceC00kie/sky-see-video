@@ -1,11 +1,12 @@
-import { default as tedIntorcio } from "/src/assets/about-us/ted-intorcio.jpg?format=webp"
+import tedIntorcio from "@/assets/about-us/ted-intorcio.jpg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import { Picture } from "../../Picture"
 
 export const TedsAboutUsCard: React.FC = ({}) => {
   return (
     <div className="flex flex-col items-start gap-2 text-lg">
       <div className="aspect-[4/3] w-full">
-        <img
-          src={tedIntorcio}
+        <Picture
+          data={tedIntorcio}
           alt={"Ted Intorcio"}
           className="h-full w-full object-cover"
         />

@@ -1,6 +1,14 @@
 /// <reference types="vite/client" />
 
-declare module '*?format=webp' {
-  const src: string
+declare module '*.png?imagetools*' {
+  const src: any
+  export default src
+}
+declare module '*.jpg?imagetools*' {
+  const src: any
+  export default src
+}
+declare module '*.jpeg?imagetools*' {
+  const src: any
   export default src
 }

@@ -2,11 +2,12 @@ import { Helmet } from "react-helmet-async"
 import { OurServicesCard1 } from "./OurServicesCard1"
 import { OurServicesCard2 } from "./OurServicesCard2"
 
-import ourServicesBanner from "/src/assets/our-services/our-services-banner.png?format=webp"
-import construction from "/src/assets/our-services/construction.png?format=webp"
-import tourism from "/src/assets/our-services/tourism.jpg?format=webp"
-import corporate from "/src/assets/our-services/corporate.jpeg?format=webp"
-import documentaries from "/src/assets/our-services/documentaries.jpeg?format=webp"
+import ourServicesBanner from "@/assets/our-services/our-services-banner.png?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import construction from "@/assets/our-services/construction.png?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import tourism from "@/assets/our-services/tourism.jpg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import corporate from "@/assets/our-services/corporate.jpeg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import documentaries from "@/assets/our-services/documentaries.jpeg?imagetools&w=320;640;960&format=avif;webp;jpg&as=picture"
+import { Picture } from "../../Picture"
 
 interface Props {}
 
@@ -22,8 +23,8 @@ export const OurServices: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <img
-        src={ourServicesBanner}
+      <Picture
+        data={ourServicesBanner}
         className="h-32 w-full object-cover object-top sm:h-96"
         fetchPriority="high"
       />
