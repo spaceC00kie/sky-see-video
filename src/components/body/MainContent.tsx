@@ -1,5 +1,6 @@
 import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
+import { AliveScope, KeepAlive } from "react-activation"
 
 const Home = lazy(() =>
   import("../pages/home/Home").then((m) => ({ default: m.Home })),
@@ -20,17 +21,19 @@ const ContactUs = lazy(() =>
 )
 
 export const MainContent: React.FC = () => (
-  <div className="flex h-full justify-center">
-    <div className="flex grow flex-col gap-3">
-      <Suspense fallback={null}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/our-work" element={<OurWork />} />
-          <Route path="/our-services" element={<OurServices />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-        </Routes>
-      </Suspense>
+  <AliveScope>
+    <div className="flex h-full justify-center">
+      <div className="flex grow flex-col gap-3">
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<KeepAlive id="home"><Home /></KeepAlive>} />
+            <Route path="/about-us" element={<AboutUs />} />
+            <Route path="/our-work" element={<OurWork />} />
+            <Route path="/our-services" element={<OurServices />} />
+            <Route path="/contact-us" element={<ContactUs />} />
+          </Routes>
+        </Suspense>
+      </div>
     </div>
-  </div>
+  </AliveScope>
 )

@@ -27,6 +27,7 @@
     "firebase-tools": "^12.4.0",
     "framer-motion": "^7.6.18",
     "react": "^18.2.0",
+    "react-activation": "0.13.4",
     "react-currency-input-field": "^3.6.9",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.1.1",

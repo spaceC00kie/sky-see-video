@@ -1144,7 +1144,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
+"@babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.9, @babel/runtime@npm:^7.23.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.8.7":
   version: 7.27.6
   resolution: "@babel/runtime@npm:7.27.6"
   checksum: 3f7b879df1823c0926bd5dbc941c62f5d60faa790c1aab9758c04799e1f04ee8d93553be9ec059d4e5882f19fe03cbe8933ee4f46212dced0f6d8205992c9c9a
@@ -4781,6 +4781,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"array-includes@npm:^3.1.1":
+  version: 3.1.9
+  resolution: "array-includes@npm:3.1.9"
+  dependencies:
+    call-bind: ^1.0.8
+    call-bound: ^1.0.4
+    define-properties: ^1.2.1
+    es-abstract: ^1.24.0
+    es-object-atoms: ^1.1.1
+    get-intrinsic: ^1.3.0
+    is-string: ^1.1.1
+    math-intrinsics: ^1.1.0
+  checksum: b58dc526fe415252e50319eaf88336e06e75aa673e3b58d252414739a4612dbe56e7b613fdcc7c90561dc9cf9202bbe5ca029ccd8c08362746459475ae5a8f3e
+  languageName: node
+  linkType: hard
+
 "arraybuffer.prototype.slice@npm:^1.0.4":
   version: 1.0.4
   resolution: "arraybuffer.prototype.slice@npm:1.0.4"
@@ -6581,7 +6597,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.6, es-abstract@npm:^1.23.9":
+"es-abstract@npm:^1.23.5, es-abstract@npm:^1.23.6, es-abstract@npm:^1.23.9, es-abstract@npm:^1.24.0":
   version: 1.24.0
   resolution: "es-abstract@npm:1.24.0"
   dependencies:
@@ -8235,7 +8251,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"hoist-non-react-statics@npm:^3.3.1":
+"hoist-non-react-statics@npm:^3.3.0, hoist-non-react-statics@npm:^3.3.1":
   version: 3.3.2
   resolution: "hoist-non-react-statics@npm:3.3.2"
   dependencies:
@@ -9361,6 +9377,16 @@ __metadata:
     json-schema: 0.4.0
     verror: 1.10.0
   checksum: d175f6b1991e160cb0aa39bc857da780e035611986b5492f32395411879fdaf4e513d98677f08f7352dac93a16b66b8361c674b86a3fa406e2e7af6b26321838
+  languageName: node
+  linkType: hard
+
+"jsx-ast-utils@npm:^2.2.1":
+  version: 2.4.1
+  resolution: "jsx-ast-utils@npm:2.4.1"
+  dependencies:
+    array-includes: ^3.1.1
+    object.assign: ^4.1.0
+  checksum: 833477231266631e0def7ab5fa5da386790130ce5f9ab5db22fb3a8e67ee0adba9082ff27687e5c64c893af00beeb2285a7309cbc40c5edbcafdaf4e9de069a1
   languageName: node
   linkType: hard
 
@@ -10498,7 +10524,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"object.assign@npm:^4.1.7":
+"object.assign@npm:^4.1.0, object.assign@npm:^4.1.7":
   version: 4.1.7
   resolution: "object.assign@npm:4.1.7"
   dependencies:
@@ -11430,6 +11456,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-activation@npm:0.13.4":
+  version: 0.13.4
+  resolution: "react-activation@npm:0.13.4"
+  dependencies:
+    hoist-non-react-statics: ^3.3.0
+    react-node-key: ^0.4.0
+    szfe-tools: ^0.0.0-beta.7
+  peerDependencies:
+    react: ">=16"
+  checksum: 4f1cf893dfdead7205c56bec51e72c6b879f49a2f34152c90fc61d0b0817b5fa52864b11f578aba9c85afc86311bdb2a3e596f77c8af22b5dc6e15bab0e6c5a3
+  languageName: node
+  linkType: hard
+
 "react-currency-input-field@npm:^3.6.9":
   version: 3.10.0
   resolution: "react-currency-input-field@npm:3.10.0"
@@ -11508,6 +11547,18 @@ __metadata:
   version: 19.1.0
   resolution: "react-is@npm:19.1.0"
   checksum: 3eb4eac7f09bf178bdc6fa98d384f5f243b85de7c99679a88b0154ead4d818ad94386ccb00ea31ec52409ffd13299057f5ec6ca2eaec06f9f7eddc1ad4832332
+  languageName: node
+  linkType: hard
+
+"react-node-key@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "react-node-key@npm:0.4.0"
+  dependencies:
+    jsx-ast-utils: ^2.2.1
+    szfe-tools: ^0.0.0-beta.7
+  peerDependencies:
+    react: ">=16"
+  checksum: 6165d441e17ff1f4b0f32ceabdf9117eef6fc3bb798298e23888feaa1792cc4aac3ecdad544d13d1717ed98901ee8d63c98f7f318f260daeefbd2c73ff5ee2ed
   languageName: node
   linkType: hard
 
@@ -12514,6 +12565,7 @@ __metadata:
     prettier-plugin-solidity: ^1.0.0
     prettier-plugin-tailwindcss: ^0.2.0
     react: ^18.2.0
+    react-activation: 0.13.4
     react-currency-input-field: ^3.6.9
     react-dom: ^18.2.0
     react-firebase-hooks: ^5.1.1
@@ -13052,6 +13104,15 @@ __metadata:
   version: 3.2.4
   resolution: "symbol-tree@npm:3.2.4"
   checksum: 6e8fc7e1486b8b54bea91199d9535bb72f10842e40c79e882fc94fb7b14b89866adf2fd79efa5ebb5b658bc07fb459ccce5ac0e99ef3d72f474e74aaf284029d
+  languageName: node
+  linkType: hard
+
+"szfe-tools@npm:^0.0.0-beta.7":
+  version: 0.0.0-beta.7
+  resolution: "szfe-tools@npm:0.0.0-beta.7"
+  dependencies:
+    "@babel/runtime": ^7.10.2
+  checksum: f60aaed06e0e124319c69ad4a66bb761ad88fb51c975eadb2384b8858b4f945b859d49ad781960de21dcdb2dcc9447f8e1a7cee1728252147a17d43bf2f1b850
   languageName: node
   linkType: hard
 
