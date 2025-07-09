@@ -38,4 +38,14 @@ $secondary: #171717;
 // prevnts a layout shift while SWAL popup is visible
 body {
   padding-right: 0 !important;
+  @apply font-sans;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-heading;
 }

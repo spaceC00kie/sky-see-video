@@ -9,6 +9,10 @@ module.exports = {
       corePlugins: {
         contentVisibility: true,
       },
+      fontFamily: {
+        sans: ["'Open Sans'", "sans-serif"],
+        heading: ["Montserrat", "sans-serif"],
+      },
     },
   },
   plugins: [],
