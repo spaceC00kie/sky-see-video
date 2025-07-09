@@ -93,7 +93,7 @@ const logos = [
   pbsLogo,
 ] as const
 
-const cards = [
+export const cards = [
   {
     image: num20,
     title: "Kompas Communications / Mission",
