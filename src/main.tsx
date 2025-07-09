@@ -7,8 +7,6 @@ import { HelmetProvider } from "react-helmet-async"
 import { registerSW } from "virtual:pwa-register"
 import { WindowSize } from "./containers/WindowSize"
 import "./index.scss"
-import { Auth } from "./containers/Auth"
-import { Date } from "./containers/Date"
 import { BrowserRouter } from "react-router-dom"
 
 const theme = createTheme({
@@ -27,17 +25,13 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
-      <Auth.Provider>
         <WindowSize.Provider>
-          <Date.Provider>
             <ThemeProvider theme={theme}>
               <BrowserRouter>
                 <App />
               </BrowserRouter>
             </ThemeProvider>
-          </Date.Provider>
         </WindowSize.Provider>
-      </Auth.Provider>
     </HelmetProvider>
   </React.StrictMode>,
 )
