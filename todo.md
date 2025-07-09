@@ -21,3 +21,5 @@
 - update home page to text from Soren
 - establish knowledge transfer for Soren
 - get soren to have the domain transferred to us
+- drop shadow on contact us page
+- captcha in front of contact form?
