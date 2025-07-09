@@ -6,25 +6,26 @@
 $primary: #a8a29e;
 $secondary: #171717;
 
-.scrollbar {
-  scrollbar-width: auto;
-  scrollbar-color: $primary $secondary;
-}
+@layer utilities {
+  .scrollbar {
+    scrollbar-width: auto;
+    scrollbar-color: $primary $secondary;
 
-.scrollbar::-webkit-scrollbar {
-  @apply h-2 w-3;
-}
-
-.scrollbar::-webkit-scrollbar-track {
-  @apply bg-stone-600;
-}
-
-.scrollbar::-webkit-scrollbar-thumb {
-  @apply rounded-full bg-stone-400;
-}
-
-.scrollbar::-webkit-scrollbar-corner {
-  @apply bg-stone-400;
+    &::-webkit-scrollbar {
+      height: 0.5rem; /* h-2 */
+      width: 0.75rem; /* w-3 */
+    }
+    &::-webkit-scrollbar-track {
+      background-color: rgb(87 83 78); /* bg-stone-600 */
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 9999px; /* rounded-full */
+      background-color: rgb(168 162 158); /* bg-stone-400 */
+    }
+    &::-webkit-scrollbar-corner {
+      background-color: rgb(168 162 158); /* bg-stone-400 */
+    }
+  }
 }
 
 .container {
