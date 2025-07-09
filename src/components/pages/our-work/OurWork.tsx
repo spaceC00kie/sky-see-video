@@ -499,9 +499,12 @@ export const cards = [
 export const OurWork: React.FC = () => (
   <>
     <Helmet>
-      {/* give the first logo & card thumb a head-start */}
-      <link rel="preload" as="image" href={cnnLogo} />
-      <link rel="preload" as="image" href={num20} />
+      {logos.map((src) => (
+        <link key={src} rel="preload" as="image" href={src} />
+      ))}
+      {cards.map(({ image }) => (
+        <link key={image} rel="preload" as="image" href={image} />
+      ))}
       <title>Our Work | SkySee Video</title>
       <meta
         name="description"
