@@ -7,7 +7,12 @@ import { imagetools } from "vite-imagetools"
 export default defineConfig({
   plugins: [
     react(),
-    imagetools(),
+    imagetools({
+      defaultDirectives: new URLSearchParams({
+        format: "webp",
+        quality: "80"
+      })
+    }),
     preload(),
     VitePWA({
       registerType: "autoUpdate",
