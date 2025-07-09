@@ -1,75 +1,79 @@
+import { Helmet } from "react-helmet-async"
 import { OurWorkCard } from "./OurWorkCard"
 
-import { default as cnnLogo } from "/src/assets/our-work/cnn-logo.png"
-import { default as horizonLogo } from "/src/assets/our-work/horizon-roofing-logo.png"
-import { default as ballyLogo } from "/src/assets/our-work/bally-sports-logo.png"
-import { default as starzLogo } from "/src/assets/our-work/starz-logo.png"
-import { default as hyundaiLogo } from "/src/assets/our-work/hyundai-construction-logo.png"
-import { default as canesLogo } from "/src/assets/our-work/raising-canes-logo.png"
-import { default as alhurraLogo } from "/src/assets/our-work/alhurra-logo.png"
-import { default as channel7Logo } from "/src/assets/our-work/channel-7-logo.png"
-import { default as blueKeyLogo } from "/src/assets/our-work/blue-key-logo.png"
-import { default as cbsnLogo } from "/src/assets/our-work/cbsn-logo.png"
-import { default as emoryLogo } from "/src/assets/our-work/emory-university-logo.png"
-import { default as foxLogo } from "/src/assets/our-work/fox-sports-logo.png"
-import { default as hlnLogo } from "/src/assets/our-work/hln-logo.png"
-import { default as natGeoLogo } from "/src/assets/our-work/national-geographic-logo.png"
-import { default as espnLogo } from "/src/assets/our-work/espn-logo.png"
-import { default as pbsLogo } from "/src/assets/our-work/pbs-logo.png"
+/* ——— client logos ——— */
+import cnnLogo from "/src/assets/our-work/cnn-logo.png"
+import horizonLogo from "/src/assets/our-work/horizon-roofing-logo.png"
+import ballyLogo from "/src/assets/our-work/bally-sports-logo.png"
+import starzLogo from "/src/assets/our-work/starz-logo.png"
+import hyundaiLogo from "/src/assets/our-work/hyundai-construction-logo.png"
+import canesLogo from "/src/assets/our-work/raising-canes-logo.png"
+import alhurraLogo from "/src/assets/our-work/alhurra-logo.png"
+import channel7Logo from "/src/assets/our-work/channel-7-logo.png"
+import blueKeyLogo from "/src/assets/our-work/blue-key-logo.png"
+import cbsnLogo from "/src/assets/our-work/cbsn-logo.png"
+import emoryLogo from "/src/assets/our-work/emory-university-logo.png"
+import foxLogo from "/src/assets/our-work/fox-sports-logo.png"
+import hlnLogo from "/src/assets/our-work/hln-logo.png"
+import natGeoLogo from "/src/assets/our-work/national-geographic-logo.png"
+import espnLogo from "/src/assets/our-work/espn-logo.png"
+import pbsLogo from "/src/assets/our-work/pbs-logo.png"
 
-import { default as num20 } from "/src/assets/our-work/examples/20.jpg"
-import { default as num21 } from "/src/assets/our-work/examples/21.png"
-import { default as num22 } from "/src/assets/our-work/examples/22.png"
-import { default as num23 } from "/src/assets/our-work/examples/23.png"
-import { default as num24 } from "/src/assets/our-work/examples/24.png"
-import { default as num25 } from "/src/assets/our-work/examples/25.png"
-import { default as num26 } from "/src/assets/our-work/examples/26.png"
-import { default as num27 } from "/src/assets/our-work/examples/27.png"
-import { default as num28 } from "/src/assets/our-work/examples/28.png"
-import { default as num29 } from "/src/assets/our-work/examples/29.png"
-import { default as num30 } from "/src/assets/our-work/examples/30.png"
-import { default as num31 } from "/src/assets/our-work/examples/31.png"
-import { default as num32 } from "/src/assets/our-work/examples/32.jpg"
-import { default as num33 } from "/src/assets/our-work/examples/33.png"
-import { default as num34 } from "/src/assets/our-work/examples/34.png"
-import { default as num35 } from "/src/assets/our-work/examples/35.png"
-import { default as num36 } from "/src/assets/our-work/examples/36.png"
-import { default as num37 } from "/src/assets/our-work/examples/37.png"
-import { default as num38 } from "/src/assets/our-work/examples/38.png"
-import { default as num39 } from "/src/assets/our-work/examples/39.png"
-import { default as num40 } from "/src/assets/our-work/examples/40.png"
-import { default as num41 } from "/src/assets/our-work/examples/41.png"
-import { default as num42 } from "/src/assets/our-work/examples/42.png"
-import { default as num43 } from "/src/assets/our-work/examples/43.png"
-import { default as num44 } from "/src/assets/our-work/examples/44.png"
-import { default as num45 } from "/src/assets/our-work/examples/45.png"
-import { default as num46 } from "/src/assets/our-work/examples/46.png"
-import { default as num47 } from "/src/assets/our-work/examples/47.png"
-import { default as num48 } from "/src/assets/our-work/examples/48.png"
-import { default as num49 } from "/src/assets/our-work/examples/49.png"
-import { default as num50 } from "/src/assets/our-work/examples/50.png"
-import { default as num51 } from "/src/assets/our-work/examples/51.png"
-import { default as num52 } from "/src/assets/our-work/examples/52.png"
-import { default as num53 } from "/src/assets/our-work/examples/53.png"
-import { default as num54 } from "/src/assets/our-work/examples/54.png"
-import { default as num55 } from "/src/assets/our-work/examples/55.png"
-import { default as num56 } from "/src/assets/our-work/examples/56.png"
-import { default as num57 } from "/src/assets/our-work/examples/57.png"
-import { default as num58 } from "/src/assets/our-work/examples/58.png"
-import { default as num59 } from "/src/assets/our-work/examples/59.png"
-import { default as num60 } from "/src/assets/our-work/examples/60.png"
-import { default as num61 } from "/src/assets/our-work/examples/61.png"
-import { default as num62 } from "/src/assets/our-work/examples/62.jpg"
-import { default as num63 } from "/src/assets/our-work/examples/63.png"
-import { default as num64 } from "/src/assets/our-work/examples/64.jpg"
-import { default as num65 } from "/src/assets/our-work/examples/65.jpg"
-import { default as num66 } from "/src/assets/our-work/examples/66.jpg"
-import { default as num67 } from "/src/assets/our-work/examples/67.jpg"
-import { default as num68 } from "/src/assets/our-work/examples/68.jpg"
-import { default as num69 } from "/src/assets/our-work/examples/69.jpg"
-import { default as num70 } from "/src/assets/our-work/examples/70.jpg"
-import { default as num71 } from "/src/assets/our-work/examples/71.jpg"
+/* ——— gallery thumbnails ——— */
+import num20 from "/src/assets/our-work/examples/20.jpg"
+import num21 from "/src/assets/our-work/examples/21.png"
+import num22 from "/src/assets/our-work/examples/22.png"
+import num23 from "/src/assets/our-work/examples/23.png"
+import num24 from "/src/assets/our-work/examples/24.png"
+import num25 from "/src/assets/our-work/examples/25.png"
+import num26 from "/src/assets/our-work/examples/26.png"
+import num27 from "/src/assets/our-work/examples/27.png"
+import num28 from "/src/assets/our-work/examples/28.png"
+import num29 from "/src/assets/our-work/examples/29.png"
+import num30 from "/src/assets/our-work/examples/30.png"
+import num31 from "/src/assets/our-work/examples/31.png"
+import num32 from "/src/assets/our-work/examples/32.jpg"
+import num33 from "/src/assets/our-work/examples/33.png"
+import num34 from "/src/assets/our-work/examples/34.png"
+import num35 from "/src/assets/our-work/examples/35.png"
+import num36 from "/src/assets/our-work/examples/36.png"
+import num37 from "/src/assets/our-work/examples/37.png"
+import num38 from "/src/assets/our-work/examples/38.png"
+import num39 from "/src/assets/our-work/examples/39.png"
+import num40 from "/src/assets/our-work/examples/40.png"
+import num41 from "/src/assets/our-work/examples/41.png"
+import num42 from "/src/assets/our-work/examples/42.png"
+import num43 from "/src/assets/our-work/examples/43.png"
+import num44 from "/src/assets/our-work/examples/44.png"
+import num45 from "/src/assets/our-work/examples/45.png"
+import num46 from "/src/assets/our-work/examples/46.png"
+import num47 from "/src/assets/our-work/examples/47.png"
+import num48 from "/src/assets/our-work/examples/48.png"
+import num49 from "/src/assets/our-work/examples/49.png"
+import num50 from "/src/assets/our-work/examples/50.png"
+import num51 from "/src/assets/our-work/examples/51.png"
+import num52 from "/src/assets/our-work/examples/52.png"
+import num53 from "/src/assets/our-work/examples/53.png"
+import num54 from "/src/assets/our-work/examples/54.png"
+import num55 from "/src/assets/our-work/examples/55.png"
+import num56 from "/src/assets/our-work/examples/56.png"
+import num57 from "/src/assets/our-work/examples/57.png"
+import num58 from "/src/assets/our-work/examples/58.png"
+import num59 from "/src/assets/our-work/examples/59.png"
+import num60 from "/src/assets/our-work/examples/60.png"
+import num61 from "/src/assets/our-work/examples/61.png"
+import num62 from "/src/assets/our-work/examples/62.jpg"
+import num63 from "/src/assets/our-work/examples/63.png"
+import num64 from "/src/assets/our-work/examples/64.jpg"
+import num65 from "/src/assets/our-work/examples/65.jpg"
+import num66 from "/src/assets/our-work/examples/66.jpg"
+import num67 from "/src/assets/our-work/examples/67.jpg"
+import num68 from "/src/assets/our-work/examples/68.jpg"
+import num69 from "/src/assets/our-work/examples/69.jpg"
+import num70 from "/src/assets/our-work/examples/70.jpg"
+import num71 from "/src/assets/our-work/examples/71.jpg"
 
+/* ——— arrays ——— */
 const logos = [
   cnnLogo,
   horizonLogo,
@@ -87,7 +91,7 @@ const logos = [
   natGeoLogo,
   espnLogo,
   pbsLogo,
-]
+] as const
 
 const cards = [
   {
@@ -438,33 +442,55 @@ const cards = [
     description: "",
     path: "/project/this-american-land-sold-on-organics/",
   },
-]
+] as const
 
 export const OurWork: React.FC = () => (
-  <div className="flex flex-col gap-4 py-20">
-    <div className="flex flex-wrap justify-center gap-4">
-      {logos.map((src) => (
-        <img key={src} src={src} decoding="async" className="w-32 xl:w-20" />
-      ))}
-    </div>
+  <>
+    <Helmet>
+      {/* give the first logo & card thumb a head-start */}
+      <link rel="preload" as="image" href={cnnLogo} />
+      <link rel="preload" as="image" href={num20} />
+      <title>Our Work | SkySee Video</title>
+      <meta
+        name="description"
+        content="Explore SkySee Video’s portfolio—broadcast promos, corporate marketing, documentaries and more."
+      />
+    </Helmet>
 
-    <div className="px-6">
-      <p className="text-center text-4xl">
-        SkySee Video has a wide range of corporate packaging and documentary
-        work. Scroll down to review some examples.
-      </p>
-
-      <div className="flex justify-center p-8">
-        <hr className="w-1/3 border-t-4 border-black" />
-      </div>
-
-      <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-        {cards.map((card) => (
-          <div key={card.image} className="content-visibility-auto">
-            <OurWorkCard {...card} />
-          </div>
+    <div className="flex flex-col gap-4 py-20">
+      {/* ——— client logos ——— */}
+      <div className="flex flex-wrap justify-center gap-4">
+        {logos.map((src, i) => (
+          <img
+            key={src}
+            src={src}
+            decoding="async"
+            loading={i > 3 ? "lazy" : undefined} /* eager-load first row */
+            className="w-32 xl:w-20"
+          />
         ))}
       </div>
+
+      {/* ——— intro copy ——— */}
+      <div className="px-6">
+        <p className="text-center text-4xl">
+          SkySee Video has a wide range of corporate packaging and documentary
+          work. Scroll down to review some examples.
+        </p>
+
+        <div className="flex justify-center p-8">
+          <hr className="w-1/3 border-t-4 border-black" />
+        </div>
+
+        {/* ——— gallery ——— */}
+        <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          {cards.map((card) => (
+            <div key={card.image} className="content-visibility-auto">
+              <OurWorkCard {...card} />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
-  </div>
+  </>
 )

@@ -2,6 +2,7 @@ import React from "react"
 import ReactDOM from "react-dom/client"
 import { App } from "./App"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
+import { HelmetProvider } from "react-helmet-async"
 //@ts-ignore
 import { registerSW } from "virtual:pwa-register"
 import { WindowSize } from "./containers/WindowSize"
@@ -14,7 +15,7 @@ const theme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#93c5fd", // tailwind blue 300
+      main: "#93c5fd",
     },
     background: {
       default: "#192231",
@@ -25,17 +26,19 @@ const theme = createTheme({
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Auth.Provider>
-      <WindowSize.Provider>
-        <Date.Provider>
-          <ThemeProvider theme={theme}>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>
-          </ThemeProvider>
-        </Date.Provider>
-      </WindowSize.Provider>
-    </Auth.Provider>
+    <HelmetProvider>
+      <Auth.Provider>
+        <WindowSize.Provider>
+          <Date.Provider>
+            <ThemeProvider theme={theme}>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </ThemeProvider>
+          </Date.Provider>
+        </WindowSize.Provider>
+      </Auth.Provider>
+    </HelmetProvider>
   </React.StrictMode>,
 )
 

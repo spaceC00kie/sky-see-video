@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sky See Video</title>
+
+    <!-- preload / preconnect for Vimeo -->
+    <link rel="preconnect" href="https://player.vimeo.com" />
+    <link rel="preconnect" href="https://i.vimeocdn.com" />
+    <link rel="preconnect" href="https://f.vimeocdn.com" />
+    <link rel="preload" as="script" href="https://player.vimeo.com/api/player.js" crossorigin />
+
     <meta
       name="description"
-      content="Keep track of the last time someone fed your fuzziest family member"
+      content="Business Videos That Connect to Your Audience. SkySee Video provides complete video production and graphic design, supporting companies with every step of the production process."
     />
     <link rel="icon" href="favicon.ico?v=2" type="image/x-icon" />
-    <link
-      rel="alternate icon"
-      href="/favicon.ico"
-      type="image/png"
-      sizes="16x16"
-    />
+    <link rel="alternate icon" href="/favicon.ico" type="image/png" sizes="16x16" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
     <link rel="mask-icon" href="/public/favicon.ico" color="#FFFFFF" />
     <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
-    <div id="root" />
+    <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -1,32 +1,56 @@
-import { useState } from "react"
+import { Helmet } from "react-helmet-async"
 import { CiMail } from "react-icons/ci"
-import { HomeCard1 } from "./HomeCard1"
 import { HiFilm } from "react-icons/hi"
 import { FaCartPlus } from "react-icons/fa"
 import { TiCamera } from "react-icons/ti"
-import { HomeCard2 } from "./HomeCard2"
-import { default as kompasThumbnail } from "/src/assets/home/kompas-thumbnail.jpg"
-import { default as hyundaiThumbnail } from "/src/assets/home/hyundai-thumbnail.png"
 import { Link } from "react-router-dom"
+
+import { HomeCard1 } from "./HomeCard1"
+import { HomeCard2 } from "./HomeCard2"
+
+import kompasThumbnail from "/src/assets/home/kompas-thumbnail.jpg"
+import hyundaiThumbnail from "/src/assets/home/hyundai-thumbnail.png"
 
 interface Props {}
 
-export const Home: React.FC<Props> = () => {
-  const [loaded, setLoaded] = useState(false)
+export const Home: React.FC<Props> = () => (
+  <>
+    <Helmet>
+      <link rel="preconnect" href="https://player.vimeo.com" />
+      <link rel="preconnect" href="https://i.vimeocdn.com" />
+      <link rel="preconnect" href="https://f.vimeocdn.com" />
+      <link
+        rel="preload"
+        as="script"
+        href="https://player.vimeo.com/api/player.js"
+        crossOrigin="anonymous"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href="https://i.vimeocdn.com/video/1742868944-1024x576.webp"
+        imageSrcSet="
+          https://i.vimeocdn.com/video/1742868944-640x360.webp 640w,
+          https://i.vimeocdn.com/video/1742868944-1024x576.webp 1024w"
+        imageSizes="(max-width: 64em) 100vw, 1024px"
+      />
+      <title>SkySee Video | Business Videos That Connect</title>
+      <meta
+        name="description"
+        content="Complete video production and graphic design—cinematic videography, marketing strategy and full post-production."
+      />
+    </Helmet>
 
-  return (
     <div className="flex flex-col items-center justify-center">
-      <div className="relative mx-auto my-6 aspect-video w-full max-w-[90em] border-2">
-        {!loaded && (
-          <div className="absolute inset-0 z-0 bg-stone-300 animate-pulse" />
-        )}
+      <div className="relative mx-auto my-6 aspect-video w-full max-w-[90em]">
+        <div className="absolute inset-0 grid place-content-center rounded-sm bg-stone-300" />
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
           className="absolute left-0 top-0 z-10 h-full w-full"
           style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-          onLoad={() => setLoaded(true)}
+          fetchpriority="high"
         />
       </div>
 
@@ -38,10 +62,10 @@ export const Home: React.FC<Props> = () => {
 
           <div className="flex flex-col gap-7 text-2xl">
             <p>
-              SkySee Video provides complete video production and graphic design,
-              supporting companies with every step of the production process.
+              SkySee Video provides complete video production and graphic
+              design, supporting companies with every step of the production
+              process.
             </p>
-
             <p>
               Demand for effective media increases every year, and so does your
               production schedule. With marketing departments stretched thin and
@@ -49,7 +73,6 @@ export const Home: React.FC<Props> = () => {
               for outside consultation and production support has never been
               greater.
             </p>
-
             <p>
               Picking the right team you can trust means less oversight, more
               efficient use of internal time &amp; resources, and the assurance
@@ -59,7 +82,6 @@ export const Home: React.FC<Props> = () => {
               media content, you've got marketing needs and we've got video
               solutions.
             </p>
-
             <p>
               Christiansen Communications is the parent company of SkySee Video.
             </p>
@@ -74,7 +96,6 @@ export const Home: React.FC<Props> = () => {
           </Link>
 
           <p className="text-3xl text-blue-500">Services</p>
-
           <hr />
 
           <div className="flex flex-col flex-wrap justify-evenly gap-5 text-center sm:flex-row">
@@ -96,7 +117,6 @@ export const Home: React.FC<Props> = () => {
           </div>
 
           <p className="text-3xl text-blue-500">Latest Projects</p>
-
           <hr />
 
           <div className="mx-auto grid max-w-fit justify-items-center gap-5 md:grid-cols-2">
@@ -116,5 +136,5 @@ export const Home: React.FC<Props> = () => {
         </div>
       </div>
     </div>
-  )
-}
+  </>
+)
