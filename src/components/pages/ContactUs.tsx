@@ -38,6 +38,7 @@ const defaultData: FormData = {
 
 export const ContactUs: React.FC = () => {
   const [data, setData] = useState<FormData>(defaultData)
+  const today = new Date().toISOString().split("T")[0]
 
   const input =
     (k: keyof FormData) =>
@@ -223,6 +224,7 @@ Services Needed: ${servicesSelected || "N/A"}`
               <input
                 type="date"
                 className="border p-2"
+                min={today}
                 value={data.completionDate}
                 onChange={input("completionDate")}
               />
