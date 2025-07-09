@@ -18,3 +18,6 @@
 - adjust font
 - when narrow, bullet points don't align properly on our services page
 - our services page: add links to each service as well as create each service's page
+- update home page to text from Soren
+- establish knowledge transfer for Soren
+- get soren to have the domain transferred to us
