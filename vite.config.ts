@@ -1,12 +1,12 @@
 import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
-import preload from "vite-plugin-preload"      // ⬅️ new, Vite-5-ready
+import preload from "vite-plugin-preload"
 import { VitePWA } from "vite-plugin-pwa"
 
 export default defineConfig({
   plugins: [
     react(),
-    preload(),                                 // auto-adds <link rel="modulepreload">
+    preload(),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg","favicon.ico","robots.txt","apple-touch-icon.png"],
