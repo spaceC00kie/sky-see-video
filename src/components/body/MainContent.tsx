@@ -1,6 +1,6 @@
 import { lazy, Suspense } from "react"
 import { Route, Routes } from "react-router-dom"
-import { cards } from "../pages/our-work/OurWork"
+import { cards } from "../pages/our-work/data"
 import { ProjectPage } from "../pages/our-work/ProjectPage"
 
 
