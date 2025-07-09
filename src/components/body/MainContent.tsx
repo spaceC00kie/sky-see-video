@@ -1,4 +1,5 @@
 import { lazy, Suspense } from "react"
+import { Spinner } from "../ui/Spinner"
 import { Route, Routes } from "react-router-dom"
 import { cards } from "../pages/our-work/OurWork"
 import { ProjectPage } from "../pages/our-work/ProjectPage"
@@ -25,7 +26,13 @@ const ContactUs = lazy(() =>
 export const MainContent: React.FC = () => (
   <div className="flex h-full justify-center">
     <div className="flex grow flex-col gap-3">
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <div className="grid h-full place-content-center">
+            <Spinner />
+          </div>
+        }
+      >
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
