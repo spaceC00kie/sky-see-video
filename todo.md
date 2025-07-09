@@ -17,3 +17,4 @@
 - only future dates on calendar
 - adjust font
 - when narrow, bullet points don't align properly on our services page
+- our services page: add links to each service as well as create each service's page
