@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 import { cards } from "../pages/our-work/OurWork"
 import { ProjectPage } from "../pages/our-work/ProjectPage"
 
+
 const Home = lazy(() =>
   import("../pages/home/Home").then((m) => ({ default: m.Home })),
 )
