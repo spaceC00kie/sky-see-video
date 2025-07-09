@@ -2,10 +2,10 @@ import { Helmet } from "react-helmet-async"
 import { AboutUsCard } from "./AboutUsCard"
 import { TedsAboutUsCard } from "./TedsAboutUsCard"
 
-import aboutUsBanner from "/src/assets/about-us/about-us-banner.png"
-import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg"
-import robinsonVil from "/src/assets/about-us/robinson-vil.jpg"
-import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg"
+import aboutUsBanner from "/src/assets/about-us/about-us-banner.png?format=webp"
+import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg?format=webp"
+import robinsonVil from "/src/assets/about-us/robinson-vil.jpg?format=webp"
+import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg?format=webp"
 
 interface Props {}
 

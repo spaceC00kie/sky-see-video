@@ -4,7 +4,7 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
-import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png"
+import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?format=webp"
 
 const db = getFirestore(firebaseApp)
 

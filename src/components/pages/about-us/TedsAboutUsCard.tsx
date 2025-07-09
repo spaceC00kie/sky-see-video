@@ -1,4 +1,4 @@
-import { default as tedIntorcio } from "/src/assets/about-us/ted-intorcio.jpg"
+import { default as tedIntorcio } from "/src/assets/about-us/ted-intorcio.jpg?format=webp"
 
 export const TedsAboutUsCard: React.FC = ({}) => {
   return (

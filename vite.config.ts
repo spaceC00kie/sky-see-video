@@ -2,10 +2,12 @@ import { defineConfig } from "vite"
 import react from "@vitejs/plugin-react"
 import preload from "vite-plugin-preload"
 import { VitePWA } from "vite-plugin-pwa"
+import { imagetools } from "vite-imagetools"
 
 export default defineConfig({
   plugins: [
     react(),
+    imagetools(),
     preload(),
     VitePWA({
       registerType: "autoUpdate",

@@ -8,8 +8,8 @@ import { Link } from "react-router-dom"
 import { HomeCard1 } from "./HomeCard1"
 import { HomeCard2 } from "./HomeCard2"
 
-import kompasThumbnail from "/src/assets/home/kompas-thumbnail.jpg"
-import hyundaiThumbnail from "/src/assets/home/hyundai-thumbnail.png"
+import kompasThumbnail from "/src/assets/home/kompas-thumbnail.jpg?format=webp"
+import hyundaiThumbnail from "/src/assets/home/hyundai-thumbnail.png?format=webp"
 
 interface Props {}
 

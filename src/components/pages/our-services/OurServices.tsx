@@ -2,11 +2,11 @@ import { Helmet } from "react-helmet-async"
 import { OurServicesCard1 } from "./OurServicesCard1"
 import { OurServicesCard2 } from "./OurServicesCard2"
 
-import ourServicesBanner from "/src/assets/our-services/our-services-banner.png"
-import construction from "/src/assets/our-services/construction.png"
-import tourism from "/src/assets/our-services/tourism.jpg"
-import corporate from "/src/assets/our-services/corporate.jpeg"
-import documentaries from "/src/assets/our-services/documentaries.jpeg"
+import ourServicesBanner from "/src/assets/our-services/our-services-banner.png?format=webp"
+import construction from "/src/assets/our-services/construction.png?format=webp"
+import tourism from "/src/assets/our-services/tourism.jpg?format=webp"
+import corporate from "/src/assets/our-services/corporate.jpeg?format=webp"
+import documentaries from "/src/assets/our-services/documentaries.jpeg?format=webp"
 
 interface Props {}
 
