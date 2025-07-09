@@ -1,6 +1,6 @@
 // components/header/HeaderLeft.tsx
 import { WindowSize } from "../../containers/WindowSize"
-import { default as skyseeLogo } from "/src/assets/skysee-7.png"
+import { Logo } from "./Logo"
 import { Link } from "react-router-dom"
 import { GiHamburgerMenu } from "react-icons/gi"
 
@@ -18,7 +18,7 @@ export const HeaderLeft: React.FC<Props> = ({ onMenuClick }) => {
         </button>
       ) : (
         <Link to="/" className="flex-none py-1">
-          <img src={skyseeLogo} className="h-16 w-auto" />
+          <Logo className="h-16 w-auto" />
         </Link>
       )}
     </div>
