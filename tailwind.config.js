@@ -6,6 +6,9 @@ module.exports = {
       square: "square",
     },
     extend: {
+      fontFamily: {
+        sans: ["Lato", "Helvetica Neue", "Helvetica", "Arial", "sans-serif"],
+      },
       corePlugins: {
         contentVisibility: true,
       },
