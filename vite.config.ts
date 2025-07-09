@@ -8,13 +8,13 @@ export default defineConfig({
   plugins: [
     react(),
     imagetools(),
-    ViteImageOptimizer({
-      jpeg: { quality: 82 },
-      png: { quality: 80 },
-      webp: { quality: 82 },
-      avif: { quality: 50 },
-      svg: { multipass: true },
-    }),
+    // ViteImageOptimizer({
+    //   jpeg: { quality: 82 },
+    //   png: { quality: 80 },
+    //   webp: { quality: 82 },
+    //   avif: { quality: 50 },
+    //   svg: { multipass: true },
+    // }),
     VitePWA({
       registerType: "autoUpdate",
       includeAssets: [

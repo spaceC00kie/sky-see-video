@@ -57,34 +57,35 @@ export const ContactUs: React.FC = () => {
         .filter(([, v]) => v)
         .map(
           ([k]) =>
-            (
+            ((
               {
                 preProduction: "Pre-Production",
                 production: "Production",
                 postProduction: "Post-Production",
               } as const
-            )[k],
+            )[k]),
         )
         .join(", ")
+
+      const emailBody = `New Project Inquiry
+
+Name: ${data.firstName} ${data.lastName}
+Email: ${data.email}
+Company: ${data.company}
+Description:
+${data.description}
+
+Target Completion Date: ${data.completionDate}
+Services Needed: ${servicesSelected || "N/A"}`
 
       await addDoc(collection(db, "mail"), {
         to: ["info@skyseevideo.com"],
         message: {
           subject: "New Project Inquiry",
-          html: `
-            <h2>New Project Inquiry</h2>
-            <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-            <p><strong>Email:</strong> ${data.email}</p>
-            <p><strong>Company:</strong> ${data.company}</p>
-            <p><strong>Description:</strong><br/>${data.description
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")
-              .replace(/\n/g, "<br/>")}</p>
-            <p><strong>Target Completion Date:</strong> ${data.completionDate}</p>
-            <p><strong>Services Needed:</strong> ${servicesSelected || "N/A"}</p>
-          `,
+          text: emailBody,
         },
       })
+
       Swal.fire({
         title: "Success!",
         text: "Your project details were sent. We’ll be in touch soon.",

@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { CiMail } from "react-icons/ci"
 import { HomeCard1 } from "./HomeCard1"
 import { HiFilm } from "react-icons/hi"
@@ -10,18 +11,25 @@ import { Link } from "react-router-dom"
 
 interface Props {}
 
-export const Home: React.FC<Props> = ({}) => {
+export const Home: React.FC<Props> = () => {
+  const [loaded, setLoaded] = useState(false)
+
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="relative mx-auto aspect-video w-full max-w-[90em] my-6">
+      <div className="relative mx-auto my-6 aspect-video w-full max-w-[90em] border-2">
+        {!loaded && (
+          <div className="absolute inset-0 z-0 bg-stone-300 animate-pulse" />
+        )}
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
-          className="absolute left-0 top-0 h-full w-full"
+          className="absolute left-0 top-0 z-10 h-full w-full"
           style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
+          onLoad={() => setLoaded(true)}
         />
       </div>
+
       <div className="flex max-w-[70em] flex-col gap-4 pb-20">
         <div className="flex w-full flex-col gap-10 px-6">
           <p className="text-3xl text-blue-500">
@@ -30,9 +38,8 @@ export const Home: React.FC<Props> = ({}) => {
 
           <div className="flex flex-col gap-7 text-2xl">
             <p>
-              SkySee Video provides complete video production and graphic
-              design, supporting companies with every step of the production
-              process.
+              SkySee Video provides complete video production and graphic design,
+              supporting companies with every step of the production process.
             </p>
 
             <p>
@@ -97,14 +104,12 @@ export const Home: React.FC<Props> = ({}) => {
               image={kompasThumbnail}
               title="Kompas Communications / Mission"
               description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company's mission statement and customer service."
-              // @todo connect path
               path=""
             />
             <HomeCard2
               image={hyundaiThumbnail}
               title="Hyundai HCEA / Amerigo Recycling"
               description="Hyundai Construction Equipment of America talked with the owner of Amerigo Recycling in Atlanta about his satisfaction with HCEA equipment, dedication to service, and quick turnaround on delivery."
-              // @todo connect path
               path=""
             />
           </div>
