@@ -88,11 +88,11 @@ export const Home: React.FC<Props> = () => (
           </div>
 
           <Link
-            className="flex w-64 items-center justify-center gap-2 rounded-sm bg-sky-600 p-3 text-white hover:bg-sky-500"
             to="/contact-us"
+            className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-sky-600 px-4 py-3 text-white hover:bg-sky-500"
           >
             <CiMail />
-            <p>Need an Estimate? Let's Talk</p>
+            <span>Need an Estimate? Let&rsquo;s Talk</span>
           </Link>
 
           <p className="text-3xl text-blue-500">Services</p>
@@ -124,13 +124,13 @@ export const Home: React.FC<Props> = () => (
               image={kompasThumbnail}
               title="Kompas Communications / Mission"
               description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company's mission statement and customer service."
-              path=""
+              path="/project/kompas-show-reel/"
             />
             <HomeCard2
               image={hyundaiThumbnail}
               title="Hyundai HCEA / Amerigo Recycling"
               description="Hyundai Construction Equipment of America talked with the owner of Amerigo Recycling in Atlanta about his satisfaction with HCEA equipment, dedication to service, and quick turnaround on delivery."
-              path=""
+              path="/project/hyundai-hcea-amerigo-recycling/"
             />
           </div>
         </div>

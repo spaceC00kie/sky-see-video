@@ -1,18 +1,10 @@
-- Home page
-  - connect links from HomeCard2
-- Our Work page
-- Our Services page
-- saturate assets folders
-- update paths to match old website exactly: services to services
 - favicon generation: https://realfavicongenerator.net/
 - send email from contact form
 - performance on Our Work page
-- only future dates on calendar
-- adjust font
-- when narrow, bullet points don't align properly on our services page
 - our services page: add links to each service as well as create each service's page
 - update home page to text from Soren
 - establish knowledge transfer for Soren
 - get soren to have the domain transferred to us
 - drop shadow on contact us page
 - captcha in front of contact form?
+- fill in the bottom part of the page for each work page item. Should be a carousel of images that link to other projects
