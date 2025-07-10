@@ -81,7 +81,8 @@ Target Completion Date: ${data.completionDate}
 Services Needed: ${servicesSelected || "N/A"}`
 
       await addDoc(collection(db, "mail"), {
-        to: ["info@skyseevideo.com"],
+        // @todo: change to info@skyseevideo.com
+        to: ["kirstie317@gmail.com"],
         message: {
           subject: "New Project Inquiry",
           text: emailBody,
@@ -122,7 +123,7 @@ Services Needed: ${servicesSelected || "N/A"}`
             fetchPriority="high"
           />
           <div className="absolute inset-0 flex items-end justify-center pb-20">
-            <p className="max-w-[90%] text-center text-3xl text-white drop-shadow-2xl">
+            <p className="max-w-[90%] text-center text-4xl text-white drop-shadow-3xl shadow-lg">
               We'd love to talk with you about your project. Give us a call
               today!
             </p>
