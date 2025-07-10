@@ -61,7 +61,7 @@ export const Header: React.FC = () => {
           </NavLink>
           <NavLink
             onClick={close}
-            to="/our-services"
+            to="/services"
             className="px-6 py-3 text-sm hover:bg-stone-500 hover:text-white"
           >
             OUR SERVICES
