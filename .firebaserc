@@ -1,6 +1,7 @@
 {
   "projects": {
-    "sky-see-video": "sky-see-video"
+    "sky-see-video": "sky-see-video",
+    "default": "sky-see-video"
   },
   "targets": {
     "sky-see-video": {
