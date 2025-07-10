@@ -3,10 +3,11 @@ import { AboutUsCard } from "./AboutUsCard"
 import { TedsAboutUsCard } from "./TedsAboutUsCard"
 import { HeroBanner } from "../../common/HeroBanner"
 
-import aboutUsBanner from "/src/assets/about-us/about-us-banner.png"
-import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg"
-import robinsonVil from "/src/assets/about-us/robinson-vil.jpg"
-import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg"
+import aboutUsBanner from "/src/assets/about-us/about-us-banner.png?width=1600&format=webp"
+import aboutUsBannerSrcset from "/src/assets/about-us/about-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
+import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg?width=400&format=webp"
+import robinsonVil from "/src/assets/about-us/robinson-vil.jpg?width=400&format=webp"
+import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg?width=400&format=webp"
 
 interface Props {}
 
@@ -25,7 +26,7 @@ export const AboutUs: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <HeroBanner img={aboutUsBanner} />
+      <HeroBanner img={aboutUsBanner} srcSet={aboutUsBannerSrcset} />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 pt-5 pb-40">
         <p className="text-2xl text-blue-500">ABOUT&nbsp;US</p>

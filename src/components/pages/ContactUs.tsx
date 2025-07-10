@@ -8,7 +8,8 @@ import { TextInput } from "../forms/TextInput"
 import { Textarea } from "../forms/Textarea"
 import { Checkbox } from "../forms/Checkbox"
 import { HeroBanner } from "../common/HeroBanner"
-import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png"
+import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
+import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
 
 const db = getFirestore(firebaseApp)
 
@@ -122,6 +123,7 @@ Services Needed: ${servicesSelected || "N/A"}`
       <div className="flex flex-col items-center justify-center">
         <HeroBanner
           img={contactUsBanner}
+          srcSet={contactUsBannerSrcset}
           heightClass="h-96"
           overlayText="We'd love to talk with you about your project. Give us a call today!"
         />
