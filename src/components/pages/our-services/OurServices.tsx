@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async"
+import { Outlet } from "react-router-dom"
 import { OurServicesCard1 } from "./OurServicesCard1"
 import { OurServicesCard2 } from "./OurServicesCard2"
-
 import ourServicesBanner from "/src/assets/our-services/our-services-banner.png"
 import construction from "/src/assets/our-services/construction.png"
 import tourism from "/src/assets/our-services/tourism.jpg"
@@ -84,28 +84,29 @@ export const OurServices: React.FC<Props> = () => (
             image={construction}
             title="Construction"
             description="Stand out at conventions, trade shows, social media and more. SkySee Video helps today’s home builders and developers highlight the uniqueness of their properties and developments with broadcast quality video packaging. Builders who are LEED compliant can take advantage of SkySee Video’s infrared cameras, emphasizing your company’s green commitment to the environment."
-            path=""
+            path="/our-services/construction"
           />
           <OurServicesCard2
             image={tourism}
             title="Tourism & Resort"
             description="Inspire travelers to pack their bags and book your rooms by capturing the beauty and uniqueness of your vacation paradise. Promote the once-in-a-lifetime experience you have to offer with broadcast quality video, shot on the ground and in the air. SkySee Video works with marketing teams to provide promotion video packages for social media, trade shows, conventions and more."
-            path=""
+            path="/our-services/tourism"
           />
           <OurServicesCard2
             image={corporate}
             title="Corporate Marketing"
             description="Capture your target audience with professional, polished video packaging, including 2-D and 3-D animation. Whether you’re a B2B, B2C or not-for-profit organization, SkySee Video has the solution. SkySee Video works with marketing teams to provide broadcast quality video, shot on the ground, and in the air for social media, trade shows, conventions and more."
-            path=""
+            path="/our-services/corporate"
           />
           <OurServicesCard2
             image={documentaries}
             title="Documentaries"
             description="Broadcast quality, on the ground and aerial cinematography, field producing, DAM, 2-D & 3-D animation, and more. SkySee Video has everything you need for your next documentary, including gimbals for smooth run ‘n gun interviews, walk ‘n talks, and b-roll. SkySee Video uses Frame.io’s Camera to Cloud, allowing clients/producers to view shots in real time."
-            path=""
+            path="/our-services/documentaries"
           />
         </div>
       </div>
     </div>
+    <Outlet />
   </>
 )

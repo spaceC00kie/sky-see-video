@@ -3,7 +3,10 @@ import { Spinner } from "../ui/Spinner"
 import { Route, Routes } from "react-router-dom"
 import { cards } from "../pages/our-work/OurWork"
 import { ProjectPage } from "../pages/our-work/ProjectPage"
-
+import { Construction } from "../pages/our-services/Construction"
+import { TourismAndResort } from "../pages/our-services/TourismAndResort"
+import { CorporateMarketing } from "../pages/our-services/CorporateMarketing"
+import { Documentaries } from "../pages/our-services/Documentaries"
 
 const Home = lazy(() =>
   import("../pages/home/Home").then((m) => ({ default: m.Home })),
@@ -37,7 +40,13 @@ export const MainContent: React.FC = () => (
           <Route path="/" element={<Home />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/our-work" element={<OurWork />} />
-          <Route path="/our-services" element={<OurServices />} />
+          <Route path="/our-services">
+            <Route index element={<OurServices />} />
+            <Route path="construction" element={<Construction />} />
+            <Route path="tourism" element={<TourismAndResort />} />
+            <Route path="corporate" element={<CorporateMarketing />} />
+            <Route path="documentaries" element={<Documentaries />} />
+          </Route>
           <Route path="/contact-us" element={<ContactUs />} />
           {cards.map((card) => (
             <Route
