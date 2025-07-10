@@ -128,7 +128,7 @@ Services Needed: ${servicesSelected || "N/A"}`
         <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
           <div className="grid place-content-center">
             <div className="flex-1 space-y-4">
-              <p className="text-xl">Make the most of your time & budget!</p>
+              <p className="text-2xl">Make the most of your time & budget!</p>
               <p>
                 It can be overwhelming to start a new video project. SkySee
                 Video is here to make the process easy for you. Complete this
