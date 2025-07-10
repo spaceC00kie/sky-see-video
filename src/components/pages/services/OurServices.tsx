@@ -88,7 +88,7 @@ export const OurServices: React.FC<Props> = () => (
             image={tourism}
             title="Tourism & Resort"
             description="Inspire travelers to pack their bags and book your rooms by capturing the beauty and uniqueness of your vacation paradise. Promote the once-in-a-lifetime experience you have to offer with broadcast quality video, shot on the ground and in the air. SkySee Video works with marketing teams to provide promotion video packages for social media, trade shows, conventions and more."
-            path="/corporate-video-marketing"
+            path="/tourism-videography"
           />
           <OurServicesCard2
             image={corporate}

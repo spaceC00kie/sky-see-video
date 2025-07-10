@@ -130,7 +130,7 @@ Services Needed: ${servicesSelected || "N/A"}`
         <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
           <div className="grid place-content-center">
             <div className="flex-1 space-y-4">
-              <p className="text-xl">Make the most of your time & budget!</p>
+              <p className="text-2xl">Make the most of your time & budget!</p>
               <p>
                 It can be overwhelming to start a new video project. SkySee
                 Video is here to make the process easy for you. Complete this
@@ -140,7 +140,13 @@ Services Needed: ${servicesSelected || "N/A"}`
               </p>
               <p>Located in Atlanta, Georgia</p>
               <div className="flex flex-col gap-1">
-                <p>Email: info@skyseevideo.com</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:info@skyseevideo.com" className="underline">
+                    info@skyseevideo.com
+                  </a>
+                </p>
+
                 <p>Phone: 678-304-9920</p>
               </div>
               <div className="flex gap-2">

@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async"
-import { OurWorkCard } from "./OurWorkCard"
-
 import { logos, cards } from "./ourWorkData"
+import { GalleryCard } from "../../common/GalleryCard"
 
 export const OurWork: React.FC = () => (
   <>
@@ -48,7 +47,7 @@ export const OurWork: React.FC = () => (
         <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
             <div key={card.image} className="content-visibility-auto">
-              <OurWorkCard {...card} />
+              <GalleryCard {...card} />
             </div>
           ))}
         </div>

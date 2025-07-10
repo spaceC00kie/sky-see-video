@@ -44,7 +44,7 @@ export const Home: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <div className="relative mx-auto my-6 aspect-video w-full max-w-[95em]">
+      <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
         <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
