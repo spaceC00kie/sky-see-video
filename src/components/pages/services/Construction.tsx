@@ -4,18 +4,22 @@ interface Props {}
 
 export const Construction: React.FC<Props> = ({}) => {
   return (
-    <div className="flex flex-col items-center gap-6 py-20 px-4 ">
-      <div className="aspect-video w-full max-w-4xl">
+    <div className="flex flex-col items-center justify-center">
+      <div className="relative mx-auto my-6 aspect-video w-full max-w-[95em]">
+        <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
         <iframe
           src="https://player.vimeo.com/video/193616058?h=af982b45c1&badge=0&autopause=0&player_id=0&app_id=58479"
+          className="absolute left-0 top-0 z-10 h-full w-full"
           title="Construction Videography | SkySee Video"
+          style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-          className="h-full w-full"
+          fetchpriority="high"
         />
       </div>
-      <div className="flex flex-col w-full max-w-4xl gap-8">
-        <div className="flex flex-col gap-3">
+
+      <div className="flex max-w-[70em] flex-col gap-8 pb-20">
+        <div className="flex w-full flex-col gap-4 px-6">
           <h1 className="text-3xl font-medium text-blue-500">
             Construction Videography | SkySee Video
           </h1>
@@ -42,7 +46,7 @@ export const Construction: React.FC<Props> = ({}) => {
             </p>
           </div>
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex w-full flex-col gap-4 px-6">
           <h2 className="text-blue-500 text-2xl">
             Our Construction Industry Video Services
           </h2>
