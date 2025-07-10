@@ -85,7 +85,8 @@ Target Completion Date: ${data.completionDate}
 Services Needed: ${servicesSelected || "N/A"}`
 
       await addDoc(collection(db, "mail"), {
-        to: ["info@skyseevideo.com"],
+        // @todo: change to info@skyseevideo.com
+        to: ["kirstie317@gmail.com"],
         message: {
           subject: "New Project Inquiry",
           text: emailBody,
