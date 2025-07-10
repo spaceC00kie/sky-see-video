@@ -4,10 +4,12 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
-import TextField from "@mui/material/TextField"
+import { TextInput } from "../forms/TextInput"
+import { Textarea } from "../forms/Textarea"
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
 import { DatePicker } from "@mui/x-date-pickers/DatePicker"
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
+import { createTheme, ThemeProvider } from "@mui/material/styles"
 import dayjs from "dayjs"
 import { Checkbox } from "../forms/Checkbox"
 import { HeroBanner } from "../common/HeroBanner"
@@ -168,28 +170,31 @@ Services Needed: ${servicesSelected || "N/A"}`
           </div>
 
           <LocalizationProvider dateAdapter={AdapterDayjs}>
+          <ThemeProvider
+            theme={createTheme({ palette: { mode: "light" } })}
+          >
           <form onSubmit={submit} className="flex flex-1 flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Name *</label>
               <div className="flex gap-2">
-                <TextField
+                <TextInput
                   required
                   placeholder="First"
-                  className="flex-1"
+                  containerClassName="flex-1"
                   value={data.firstName}
                   onChange={input("firstName")}
                 />
-                <TextField
+                <TextInput
                   required
                   placeholder="Last"
-                  className="flex-1"
+                  containerClassName="flex-1"
                   value={data.lastName}
                   onChange={input("lastName")}
                 />
               </div>
             </div>
 
-            <TextField
+            <TextInput
               label="Email *"
               type="email"
               required
@@ -197,15 +202,14 @@ Services Needed: ${servicesSelected || "N/A"}`
               onChange={input("email")}
             />
 
-            <TextField
+            <TextInput
               label="Company Name"
               value={data.company}
               onChange={input("company")}
             />
 
-            <TextField
+            <Textarea
               label="Description of Project"
-              multiline
               rows={4}
               value={data.description}
               onChange={input("description")}
@@ -221,7 +225,14 @@ Services Needed: ${servicesSelected || "N/A"}`
                   completionDate: newValue ? newValue.format("YYYY-MM-DD") : "",
                 })
               }
-              slotProps={{ textField: { className: "w-full" } }}
+              slotProps={{
+                textField: {
+                  size: "small",
+                  className: "w-full",
+                  InputProps: { sx: { p: 0 } },
+                  sx: { "& .MuiOutlinedInput-input": { p: 2 } },
+                },
+              }}
             />
 
             <fieldset className="flex flex-col gap-2">
@@ -251,6 +262,7 @@ Services Needed: ${servicesSelected || "N/A"}`
               Submit
             </button>
           </form>
+          </ThemeProvider>
           </LocalizationProvider>
         </div>
       </div>
