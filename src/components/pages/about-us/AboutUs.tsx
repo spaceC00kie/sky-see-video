@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async"
 import { AboutUsCard } from "./AboutUsCard"
 import { TedsAboutUsCard } from "./TedsAboutUsCard"
+import { HeroBanner } from "../../common/HeroBanner"
 
 import aboutUsBanner from "/src/assets/about-us/about-us-banner.png"
 import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg"
@@ -24,11 +25,7 @@ export const AboutUs: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <img
-        src={aboutUsBanner}
-        className="h-32 w-full object-cover object-top sm:h-96"
-        fetchPriority="high"
-      />
+      <HeroBanner img={aboutUsBanner} />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 pt-5 pb-40">
         <p className="text-2xl text-blue-500">ABOUT&nbsp;US</p>

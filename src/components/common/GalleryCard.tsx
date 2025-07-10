@@ -1,0 +1,35 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  path: string;
+  lazy?: boolean;
+}
+
+export const GalleryCard: React.FC<Props> = ({
+  image,
+  title,
+  description,
+  path,
+  lazy = false,
+}) => (
+  <div className="flex max-w-md flex-col items-start gap-2 text-lg">
+    <Link to={path} className="group relative block w-full overflow-hidden rounded">
+      <div className="aspect-[4/3] w-full overflow-hidden">
+        <img
+          src={image}
+          alt={title}
+          loading={lazy ? "lazy" : undefined}
+          decoding={lazy ? "async" : undefined}
+          className="h-full w-full object-cover"
+        />
+      </div>
+      <span className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-40" />
+    </Link>
+    <h2 className="font-bold">{title}</h2>
+    <p>{description}</p>
+  </div>
+);
