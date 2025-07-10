@@ -2,15 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 interface Props {
-  image: string;
-  title: string;
-  description: string;
-  path: string;
-  lazy?: boolean;
+  image: string
+  srcSet?: string
+  title: string
+  description: string
+  path: string
+  lazy?: boolean
 }
 
 export const GalleryCard: React.FC<Props> = ({
   image,
+  srcSet,
   title,
   description,
   path,
@@ -21,6 +23,8 @@ export const GalleryCard: React.FC<Props> = ({
       <div className="aspect-[4/3] w-full overflow-hidden">
         <img
           src={image}
+          srcSet={srcSet}
+          sizes="(max-width: 64em) 100vw, 300px"
           alt={title}
           loading={lazy ? "lazy" : undefined}
           decoding={lazy ? "async" : undefined}

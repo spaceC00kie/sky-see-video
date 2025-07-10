@@ -2,6 +2,7 @@ import { GalleryCard } from "../../common/GalleryCard";
 
 export interface OurWorkCardProps {
   image: string;
+  srcSet?: string;
   title: string;
   description: string;
   path: string;
@@ -9,7 +10,17 @@ export interface OurWorkCardProps {
 
 export const OurWorkCard: React.FC<OurWorkCardProps> = ({
   image,
+  srcSet,
   title,
   description,
   path,
-}) => <GalleryCard image={image} title={title} description={description} path={path} lazy />;
+}) => (
+  <GalleryCard
+    image={image}
+    srcSet={srcSet}
+    title={title}
+    description={description}
+    path={path}
+    lazy
+  />
+);

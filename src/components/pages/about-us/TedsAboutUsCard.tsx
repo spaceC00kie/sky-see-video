@@ -1,4 +1,4 @@
-import tedIntorcio from "/src/assets/about-us/ted-intorcio.jpg"
+import tedIntorcio from "/src/assets/about-us/ted-intorcio.jpg?width=400&format=webp"
 
 export const TedsAboutUsCard: React.FC = () => (
   <div className="flex flex-col items-start gap-2 text-lg">

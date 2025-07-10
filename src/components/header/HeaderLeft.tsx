@@ -1,6 +1,6 @@
 // components/header/HeaderLeft.tsx
 import { WindowSize } from "../../containers/WindowSize"
-import { default as skyseeLogo } from "/src/assets/skysee-7.png"
+import { default as skyseeLogo } from "/src/assets/skysee-7.png?format=webp"
 import { Link } from "react-router-dom"
 import { GiHamburgerMenu } from "react-icons/gi"
 

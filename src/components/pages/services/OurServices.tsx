@@ -2,12 +2,13 @@ import { Helmet } from "react-helmet-async"
 import { Outlet } from "react-router-dom"
 import { OurServicesCard1 } from "./OurServicesCard1"
 import { OurServicesCard2 } from "./OurServicesCard2"
-import ourServicesBanner from "/src/assets/services/services-banner.png"
+import ourServicesBanner from "/src/assets/services/services-banner.png?width=1600&format=webp"
+import ourServicesBannerSrcset from "/src/assets/services/services-banner.png?width=640;1024;1600&format=webp&as=srcset"
 import { HeroBanner } from "../../common/HeroBanner"
-import construction from "/src/assets/services/construction.png"
-import tourism from "/src/assets/services/tourism.jpg"
-import corporate from "/src/assets/services/corporate.jpeg"
-import documentaries from "/src/assets/services/documentaries.jpeg"
+import construction from "/src/assets/services/construction.png?format=webp"
+import tourism from "/src/assets/services/tourism.jpg?format=webp"
+import corporate from "/src/assets/services/corporate.jpeg?format=webp"
+import documentaries from "/src/assets/services/documentaries.jpeg?format=webp"
 
 interface Props {}
 
@@ -23,7 +24,7 @@ export const OurServices: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <HeroBanner img={ourServicesBanner} />
+      <HeroBanner img={ourServicesBanner} srcSet={ourServicesBannerSrcset} />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 py-20">
         <p className="text-xl text-blue-500">OUR&nbsp;SERVICES</p>
