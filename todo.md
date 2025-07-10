@@ -9,4 +9,4 @@
 - captcha in front of contact form?
 - fill in the bottom part of the page for each work page item. Should be a carousel of images that link to other projects
 - add appropriate helmet tags
--ensure paths match in our work
+- ensure paths match in our work
