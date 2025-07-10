@@ -125,7 +125,6 @@ Services Needed: ${servicesSelected || "N/A"}`
           heightClass="h-96"
           overlayText="We'd love to talk with you about your project. Give us a call today!"
         />
-
         <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
           <div className="grid place-content-center">
             <div className="flex-1 space-y-4">
