@@ -20,6 +20,7 @@
     "react-ga4": "^2.1.0",
     "react-helmet-async": "^2.0.5",
     "react-icons": "^4.7.1",
+    "react-material-ui-carousel": "latest",
     "react-router-dom": "^7.6.3",
     "sass": "^1.56.1",
     "sweetalert2": "^11.6.15",

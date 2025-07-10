@@ -1,4 +1,8 @@
 import { Helmet } from "react-helmet-async"
+import Carousel from "react-material-ui-carousel"
+import { useLocation } from "react-router-dom"
+import { cards } from "./ourWorkData"
+import { OurWorkCard } from "./OurWorkCard"
 
 interface Props {
   title: string
@@ -27,5 +31,29 @@ export const ProjectPage: React.FC<Props> = ({ title, description, videoUrl }) =
       <h1 className="text-3xl font-bold text-center">{title}</h1>
       <p className="max-w-4xl text-center">{description}</p>
     </div>
+    <RelatedProjects />
   </>
 )
+
+const RelatedProjects: React.FC = () => {
+  const { pathname } = useLocation()
+  const otherCards = cards.filter((c) => c.path !== pathname)
+
+  return (
+    <div className="w-full px-4 pb-20">
+      <h2 className="mb-4 text-center text-2xl font-bold">More Projects</h2>
+      <Carousel
+        navButtonsAlwaysVisible
+        indicators={false}
+        autoPlay={false}
+        className="mx-auto w-full max-w-5xl"
+      >
+        {otherCards.map((card) => (
+          <div key={card.path} className="flex justify-center py-4">
+            <OurWorkCard {...card} />
+          </div>
+        ))}
+      </Carousel>
+    </div>
+  )
+}
