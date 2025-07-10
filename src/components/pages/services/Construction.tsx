@@ -1,5 +1,3 @@
-import { Helmet } from "react-helmet-async"
-
 interface Props {}
 
 export const Construction: React.FC<Props> = ({}) => {
@@ -21,7 +19,7 @@ export const Construction: React.FC<Props> = ({}) => {
       <div className="flex max-w-[70em] flex-col gap-8 pb-20">
         <div className="flex w-full flex-col gap-4 px-6">
           <h1 className="text-3xl font-medium text-blue-500">
-            Construction Videography | SkySee Video
+            Construction Videography
           </h1>
           <div className="flex flex-col gap-3 text-lg">
             <p>
@@ -56,7 +54,7 @@ export const Construction: React.FC<Props> = ({}) => {
             ability to create custom construction industry videos for:
           </p>
           <ul className="list-[circle] ml-5">
-            <li className="">
+            <li>
               <span className="font-bold m-2">General Marketing.</span>
               <span>
                 We’ll work with your marketing team to provide specific,
@@ -72,7 +70,7 @@ export const Construction: React.FC<Props> = ({}) => {
                 video of the build from start to finish.
               </span>
             </li>
-            <li className="">
+            <li>
               <span className="font-bold m-2">
                 Full Service Video Production.
               </span>
@@ -85,7 +83,7 @@ export const Construction: React.FC<Props> = ({}) => {
                 GFX (logos & contact info) and music/sound design.
               </span>
             </li>
-            <li className="">
+            <li>
               <span className="font-bold m-2">Events.</span>
               <span>
                 If you’re hosting or participating in an upcoming trade show,

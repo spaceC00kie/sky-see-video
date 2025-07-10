@@ -138,7 +138,13 @@ Services Needed: ${servicesSelected || "N/A"}`
               </p>
               <p>Located in Atlanta, Georgia</p>
               <div className="flex flex-col gap-1">
-                <p>Email: info@skyseevideo.com</p>
+                <p>
+                  Email:{" "}
+                  <a href="mailto:info@skyseevideo.com" className="underline">
+                    info@skyseevideo.com
+                  </a>
+                </p>
+
                 <p>Phone: 678-304-9920</p>
               </div>
               <div className="flex gap-2">
