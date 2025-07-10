@@ -4,8 +4,11 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
-import { TextInput } from "../forms/TextInput"
-import { Textarea } from "../forms/Textarea"
+import TextField from "@mui/material/TextField"
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider"
+import { DatePicker } from "@mui/x-date-pickers/DatePicker"
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs"
+import dayjs from "dayjs"
 import { Checkbox } from "../forms/Checkbox"
 import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png"
@@ -42,7 +45,7 @@ const defaultData: FormData = {
 
 export const ContactUs: React.FC = () => {
   const [data, setData] = useState<FormData>(defaultData)
-  const today = new Date().toISOString().split("T")[0]
+  const today = dayjs()
 
   const input =
     (k: keyof FormData) =>
@@ -164,28 +167,29 @@ Services Needed: ${servicesSelected || "N/A"}`
             </div>
           </div>
 
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
           <form onSubmit={submit} className="flex flex-1 flex-col gap-4">
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Name *</label>
               <div className="flex gap-2">
-                <TextInput
+                <TextField
                   required
                   placeholder="First"
-                  containerClassName="flex-1"
+                  className="flex-1"
                   value={data.firstName}
                   onChange={input("firstName")}
                 />
-                <TextInput
+                <TextField
                   required
                   placeholder="Last"
-                  containerClassName="flex-1"
+                  className="flex-1"
                   value={data.lastName}
                   onChange={input("lastName")}
                 />
               </div>
             </div>
 
-            <TextInput
+            <TextField
               label="Email *"
               type="email"
               required
@@ -193,25 +197,31 @@ Services Needed: ${servicesSelected || "N/A"}`
               onChange={input("email")}
             />
 
-            <TextInput
+            <TextField
               label="Company Name"
               value={data.company}
               onChange={input("company")}
             />
 
-            <Textarea
+            <TextField
               label="Description of Project"
+              multiline
               rows={4}
               value={data.description}
               onChange={input("description")}
             />
 
-            <TextInput
+            <DatePicker
               label="Project Completion Date"
-              type="date"
-              min={today}
-              value={data.completionDate}
-              onChange={input("completionDate")}
+              minDate={today}
+              value={data.completionDate ? dayjs(data.completionDate) : null}
+              onChange={(newValue) =>
+                setData({
+                  ...data,
+                  completionDate: newValue ? newValue.format("YYYY-MM-DD") : "",
+                })
+              }
+              slotProps={{ textField: { className: "w-full" } }}
             />
 
             <fieldset className="flex flex-col gap-2">
@@ -241,6 +251,7 @@ Services Needed: ${servicesSelected || "N/A"}`
               Submit
             </button>
           </form>
+          </LocalizationProvider>
         </div>
       </div>
     </>
