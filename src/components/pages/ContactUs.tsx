@@ -4,6 +4,10 @@ import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { addDoc, collection, getFirestore } from "firebase/firestore"
 import { firebaseApp } from "../../../firestore.config"
+import { TextInput } from "../forms/TextInput"
+import { Textarea } from "../forms/Textarea"
+import { Checkbox } from "../forms/Checkbox"
+import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png"
 
 const db = getFirestore(firebaseApp)
@@ -115,19 +119,11 @@ Services Needed: ${servicesSelected || "N/A"}`
       </Helmet>
 
       <div className="flex flex-col items-center justify-center">
-        <div className="relative h-96 w-full">
-          <img
-            src={contactUsBanner}
-            className="h-full w-full object-cover object-top"
-            fetchPriority="high"
-          />
-          <div className="absolute inset-0 flex items-end justify-center pb-20">
-            <p className="max-w-[90%] text-center text-3xl text-white drop-shadow-2xl">
-              We'd love to talk with you about your project. Give us a call
-              today!
-            </p>
-          </div>
-        </div>
+        <HeroBanner
+          img={contactUsBanner}
+          heightClass="h-96"
+          overlayText="We'd love to talk with you about your project. Give us a call today!"
+        />
 
         <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
           <div className="grid place-content-center">
@@ -172,92 +168,70 @@ Services Needed: ${servicesSelected || "N/A"}`
             <div className="flex flex-col gap-2">
               <label className="font-semibold">Name *</label>
               <div className="flex gap-2">
-                <input
+                <TextInput
                   required
                   placeholder="First"
-                  className="flex-1 border p-2"
+                  containerClassName="flex-1"
                   value={data.firstName}
                   onChange={input("firstName")}
                 />
-                <input
+                <TextInput
                   required
                   placeholder="Last"
-                  className="flex-1 border p-2"
+                  containerClassName="flex-1"
                   value={data.lastName}
                   onChange={input("lastName")}
                 />
               </div>
             </div>
 
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Email *</label>
-              <input
-                type="email"
-                required
-                className="border p-2"
-                value={data.email}
-                onChange={input("email")}
-              />
-            </div>
+            <TextInput
+              label="Email *"
+              type="email"
+              required
+              value={data.email}
+              onChange={input("email")}
+            />
 
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Company Name</label>
-              <input
-                className="border p-2"
-                value={data.company}
-                onChange={input("company")}
-              />
-            </div>
+            <TextInput
+              label="Company Name"
+              value={data.company}
+              onChange={input("company")}
+            />
 
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Description of Project</label>
-              <textarea
-                rows={4}
-                className="border p-2"
-                value={data.description}
-                onChange={input("description")}
-              />
-            </div>
+            <Textarea
+              label="Description of Project"
+              rows={4}
+              value={data.description}
+              onChange={input("description")}
+            />
 
-            <div className="flex flex-col gap-2">
-              <label className="font-semibold">Project Completion Date</label>
-              <input
-                type="date"
-                className="border p-2"
-                min={today}
-                value={data.completionDate}
-                onChange={input("completionDate")}
-              />
-            </div>
+            <TextInput
+              label="Project Completion Date"
+              type="date"
+              min={today}
+              value={data.completionDate}
+              onChange={input("completionDate")}
+            />
 
             <fieldset className="flex flex-col gap-2">
               <legend className="font-semibold">Services Needed</legend>
 
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={data.services.preProduction}
-                  onChange={service("preProduction")}
-                />
-                Pre-Production (Mood Boards, Scripts, Style Framing, Branding &
-                Logo Development)
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={data.services.production}
-                  onChange={service("production")}
-                />
-                Production – Aerial & On-The-Ground Videography
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={data.services.postProduction}
-                  onChange={service("postProduction")}
-                />
-                Post-Production – Editing, 2D & 3D Animation and Sound Design
-              </label>
+              <Checkbox
+                label="Pre-Production (Mood Boards, Scripts, Style Framing, Branding & Logo Development)"
+                checked={data.services.preProduction}
+                onChange={service("preProduction")}
+              />
+              <Checkbox
+                label="Production – Aerial & On-The-Ground Videography"
+                checked={data.services.production}
+                onChange={service("production")}
+              />
+              <Checkbox
+                label="Post-Production – Editing, 2D & 3D Animation and Sound Design"
+                checked={data.services.postProduction}
+                onChange={service("postProduction")}
+              />
             </fieldset>
 
             <button

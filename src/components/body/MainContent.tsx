@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react"
 import { Spinner } from "../ui/Spinner"
 import { Route, Routes } from "react-router-dom"
-import { cards } from "../pages/our-work/OurWork"
+import { cards } from "../pages/our-work/ourWorkData"
 import { ProjectPage } from "../pages/our-work/ProjectPage"
 import { Construction } from "../pages/services/Construction"
 import { TourismAndResort } from "../pages/services/TourismAndResort"
