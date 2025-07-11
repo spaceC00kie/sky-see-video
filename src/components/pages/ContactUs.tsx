@@ -1,4 +1,5 @@
 import { useState, ChangeEvent, FormEvent } from "react"
+import ReCAPTCHA from "react-google-recaptcha"
 import { Helmet } from "react-helmet-async"
 import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
@@ -38,6 +39,7 @@ const defaultData: FormData = {
 
 export const ContactUs: React.FC = () => {
   const [data, setData] = useState<FormData>(defaultData)
+  const [captchaValue, setCaptchaValue] = useState<string | null>(null)
   const today = new Date().toISOString().split("T")[0]
 
   const input =
@@ -54,6 +56,13 @@ export const ContactUs: React.FC = () => {
 
   const submit = async (e: FormEvent) => {
     e.preventDefault()
+    if (!captchaValue) {
+      Swal.fire({
+        title: "Please verify you're not a robot",
+        icon: "warning",
+      })
+      return
+    }
     try {
       const servicesSelected = Object.entries(data.services)
         .filter(([, v]) => v)
@@ -95,6 +104,7 @@ Services Needed: ${servicesSelected || "N/A"}`
         icon: "success",
       })
       setData(defaultData)
+      setCaptchaValue(null)
     } catch {
       Swal.fire({
         title: "Something went wrong",
@@ -260,6 +270,11 @@ Services Needed: ${servicesSelected || "N/A"}`
                 Post-Production – Editing, 2D & 3D Animation and Sound Design
               </label>
             </fieldset>
+
+            <ReCAPTCHA
+              sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
+              onChange={setCaptchaValue}
+            />
 
             <button
               type="submit"
