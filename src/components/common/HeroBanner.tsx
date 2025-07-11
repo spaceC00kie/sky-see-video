@@ -2,6 +2,7 @@ import React from "react"
 
 interface Props {
   img: string
+  srcSet?: string
   alt?: string
   heightClass?: string
   overlayText?: React.ReactNode
@@ -9,6 +10,7 @@ interface Props {
 
 export const HeroBanner: React.FC<Props> = ({
   img,
+  srcSet,
   alt = "",
   heightClass = "h-32 sm:h-96",
   overlayText,
@@ -16,6 +18,8 @@ export const HeroBanner: React.FC<Props> = ({
   <div className={`relative w-full ${heightClass}`}>
     <img
       src={img}
+      srcSet={srcSet}
+      sizes="100vw"
       alt={alt}
       className="h-full w-full object-cover object-top"
       fetchPriority="high"
