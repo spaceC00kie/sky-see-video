@@ -1,8 +1,15 @@
+import { Helmet } from "react-helmet-async"
+
 interface Props {}
 
 export const Documentaries: React.FC<Props> = ({}) => {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <>
+      <Helmet>
+        <title>Documentary Videography | SkySee Video</title>
+      </Helmet>
+
+      <div className="flex flex-col items-center justify-center">
       <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
         <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
         <iframe
@@ -55,5 +62,6 @@ export const Documentaries: React.FC<Props> = ({}) => {
         </div>
       </div>
     </div>
+    </>
   )
 }
