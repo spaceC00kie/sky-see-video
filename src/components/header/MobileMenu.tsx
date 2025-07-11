@@ -1,17 +1,17 @@
-import { NavLink } from "react-router-dom";
-import { IoClose } from "react-icons/io5";
-import { NAV_ITEMS, QUOTE_ITEM } from "../common/NavItems";
+import { NavLink } from "react-router-dom"
+import { IoClose } from "react-icons/io5"
+import { NAV_ITEMS, QUOTE_ITEM } from "../common/NavItems"
 
 interface Props {
-  open: boolean;
-  onClose: () => void;
+  open: boolean
+  onClose: () => void
 }
 
 export const MobileMenu: React.FC<Props> = ({ open, onClose }) => (
   <>
     <div
       onClick={onClose}
-      className={`fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+      className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 ${
         open ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
     />
@@ -39,4 +39,4 @@ export const MobileMenu: React.FC<Props> = ({ open, onClose }) => (
       </div>
     </nav>
   </>
-);
+)

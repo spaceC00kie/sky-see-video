@@ -1,4 +1,3 @@
-import { motion } from "framer-motion"
 import { Header } from "./components/header/Header"
 import { MainContent } from "./components/body/MainContent"
 import ReactGA from "react-ga4"

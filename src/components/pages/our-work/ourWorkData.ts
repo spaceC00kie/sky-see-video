@@ -18,7 +18,7 @@ import pbsLogo from "/src/assets/our-work/pbs-logo.png?format=webp"
 
 export interface WorkCard {
   image: string
-  srcSet?: string
+  srcSet: string
   title: string
   description: string
   path: string

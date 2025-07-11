@@ -20,13 +20,13 @@ export const OurWork: React.FC = () => (
 
     <div className="flex flex-col gap-4 py-20">
       {/* ——— client logos ——— */}
-      <div className="flex flex-wrap justify-center gap-4">
+      <div className="xl:grid xl:grid-flow-col gap-4 flex flex-wrap justify-center">
         {logos.map((src, i) => (
           <img
             key={src}
             src={src}
             decoding="async"
-            loading={i > 3 ? "lazy" : undefined} /* eager-load first row */
+            loading="eager"
             className="w-32 xl:w-20"
           />
         ))}
@@ -46,7 +46,10 @@ export const OurWork: React.FC = () => (
         {/* ——— gallery ——— */}
         <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
-            <div key={card.image} className="content-visibility-auto">
+            <div
+              key={card.image}
+              className="content-visibility-auto flex justify-center"
+            >
               <GalleryCard {...card} />
             </div>
           ))}
