@@ -18,7 +18,7 @@ export const GalleryCard: React.FC<Props> = ({
   path,
   lazy = false,
 }) => (
-  <div className="flex max-w-md flex-col items-start gap-2 text-lg">
+  <div className="flex max-w-md flex-col items-start gap-2 text-lg w-full">
     <Link
       to={path}
       className="group relative block w-full overflow-hidden rounded"
