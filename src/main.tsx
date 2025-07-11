@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async"
 //@ts-ignore
 import { registerSW } from "virtual:pwa-register"
 import { WindowSize } from "./containers/WindowSize"
+import { ProjectCarousel } from "./containers/ProjectCarousel"
 import "./index.scss"
 import { BrowserRouter } from "react-router-dom"
 
@@ -25,13 +26,15 @@ const theme = createTheme({
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <HelmetProvider>
+      <ProjectCarousel.Provider>
         <WindowSize.Provider>
-            <ThemeProvider theme={theme}>
-              <BrowserRouter>
-                <App />
-              </BrowserRouter>
-            </ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <BrowserRouter>
+              <App />
+            </BrowserRouter>
+          </ThemeProvider>
         </WindowSize.Provider>
+      </ProjectCarousel.Provider>
     </HelmetProvider>
   </React.StrictMode>,
 )

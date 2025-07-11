@@ -1,8 +1,11 @@
 import { Helmet } from "react-helmet-async"
-import Carousel from "react-material-ui-carousel"
+import SliderLib from "react-slick"
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Slider: React.FC<any> = SliderLib as any
 import { useLocation } from "react-router-dom"
 import { cards } from "./ourWorkData"
 import { OurWorkCard } from "./OurWorkCard"
+import { ProjectCarousel } from "../../../containers/ProjectCarousel"
 
 interface Props {
   title: string
@@ -38,22 +41,30 @@ export const ProjectPage: React.FC<Props> = ({ title, description, videoUrl }) =
 const RelatedProjects: React.FC = () => {
   const { pathname } = useLocation()
   const otherCards = cards.filter((c) => c.path !== pathname)
+  const { slide, setSlide } = ProjectCarousel.useContainer()
+
+  const settings = {
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: slide,
+    afterChange: (current: number) => setSlide(current),
+    responsive: [
+      { breakpoint: 1024, settings: { slidesToShow: 2 } },
+      { breakpoint: 640, settings: { slidesToShow: 1 } },
+    ],
+  }
 
   return (
     <div className="w-full px-4 pb-20">
       <h2 className="mb-4 text-center text-2xl font-bold">More Projects</h2>
-      <Carousel
-        navButtonsAlwaysVisible
-        indicators={false}
-        autoPlay={false}
-        className="mx-auto w-full max-w-5xl"
-      >
+      <Slider {...settings} className="mx-auto w-full max-w-5xl">
         {otherCards.map((card) => (
-          <div key={card.path} className="flex justify-center py-4">
+          <div key={card.path} className="px-2">
             <OurWorkCard {...card} />
           </div>
         ))}
-      </Carousel>
+      </Slider>
     </div>
   )
 }
