@@ -46,7 +46,10 @@ export const OurWork: React.FC = () => (
         {/* ——— gallery ——— */}
         <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
           {cards.map((card) => (
-            <div key={card.image} className="content-visibility-auto">
+            <div
+              key={card.image}
+              className="content-visibility-auto flex justify-center"
+            >
               <GalleryCard {...card} />
             </div>
           ))}

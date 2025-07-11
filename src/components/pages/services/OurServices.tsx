@@ -15,7 +15,18 @@ interface Props {}
 export const OurServices: React.FC<Props> = () => (
   <>
     <Helmet>
-      <link rel="preload" as="image" href={ourServicesBanner} />
+      <link
+        rel="preload"
+        as="image"
+        href={ourServicesBanner}
+        fetchPriority="high"
+      />
+      <link
+        rel="preload"
+        as="image"
+        href={ourServicesBannerSrcset}
+        fetchPriority="high"
+      />
       <title>Services | SkySee Video</title>
       <meta
         name="description"
