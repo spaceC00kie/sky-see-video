@@ -57,7 +57,6 @@ export const ProjectPage: React.FC<Props> = ({
             visibleSlides={visibleSlides}
             dragEnabled
             touchEnabled
-            preventVerticalScrollOnTouch
             isPlaying
             infinite={false}
             className="w-full"
