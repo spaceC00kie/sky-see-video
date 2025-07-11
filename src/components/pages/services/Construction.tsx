@@ -1,7 +1,12 @@
+import { Helmet } from "react-helmet-async"
+
 interface Props {}
 
-export const Construction: React.FC<Props> = ({}) => {
-  return (
+export const Construction: React.FC<Props> = () => (
+  <>
+    <Helmet>
+      <title>Construction Videography | SkySee Video</title>
+    </Helmet>
     <div className="flex flex-col items-center justify-center">
       <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
         <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
@@ -99,5 +104,5 @@ export const Construction: React.FC<Props> = ({}) => {
         </div>
       </div>
     </div>
-  )
-}
+  </>
+)
