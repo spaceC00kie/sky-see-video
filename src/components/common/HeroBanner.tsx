@@ -27,7 +27,7 @@ export const HeroBanner: React.FC<Props> = ({
     {overlayText && (
       <div className="absolute inset-0 flex items-end justify-center pb-20">
         <div className="relative inline-block">
-          <span className="pointer-events-none absolute inset-0 rounded-full bg-stone-800/80 blur-xl" />
+          <span className="pointer-events-none absolute inset-1 rounded-full bg-stone-900/80 blur-2xl" />
           <p className="relative z-10 px-6 py-4 text-center text-3xl text-white drop-shadow-2xl">
             {overlayText}
           </p>
