@@ -14,13 +14,14 @@ export const ProjectPage: React.FC<Props> = ({ title, description, videoUrl }) =
     </Helmet>
     <div className="flex flex-col items-center gap-4 py-20 px-4">
       {videoUrl && (
-        <div className="aspect-video w-full max-w-4xl">
+        <div className="relative mx-auto mb-6 aspect-video w-full max-w-4xl">
+          <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
           <iframe
             src={videoUrl}
             title={title}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            className="h-full w-full"
+            className="absolute left-0 top-0 z-10 h-full w-full"
           />
         </div>
       )}
