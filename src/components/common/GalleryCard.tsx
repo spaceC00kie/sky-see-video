@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"
+import { Link } from "react-router-dom"
 
 interface Props {
   image: string
@@ -19,15 +19,18 @@ export const GalleryCard: React.FC<Props> = ({
   lazy = false,
 }) => (
   <div className="flex max-w-md flex-col items-start gap-2 text-lg">
-    <Link to={path} className="group relative block w-full overflow-hidden rounded">
+    <Link
+      to={path}
+      className="group relative block w-full overflow-hidden rounded"
+    >
       <div className="aspect-[4/3] w-full overflow-hidden">
         <img
           src={image}
           srcSet={srcSet}
           sizes="(max-width: 64em) 100vw, 300px"
           alt={title}
-          loading={lazy ? "lazy" : undefined}
-          decoding={lazy ? "async" : undefined}
+          loading="lazy"
+          decoding="async"
           className="h-full w-full object-cover"
         />
       </div>
@@ -36,4 +39,4 @@ export const GalleryCard: React.FC<Props> = ({
     <h2 className="font-bold">{title}</h2>
     <p>{description}</p>
   </div>
-);
+)
