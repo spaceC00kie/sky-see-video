@@ -8,6 +8,7 @@ import { registerSW } from "virtual:pwa-register"
 import { WindowSize } from "./containers/WindowSize"
 import "./index.scss"
 import { BrowserRouter } from "react-router-dom"
+import { ScrollToTop } from "./components/ScrollToTop"
 
 const theme = createTheme({
   palette: {
@@ -28,6 +29,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
         <WindowSize.Provider>
             <ThemeProvider theme={theme}>
               <BrowserRouter>
+                <ScrollToTop />
                 <App />
               </BrowserRouter>
             </ThemeProvider>

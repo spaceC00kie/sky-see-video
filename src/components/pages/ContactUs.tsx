@@ -2,12 +2,9 @@ import { useState, ChangeEvent, FormEvent } from "react"
 import { Helmet } from "react-helmet-async"
 import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
-import { addDoc, collection, getFirestore } from "firebase/firestore"
-import { firebaseApp } from "../../../firestore.config"
 import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
 import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
-
 import {
   TextField,
   Checkbox,
@@ -22,7 +19,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker"
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
 
 const muiTheme = createTheme({ palette: { mode: "light" } })
-const db = getFirestore(firebaseApp)
+
+// @todo get soren to sign up and give you the access key, paste here
+const WEB3FORMS_ACCESS_KEY = "8b464d25-3c6f-4a8e-a029-033e6e23086d"
 
 interface FormData {
   firstName: string
@@ -67,51 +66,85 @@ export const ContactUs: React.FC = () => {
         services: { ...data.services, [k]: e.target.checked },
       })
 
-  const submit = async (e: FormEvent) => {
+  const submit = (e: FormEvent) => {
     e.preventDefault()
-    try {
-      const servicesSelected = Object.entries(data.services)
-        .filter(([, v]) => v)
-        .map(
-          ([k]) =>
-            ((
-              {
-                preProduction: "Pre-Production",
-                production: "Production",
-                postProduction: "Post-Production",
-              } as const
-            )[k]),
-        )
-        .join(", ")
-      const dateString =
-        data.completionDate?.toISOString().split("T")[0] ?? "N/A"
-      const emailBody = `New Project Inquiry
 
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Company: ${data.company}
-Description:
-${data.description}
+    Swal.fire({
+      title: "Sending…",
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading(),
+    })
 
-Target Completion Date: ${dateString}
-Services Needed: ${servicesSelected || "N/A"}`
-      await addDoc(collection(db, "mail"), {
-        to: ["kirstie317@gmail.com"],
-        message: { subject: "New Project Inquiry", text: emailBody },
+    const servicesArr = Object.entries(data.services)
+      .filter(([, v]) => v)
+      .map(
+        ([k]) =>
+          ((
+            {
+              preProduction: "Pre-Production",
+              production: "Production",
+              postProduction: "Post-Production",
+            } as const
+          )[k]),
+      )
+
+    const servicesText = servicesArr.join(", ") || "N/A"
+    const dateString = data.completionDate?.toISOString().split("T")[0] ?? "N/A"
+
+    const plainBody = [
+      "New Project Inquiry",
+      `Name: ${data.firstName} ${data.lastName}`,
+      `Email: ${data.email}`,
+      `Company: ${data.company || "N/A"}`,
+      "",
+      "Description:",
+      data.description || "N/A",
+      "",
+      `Target Completion Date: ${dateString}`,
+      `Services Needed: ${servicesText}`,
+    ].join("\n")
+
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
+        subject: "New Project Inquiry",
+        from_name: `${data.firstName} ${data.lastName}`,
+        replyto: data.email,
+        first_name: data.firstName,
+        last_name: data.lastName,
+        company: data.company || "N/A",
+        completion_date: dateString,
+        services_needed: servicesText,
+        message: plainBody,
+      }),
+    })
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.success) {
+          Swal.close()
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Your project details were sent. We’ll be in touch soon.",
+          })
+          setData(defaultData)
+        } else {
+          throw new Error(res.message)
+        }
       })
-      Swal.fire({
-        title: "Success!",
-        text: "Your project details were sent. We’ll be in touch soon.",
-        icon: "success",
+      .catch(() => {
+        Swal.close()
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong",
+          text: "Please call 678-304-9920 or email info@skyseevideo.com directly.",
+        })
       })
-      setData(defaultData)
-    } catch {
-      Swal.fire({
-        title: "Something went wrong",
-        text: "Please call 678-304-9920 or email info@skyseevideo.com directly.",
-        icon: "error",
-      })
-    }
   }
 
   return (
@@ -131,11 +164,12 @@ Services Needed: ${servicesSelected || "N/A"}`
             img={contactUsBanner}
             srcSet={contactUsBannerSrcset}
             heightClass="h-96"
+            alt="Contact SkySee Video"
             overlayText="We'd love to talk with you about your project. Give us a call today!"
           />
 
           <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
-            <div className="grid place-content-center w-full md:w-1/2">
+            <div className="grid w-full place-content-center md:w-1/2">
               <div className="flex-1 space-y-4">
                 <p className="text-2xl">Make the most of your time & budget!</p>
                 <p>
@@ -158,6 +192,7 @@ Services Needed: ${servicesSelected || "N/A"}`
                 <div className="flex gap-2">
                   <a
                     href="https://www.instagram.com/skyseevideo/"
+                    aria-label="Instagram"
                     className="group grid h-16 w-16 place-content-center rounded-full border-2 border-cyan-700 transition-colors hover:bg-cyan-700"
                   >
                     <RiInstagramLine
@@ -167,6 +202,7 @@ Services Needed: ${servicesSelected || "N/A"}`
                   </a>
                   <a
                     href="https://www.facebook.com/SkySeeVideo/"
+                    aria-label="Facebook"
                     className="group grid h-16 w-16 place-content-center rounded-full border-2 border-blue-800 transition-colors hover:bg-blue-800"
                   >
                     <RiFacebookFill
@@ -180,7 +216,7 @@ Services Needed: ${servicesSelected || "N/A"}`
 
             <form
               onSubmit={submit}
-              className="flex w-full md:w-1/2 flex-col gap-4"
+              className="flex w-full flex-col gap-4 md:w-1/2"
             >
               <div className="flex gap-2">
                 <TextField
@@ -234,7 +270,7 @@ Services Needed: ${servicesSelected || "N/A"}`
                   label="Project Completion Date"
                   disablePast
                   value={data.completionDate}
-                  onChange={(newDate: Date | null) =>
+                  onChange={(newDate) =>
                     setData({ ...data, completionDate: newDate })
                   }
                   slotProps={{

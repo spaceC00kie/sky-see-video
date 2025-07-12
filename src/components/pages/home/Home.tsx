@@ -8,10 +8,7 @@ import { Link } from "react-router-dom"
 import { HomeCard1 } from "./HomeCard1"
 import { HomeCard2 } from "./HomeCard2"
 
-import kompasThumbnail from "/src/assets/home/kompas-thumbnail.jpg?width=600&format=webp"
-import kompasThumbnailSrcset from "/src/assets/home/kompas-thumbnail.jpg?width=300;600&format=webp&as=srcset"
-import hyundaiThumbnail from "/src/assets/home/hyundai-thumbnail.png?width=600&format=webp"
-import hyundaiThumbnailSrcset from "/src/assets/home/hyundai-thumbnail.png?width=300;600&format=webp&as=srcset"
+import { cards as workCards } from "../our-work/ourWorkData"
 
 interface Props {}
 
@@ -49,6 +46,7 @@ export const Home: React.FC<Props> = () => (
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
           className="absolute left-0 top-0 z-10 h-full w-full"
+          title="SkySee Video Reel"
           style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
@@ -88,7 +86,7 @@ export const Home: React.FC<Props> = () => (
 
           <Link
             to="/contact-us"
-            className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-sky-600 px-4 py-3 text-white hover:bg-sky-500"
+            className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-sky-700 px-4 py-3 text-white hover:bg-sky-600"
           >
             <CiMail />
             <span>Need an Estimate? Let&rsquo;s Talk</span>
@@ -119,20 +117,9 @@ export const Home: React.FC<Props> = () => (
           <hr />
 
           <div className="mx-auto grid max-w-fit justify-items-center gap-5 md:grid-cols-2">
-            <HomeCard2
-              image={kompasThumbnail}
-              srcSet={kompasThumbnailSrcset}
-              title="Kompas Communications / Mission"
-              description="Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company's mission statement and customer service."
-              path="/project/kompas-show-reel/"
-            />
-            <HomeCard2
-              image={hyundaiThumbnail}
-              srcSet={hyundaiThumbnailSrcset}
-              title="Hyundai HCEA / Amerigo Recycling"
-              description="Hyundai Construction Equipment of America talked with the owner of Amerigo Recycling in Atlanta about his satisfaction with HCEA equipment, dedication to service, and quick turnaround on delivery."
-              path="/project/hyundai-hcea-amerigo-recycling/"
-            />
+            {workCards.slice(0, 2).map((card) => (
+              <HomeCard2 key={card.title} {...card} />
+            ))}
           </div>
         </div>
       </div>

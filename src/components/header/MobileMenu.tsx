@@ -22,7 +22,7 @@ export const MobileMenu: React.FC<Props> = ({ open, onClose }) => (
     >
       <div className="flex flex-col">
         <div className="flex w-full justify-end">
-          <button onClick={onClose} className="p-2">
+          <button onClick={onClose} className="p-2" aria-label="Close menu">
             <IoClose size={35} />
           </button>
         </div>
