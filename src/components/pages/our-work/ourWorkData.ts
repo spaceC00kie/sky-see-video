@@ -308,7 +308,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Shop MLR video: Get the hottest gear from your favorite Major League Rugby squad. Whether it’s jerseys, caps or workout gear … you can get everything you need at ShopMLR.com",
     path: "/project/major-league-rugby-pro-shop/",
-    videoUrl: "",
+    videoUrl: "https://player.vimeo.com/video/819562647?h=c9c10f1f70&dnt=1",
   },
   {
     image: num37,
@@ -317,7 +317,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "13-Part Series on families who immigrated to the United States. 3 generations of each family were interviewed for this series, with each generation offering its own unique perspective on America.",
     path: "/project/mbn-alhurra-the-melting-pot/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/-eHAiKjgp4U?si=Jq1v0cIwl-Sr7TJy",
   },
   {
     image: num38,
@@ -326,7 +326,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Daniel Weiss, CEO of the Metropolitan Museum of Art, finds poetry in one soldier’s life and captures a portrait of the Vietnam era with his new book, In That Time. The book is a tribute to Major Michael O’Donnell.",
     path: "/project/nantucket-book-festival-at-home-with-authors-in-that-time/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/2-DV7fKOjlg?si=EcUjRmxRIllhO09b",
   },
   {
     image: num39,
@@ -335,7 +335,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "You could say that Crocker Snow Jr. has been writing his latest book, about the tiny island off the coast of Nantucket called Muskeget, ever since his father flew him there some 70 years ago. He shares his memories of a bygone era.",
     path: "/project/nantucket-book-festival-at-home-with-authors-crocker-snow-jr-with-rob-cocuzzo/",
-    videoUrl: "",
+      videoUrl: "https://www.youtube.com/embed/FuyDvRxljOQ?si=0lThOwgmIVewMKYi",
   },
   {
     image: num40,
@@ -344,7 +344,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Elaine Weiss, author of The Woman’s Hour: The Great Fight To Win The Vote, says her book “is about how change is made in a democracy….what it takes to make change, and how hard it is.”",
     path: "/project/nantucket-book-festival-at-home-with-authors-the-right-to-vote/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/OCbok-mTtqw?si=p_p-KHYOo1Mzn2oy",
   },
   {
     image: num41,
