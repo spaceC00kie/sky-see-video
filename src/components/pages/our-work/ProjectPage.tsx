@@ -35,49 +35,50 @@ const FadeSlider: React.FC<{ visibleSlides: number }> = ({ visibleSlides }) => {
   const isAtStart = currentSlide === 0
   const isAtEnd = currentSlide + visibleSlides >= cards.length
 
-  const maskStops = [
-    ...(isAtStart ? ["black 0px"] : ["transparent 0px", "black 40px"]),
-    ...(isAtEnd
-      ? ["black 100%"]
-      : ["black calc(100% - 25px)", "transparent 100%"]),
-  ]
-
-  const mask = `linear-gradient(to right, ${maskStops.join(", ")})`
-
   return (
-    <Slider
-      className="px-0 sm:px-6"
-      style={{ WebkitMaskImage: mask, maskImage: mask }}
-    >
-      {cards.map((card, idx) => (
-        <Slide key={card.path} index={idx} className="border-b px-1 sm:px-3">
-          <Link
-            to={card.path}
-            className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
-          >
-            <div className="relative aspect-[4/3] border-b w-full flex-none overflow-hidden">
-              <picture>
-                {card.srcSet && <source srcSet={card.srcSet} />}
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="absolute inset-0 h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </picture>
-            </div>
-            <div className="grow p-4">
-              <h3 className="mb-1 sm:text-lg text-3xl font-semibold">
-                {card.title}
-              </h3>
-              <p className="line-clamp-2 sm:text-sm text-2xl text-gray-700">
-                {card.description}
-              </p>
-            </div>
-          </Link>
-        </Slide>
-      ))}
-    </Slider>
+    <div className="relative">
+      <Slider className="px-0 sm:px-6">
+        {cards.map((card, idx) => (
+          <Slide key={card.path} index={idx} className="border-b px-1 sm:px-3">
+            <Link
+              to={card.path}
+              className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
+            >
+              <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">
+                <picture>
+                  {card.srcSet && <source srcSet={card.srcSet} />}
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+              <div className="grow p-4">
+                <h3 className="mb-1 text-3xl font-semibold sm:text-lg">
+                  {card.title}
+                </h3>
+                <p className="line-clamp-2 text-2xl text-gray-700 sm:text-sm">
+                  {card.description}
+                </p>
+              </div>
+            </Link>
+          </Slide>
+        ))}
+      </Slider>
+
+      <div
+        className={`pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent transition-opacity duration-300 ${
+          isAtStart ? "opacity-0" : "opacity-100"
+        }`}
+      />
+      <div
+        className={`pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent transition-opacity duration-300 ${
+          isAtEnd ? "opacity-0" : "opacity-100"
+        }`}
+      />
+    </div>
   )
 }
 
@@ -125,7 +126,7 @@ export const ProjectPage: React.FC<Props> = ({
             </h1>
             <button
               onClick={share}
-              className="flex h-12 w-28 grow-0 items-center justify-evenly gap-2 rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
+              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
             >
               <FiShare2 /> Share
             </button>
@@ -147,13 +148,13 @@ export const ProjectPage: React.FC<Props> = ({
           >
             <ButtonBack
               aria-label="Previous"
-              className="absolute left-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-stone-500 bg-stone-300/80 p-3 backdrop-blur-sm transition hover:bg-stone-100/90 focus:outline-none disabled:hidden"
+              className="absolute left-2.5 top-1/2 z-20 -translate-y-1/2 rounded-full border border-stone-500 bg-stone-300/80 p-3 backdrop-blur-sm transition hover:bg-stone-100/90 focus:outline-none disabled:hidden"
             >
               <FiChevronLeft size={30} />
             </ButtonBack>
             <ButtonNext
               aria-label="Next"
-              className="absolute right-2 top-1/2 z-20 -translate-y-1/2 rounded-full border border-stone-500 bg-stone-300/80 p-3 backdrop-blur-sm transition hover:bg-stone-100/90 focus:outline-none disabled:hidden"
+              className="absolute right-2.5 top-1/2 z-20 -translate-y-1/2 rounded-full border border-stone-500 bg-stone-300/80 p-3 backdrop-blur-sm transition hover:bg-stone-100/90 focus:outline-none disabled:hidden"
             >
               <FiChevronRight size={30} />
             </ButtonNext>
