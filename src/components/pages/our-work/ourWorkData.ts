@@ -236,7 +236,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "During the pandemic, Proper Cloth introduced a high-end line of masks with comfort, style, and efficacy as key selling points. Tracked GFX highlight the technology and product’s superiority.",
     path: "/project/proper-cloth-cvc-masks/",
-    videoUrl: "",
+    videoUrl: "https://player.vimeo.com/video/447499019?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
   },
   {
     image: num29,
@@ -371,7 +371,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Black Friday promotional event for Mercedes-Benz of Buckhead. SkySee Video’s camera and drone crew followed the Black Friday caravan around the Buckhead area, including the Lennox Mall roundabout.",
     path: "/project/mercedes-benz-of-buckhead-black-friday/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/szwy97LvzTU?si=m6dlkqwLp-Ss031i",
   },
   {
     image: num44,
@@ -398,7 +398,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
     path: "/project/rasin-mwen-l-amour-du-fric/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
   },
   {
     image: num47,
@@ -437,7 +437,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "When Friendship Baptist Church, its school and gym were devastated by a hurricane, Horizon Roofing was able to secure $2,500,000 to repair all of the damages and restore the property.",
     path: "/project/horizon-roofing-friendship-baptist-church/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/4dSox8UpUOk?si=bw7guCQdxn7baiUE",
   },
   {
     image: num51,
@@ -446,7 +446,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-lifestyle-girlfriends-getaway/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/0PMK2CxixFw?si=q2RQ1HHNSWDwEXbT",
   },
   {
     image: num52,
@@ -559,7 +559,7 @@ export const cards: readonly WorkCard[] = [
     title: "Kearns Marine Construction",
     description: "",
     path: "/project/kearns-marine-construction/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/FeSDL4-uLHk?si=h36lM215x6g4UZSB",
   },
   {
     image: num65,
