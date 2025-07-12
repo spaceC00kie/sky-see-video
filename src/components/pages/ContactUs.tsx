@@ -21,8 +21,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
 
 const muiTheme = createTheme({ palette: { mode: "light" } })
 
-// Replace this access key with the one from your Web3Forms dashboard
-const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_ACCESS_KEY"
+const WEB3FORMS_ACCESS_KEY = "8b464d25-3c6f-4a8e-a029-033e6e23086d"
 
 interface FormData {
   firstName: string
@@ -69,12 +68,6 @@ export const ContactUs: React.FC = () => {
 
   const submit = (e: FormEvent) => {
     e.preventDefault()
-
-    Swal.fire({
-      title: "Sending…",
-      allowOutsideClick: false,
-      didOpen: () => Swal.showLoading(),
-    })
 
     const servicesArr = Object.entries(data.services)
       .filter(([, v]) => v)

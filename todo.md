@@ -1,4 +1,3 @@
-- send email from contact form
-*- establish knowledge transfer for Soren
+- fill in missing links for our work pages in the ourWorkData.ts file
+- establish knowledge transfer for Soren
 - get soren to have the domain transferred to us
-- captcha in front of contact form?
