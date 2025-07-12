@@ -1,7 +1,3 @@
-- favicon generation: https://realfavicongenerator.net/
-- send email from contact form
-*- update home page to email from Soren
-*- establish knowledge transfer for Soren
+- fill in missing links for our work pages in the ourWorkData.ts file
+- get soren to sign up for web3forms with their info@skyseevideo.com email
 - get soren to have the domain transferred to us
-- captcha in front of contact form?
-- add appropriate helmet tags

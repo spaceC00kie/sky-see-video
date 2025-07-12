@@ -55,6 +55,7 @@ export const ProjectPage: React.FC<Props> = ({
             naturalSlideHeight={5}
             totalSlides={cards.length}
             visibleSlides={visibleSlides}
+            step={visibleSlides}
             dragEnabled
             touchEnabled
             isPlaying
@@ -78,44 +79,59 @@ export const ProjectPage: React.FC<Props> = ({
               </>
             )}
 
-            {/* Slider with opacity-fade on both edges */}
             <Slider
               className="px-6 sm:px-8"
               style={{
-                // fade 0–40 px on left and right
                 WebkitMaskImage:
                   "linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 25px), transparent 100%)",
                 maskImage:
                   "linear-gradient(to right, transparent 0px, black 40px, black calc(100% - 25px), transparent 100%)",
               }}
             >
-              {cards.map((card, idx) => (
-                <Slide key={card.path} index={idx} className="px-2 sm:px-3 border-b">
-                  <Link
-                    to={card.path}
-                    className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
+              {cards.map(
+                (
+                  {
+                    path,
+                    srcSet,
+                    image,
+                    title: cardTitle,
+                    description: cardDescription,
+                  },
+                  idx,
+                ) => (
+                  <Slide
+                    key={path}
+                    index={idx}
+                    className="px-2 sm:px-3 border-b-4 border-t-4 border-stone-200"
                   >
-                    <div className="relative aspect-[4/3] w-full flex-none overflow-hidden">
-                      <picture>
-                        {card.srcSet && <source srcSet={card.srcSet} />}
-                        <img
-                          src={card.image}
-                          alt={card.title}
-                          className="absolute inset-0 h-full w-full object-cover"
-                          loading="lazy"
-                        />
-                      </picture>
-                    </div>
+                    <Link
+                      to={path}
+                      className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
+                    >
+                      <div className="relative aspect-[4/3] w-full flex-none overflow-hidden">
+                        <picture>
+                          {srcSet && <source srcSet={srcSet} />}
+                          <img
+                            src={image}
+                            alt={cardTitle}
+                            className="absolute inset-0 h-full w-full object-cover"
+                            loading="lazy"
+                          />
+                        </picture>
+                      </div>
 
-                    <div className="grow p-4">
-                      <h3 className="mb-1 text-lg font-semibold">{card.title}</h3>
-                      <p className="line-clamp-2 text-sm text-gray-700">
-                        {card.description}
-                      </p>
-                    </div>
-                  </Link>
-                </Slide>
-              ))}
+                      <div className="grow p-4">
+                        <h3 className="mb-1 text-lg font-semibold">
+                          {cardTitle}
+                        </h3>
+                        <p className="line-clamp-2 text-sm text-gray-700">
+                          {cardDescription}
+                        </p>
+                      </div>
+                    </Link>
+                  </Slide>
+                ),
+              )}
             </Slider>
           </CarouselProvider>
         </div>
