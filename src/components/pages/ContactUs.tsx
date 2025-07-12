@@ -164,6 +164,7 @@ export const ContactUs: React.FC = () => {
             img={contactUsBanner}
             srcSet={contactUsBannerSrcset}
             heightClass="h-96"
+            alt="Contact SkySee Video"
             overlayText="We'd love to talk with you about your project. Give us a call today!"
           />
 
@@ -191,6 +192,7 @@ export const ContactUs: React.FC = () => {
                 <div className="flex gap-2">
                   <a
                     href="https://www.instagram.com/skyseevideo/"
+                    aria-label="Instagram"
                     className="group grid h-16 w-16 place-content-center rounded-full border-2 border-cyan-700 transition-colors hover:bg-cyan-700"
                   >
                     <RiInstagramLine
@@ -200,6 +202,7 @@ export const ContactUs: React.FC = () => {
                   </a>
                   <a
                     href="https://www.facebook.com/SkySeeVideo/"
+                    aria-label="Facebook"
                     className="group grid h-16 w-16 place-content-center rounded-full border-2 border-blue-800 transition-colors hover:bg-blue-800"
                   >
                     <RiFacebookFill

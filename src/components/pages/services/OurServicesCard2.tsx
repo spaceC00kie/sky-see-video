@@ -16,7 +16,7 @@ export const OurServicesCard2: React.FC<Props> = ({
   <div className="flex flex-col items-center justify-start gap-3 p-5 lg:w-64">
     <div className="grid place-content-center pb-2">
       <Link to={path}>
-        <img src={image} className="h-36 w-36 rounded-full" />
+        <img src={image} alt={title} className="h-36 w-36 rounded-full" />
       </Link>
     </div>
     <Link to={path}>
