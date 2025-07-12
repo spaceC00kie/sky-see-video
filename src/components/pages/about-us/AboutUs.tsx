@@ -14,11 +14,21 @@ interface Props {}
 export const AboutUs: React.FC<Props> = () => (
   <>
     <Helmet>
-      <link rel="preload" as="image" href={aboutUsBanner} fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href={aboutUsBanner}
+        fetchPriority="high"
+      />
       <link rel="preload" as="image" href={sorenChristiansen} />
       <link rel="preload" as="image" href={robinsonVil} />
       <link rel="preload" as="image" href={charlesFrederick} />
-      <link rel="preload" as="image" href={aboutUsBannerSrcset} />
+      <link
+        rel="preload"
+        as="image"
+        imageSrcSet={aboutUsBannerSrcset}
+        imageSizes="(max-width: 64em) 100vw, 1600px"
+      />
       <title>About Us | SkySee Video</title>
       <meta
         name="description"
