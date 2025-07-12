@@ -33,7 +33,7 @@ export const Home: React.FC<Props> = () => (
           https://i.vimeocdn.com/video/1742868944-1024x576.webp 1024w"
         imageSizes="(max-width: 64em) 100vw, 1024px"
       />
-      <title>SkySee Video | Business Videos That Connect</title>
+      <title>SkySee Video | Make an Impact</title>
       <meta
         name="description"
         content="Complete video production and graphic design—cinematic videography, marketing strategy and full post-production."
@@ -56,34 +56,31 @@ export const Home: React.FC<Props> = () => (
 
       <div className="flex max-w-[70em] flex-col gap-4 pb-20">
         <div className="flex w-full flex-col gap-10 px-6">
-          <p className="text-3xl text-blue-500">
-            Business Videos That Connect to Your Audience
-          </p>
+          <p className="text-3xl text-blue-500">Make an Impact</p>
 
           <div className="flex flex-col gap-7 text-2xl">
             <p>
-              SkySee Video provides complete video production and graphic
-              design, supporting companies with every step of the production
-              process.
+              SkySee Video produces award-winning videos that promote people,
+              products & services. Our brand-driven video packaging highlights
+              the best of our corporate clients, reinforcing the quality and
+              value of what they offer potential clients. We support marketing
+              teams, agencies, and organizations with the creative and technical
+              firepower to bring ideas to life, building upon the strategies and
+              brand-driven direction developed by internal marketing
+              departments. We’re team players, communicating that vision to let
+              current, and potential, clients know that “This is the company we
+              want to partner with for our company’s future.”
             </p>
             <p>
-              Demand for effective media increases every year, and so does your
-              production schedule. With marketing departments stretched thin and
-              team members working overtime to meet project deadlines, the need
-              for outside consultation and production support has never been
-              greater.
-            </p>
-            <p>
-              Picking the right team you can trust means less oversight, more
-              efficient use of internal time &amp; resources, and the assurance
-              that deadlines are met. At SkySee Video, we'll respect, protect
-              and project your brand, creating work that drives viewers and
-              grows your business. From long-form campaigns to snackable social
-              media content, you've got marketing needs and we've got video
-              solutions.
-            </p>
-            <p>
-              Christiansen Communications is the parent company of SkySee Video.
+              SkySee Video also produces cinematic documentary footage that
+              captures the essence of the producers’ and director’s vision. We
+              shoot 4K 3-camera interviews, walk ‘n talks with gimbals for
+              smooth sequences, and eye-catching aerial footage that draws in
+              viewers and reinforces the subject at hand. Our services include
+              complete packages, including pre-production, production and
+              post-production, but we’re also delighted to jump aboard and
+              provide a la carte services to get your team across the finish
+              line.
             </p>
           </div>
 
