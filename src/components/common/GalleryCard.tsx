@@ -16,9 +16,8 @@ export const GalleryCard: React.FC<Props> = ({
   title,
   description,
   path,
-  lazy = false,
 }) => (
-  <div className="flex max-w-md flex-col items-start gap-2 text-lg w-full">
+  <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
     <Link
       to={path}
       className="group relative block w-full overflow-hidden rounded"
@@ -27,7 +26,6 @@ export const GalleryCard: React.FC<Props> = ({
         <img
           src={image}
           srcSet={srcSet}
-          sizes="(max-width: 64em) 100vw, 300px"
           alt={title}
           loading="lazy"
           decoding="async"
