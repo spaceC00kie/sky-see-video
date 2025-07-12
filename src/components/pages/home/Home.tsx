@@ -49,6 +49,7 @@ export const Home: React.FC<Props> = () => (
         <iframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0"
           className="absolute left-0 top-0 z-10 h-full w-full"
+          title="SkySee Video Reel"
           style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
@@ -91,7 +92,7 @@ export const Home: React.FC<Props> = () => (
 
           <Link
             to="/contact-us"
-            className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-sky-600 px-4 py-3 text-white hover:bg-sky-500"
+            className="inline-flex w-fit items-center gap-2 self-start rounded-sm bg-sky-700 px-4 py-3 text-white hover:bg-sky-600"
           >
             <CiMail />
             <span>Need an Estimate? Let&rsquo;s Talk</span>

@@ -27,7 +27,11 @@ export const AboutUs: React.FC<Props> = () => (
     </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <HeroBanner img={aboutUsBanner} srcSet={aboutUsBannerSrcset} />
+      <HeroBanner
+        img={aboutUsBanner}
+        srcSet={aboutUsBannerSrcset}
+        alt="SkySee Video team"
+      />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 pt-5 pb-40">
         <p className="text-2xl text-blue-500">ABOUT&nbsp;US</p>

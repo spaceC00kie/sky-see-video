@@ -17,7 +17,7 @@ export const DesktopNav: React.FC = () => {
         <div className="pt-4 text-center">678-304-9920</div>
         <NavLink
           to={QUOTE_ITEM.path}
-          className="whitespace-nowrap rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
+          className="whitespace-nowrap rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-600"
         >
           {QUOTE_ITEM.label}
         </NavLink>
