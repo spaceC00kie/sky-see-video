@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useContext } from "react"
+import { useState, useEffect, useContext } from "react";
+import * as React from "react";
 import { Helmet } from "react-helmet-async"
 import { Link } from "react-router-dom"
 import {

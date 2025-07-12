@@ -1,4 +1,4 @@
-import React from "react"
+import * as React from "react";
 import { default as skyseeLogo } from "/src/assets/skysee-7.png?format=webp"
 import { WindowSize } from "../../containers/WindowSize"
 import { Link } from "react-router-dom"
