@@ -1269,28 +1269,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:^0.8.2":
-  version: 0.8.8
-  resolution: "@emotion/is-prop-valid@npm:0.8.8"
-  dependencies:
-    "@emotion/memoize": 0.7.4
-  checksum: bb7ec6d48c572c540e24e47cc94fc2f8dec2d6a342ae97bc9c8b6388d9b8d283862672172a1bb62d335c02662afe6291e10c71e9b8642664a8b43416cdceffac
-  languageName: node
-  linkType: hard
-
 "@emotion/is-prop-valid@npm:^1.3.0":
   version: 1.3.1
   resolution: "@emotion/is-prop-valid@npm:1.3.1"
   dependencies:
     "@emotion/memoize": ^0.9.0
   checksum: fe6549d54f389e1a17cb02d832af7ee85fb6ea126fc18d02ca47216e8ff19332c1983f4a0ba68602cfcd3b325ffd4ebf0b2d0c6270f1e7e6fe3fca4ba7741e1a
-  languageName: node
-  linkType: hard
-
-"@emotion/memoize@npm:0.7.4":
-  version: 0.7.4
-  resolution: "@emotion/memoize@npm:0.7.4"
-  checksum: 4e3920d4ec95995657a37beb43d3f4b7d89fed6caa2b173a4c04d10482d089d5c3ea50bbc96618d918b020f26ed6e9c4026bbd45433566576c1f7b056c3271dc
   languageName: node
   linkType: hard
 
@@ -2344,6 +2328,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jkroso/type@npm:1":
+  version: 1.1.1
+  resolution: "@jkroso/type@npm:1.1.1"
+  checksum: c2bb3cf56d8225e8e74ccb5e1dcc44132ab89056389f18ac05866c540873a4b330034e78cc3f95628f80ed576e58d4a6dea7dbcd09447992187ee3f0883a8509
+  languageName: node
+  linkType: hard
+
 "@jridgewell/gen-mapping@npm:^0.3.12, @jridgewell/gen-mapping@npm:^0.3.2, @jridgewell/gen-mapping@npm:^0.3.5":
   version: 0.3.12
   resolution: "@jridgewell/gen-mapping@npm:0.3.12"
@@ -2385,71 +2376,6 @@ __metadata:
     "@jridgewell/resolve-uri": ^3.1.0
     "@jridgewell/sourcemap-codec": ^1.4.14
   checksum: 5e92eeafa5131a4f6b7122063833d657f885cb581c812da54f705d7a599ff36a75a4a093a83b0f6c7e95642f5772dd94753f696915e8afea082237abf7423ca3
-  languageName: node
-  linkType: hard
-
-"@motionone/animation@npm:^10.18.0":
-  version: 10.18.0
-  resolution: "@motionone/animation@npm:10.18.0"
-  dependencies:
-    "@motionone/easing": ^10.18.0
-    "@motionone/types": ^10.17.1
-    "@motionone/utils": ^10.18.0
-    tslib: ^2.3.1
-  checksum: 841cb9f4843a89e5e4560b9f960f52cbe78afc86f87c769f71e9edb3aadd53fb87982b7e11914428f228b29fd580756be531369c2ffac06432550afa4e87d1c3
-  languageName: node
-  linkType: hard
-
-"@motionone/dom@npm:^10.15.3":
-  version: 10.18.0
-  resolution: "@motionone/dom@npm:10.18.0"
-  dependencies:
-    "@motionone/animation": ^10.18.0
-    "@motionone/generators": ^10.18.0
-    "@motionone/types": ^10.17.1
-    "@motionone/utils": ^10.18.0
-    hey-listen: ^1.0.8
-    tslib: ^2.3.1
-  checksum: b11f5366b05d1a93d7df0c91923f0339412e5eb65de2010b1d0484bcbb8027d352334722ce6b839f1be776585d849d1bcbee9d96b2445f6bb6e82301fe67bbeb
-  languageName: node
-  linkType: hard
-
-"@motionone/easing@npm:^10.18.0":
-  version: 10.18.0
-  resolution: "@motionone/easing@npm:10.18.0"
-  dependencies:
-    "@motionone/utils": ^10.18.0
-    tslib: ^2.3.1
-  checksum: 6bd37f7a9d5a88f868cc0ad6e47d2ba8d9fefd7da84fccfea7ed77ec08c2e6d1e42df88dda462665102a5cf03f748231a1a077de7054b5a8ccb0fbf36f61b1e7
-  languageName: node
-  linkType: hard
-
-"@motionone/generators@npm:^10.18.0":
-  version: 10.18.0
-  resolution: "@motionone/generators@npm:10.18.0"
-  dependencies:
-    "@motionone/types": ^10.17.1
-    "@motionone/utils": ^10.18.0
-    tslib: ^2.3.1
-  checksum: 51a0e075681697b11d0771998cac8c76a745f00141502f81adb953896992b7f49478965e4afe696bc83361afaae8d2f1057d71c25b21035fe67258ff73764f1c
-  languageName: node
-  linkType: hard
-
-"@motionone/types@npm:^10.17.1":
-  version: 10.17.1
-  resolution: "@motionone/types@npm:10.17.1"
-  checksum: 3fa74db64e371e61a7f7669d7d541d11c9a8dd871032d59c69041e3b2e07a67ad2ed8767cb9273bac90eed4e1f76efc1f14c8673c2e9a288f6070ee0fef64a25
-  languageName: node
-  linkType: hard
-
-"@motionone/utils@npm:^10.18.0":
-  version: 10.18.0
-  resolution: "@motionone/utils@npm:10.18.0"
-  dependencies:
-    "@motionone/types": ^10.17.1
-    hey-listen: ^1.0.8
-    tslib: ^2.3.1
-  checksum: a27f9afde693a0cbbbcb33962b12bbe40dd2cfa514b0732f3c7953c5ef4beed738e1e8172a2de89e3b9f74a253ef0a70d7f3efb730be97b77d7176a3ffacb67a
   languageName: node
   linkType: hard
 
@@ -2578,7 +2504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/utils@npm:^7.1.1, @mui/utils@npm:^7.2.0":
+"@mui/utils@npm:^7.2.0":
   version: 7.2.0
   resolution: "@mui/utils@npm:7.2.0"
   dependencies:
@@ -2599,12 +2525,12 @@ __metadata:
   linkType: hard
 
 "@mui/x-date-pickers@npm:^8.7.0":
-  version: 8.7.0
-  resolution: "@mui/x-date-pickers@npm:8.7.0"
+  version: 8.8.0
+  resolution: "@mui/x-date-pickers@npm:8.8.0"
   dependencies:
     "@babel/runtime": ^7.27.6
-    "@mui/utils": ^7.1.1
-    "@mui/x-internals": 8.7.0
+    "@mui/utils": ^7.2.0
+    "@mui/x-internals": 8.8.0
     "@types/react-transition-group": ^4.4.12
     clsx: ^2.1.1
     prop-types: ^15.8.1
@@ -2642,21 +2568,21 @@ __metadata:
       optional: true
     moment-jalaali:
       optional: true
-  checksum: 448701edda96ffb01eb99ca8d2b4d8565ed13d70622f0643ce23ec08501f567d30093a31aaf927a0fc554217499ea0fc111f8a18f6dc35372da079ff2d2e1d9e
+  checksum: 3639d3972c45e4a1d4945c4ad6c5861429f5b98ce708a338f60b5f12173df176f820b759129a1bf1bb79a8f29f994dd245d901a77966b086531d47af72624682
   languageName: node
   linkType: hard
 
-"@mui/x-internals@npm:8.7.0":
-  version: 8.7.0
-  resolution: "@mui/x-internals@npm:8.7.0"
+"@mui/x-internals@npm:8.8.0":
+  version: 8.8.0
+  resolution: "@mui/x-internals@npm:8.8.0"
   dependencies:
     "@babel/runtime": ^7.27.6
-    "@mui/utils": ^7.1.1
+    "@mui/utils": ^7.2.0
     reselect: ^5.1.1
   peerDependencies:
     "@mui/system": ^5.15.14 || ^6.0.0 || ^7.0.0
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 5eab57f849d1998310f464d58973bea174c14796c15af1c77271089b697947ff8d0cb7d97361ba3e64921b7993c45beed2ec462334a5354f134fea1fc604cf5b
+  checksum: c5ad26e2c43e24d7c7b61c9a576b390b6bc19e5699d313cafce15e18d0a43945292875558b2a8e8d5652d664a34d54a172ca1858da91159eae90f4e11f26a23b
   languageName: node
   linkType: hard
 
@@ -3254,11 +3180,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 24.0.12
-  resolution: "@types/node@npm:24.0.12"
+  version: 24.0.13
+  resolution: "@types/node@npm:24.0.13"
   dependencies:
     undici-types: ~7.8.0
-  checksum: fad1d824df644492f85fc1d29ae500672703145a1599ab59b48897a6fb868ed5065eb74c48027ac9ec68b2ad9557fe214a959884abc6e4cd82dbd85a7eb33b68
+  checksum: a98c3c7979e3c17e2853af4b5c4adfb0cbeaf3747a85bc349048ec068cf16d2a96186e005b76ad05f8f533f9b067f499e45ff0296dab0111297af634f71c792c
   languageName: node
   linkType: hard
 
@@ -3996,6 +3922,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"deep-freeze@npm:0.0.1":
+  version: 0.0.1
+  resolution: "deep-freeze@npm:0.0.1"
+  checksum: 1e43c98e44c7849382d9f896e679d48a1b5bf40993f7cc858e3730ef4e2ba387b9b7b7fe722cac34febe7f6a564cd242c27bbc319e8df793c2a287f21e5ba038
+  languageName: node
+  linkType: hard
+
+"deepmerge@npm:^2.2.1":
+  version: 2.2.1
+  resolution: "deepmerge@npm:2.2.1"
+  checksum: 284b71065079e66096229f735a9a0222463c9ca9ee9dda7d5e9a0545bf254906dbc7377e3499ca3b2212073672b1a430d80587993b43b87d8de17edc6af649a8
+  languageName: node
+  linkType: hard
+
 "deepmerge@npm:^4.2.2":
   version: 4.3.1
   resolution: "deepmerge@npm:4.3.1"
@@ -4102,9 +4042,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.173":
-  version: 1.5.180
-  resolution: "electron-to-chromium@npm:1.5.180"
-  checksum: 52f5a42dec005c56d6894f1570136bf5f163e5e61a7e4414631a010c81eb24ff8e5c3a7c335e03bd87587cd73a3ca751f66a1d125e4e648ded0cae9404dc019a
+  version: 1.5.182
+  resolution: "electron-to-chromium@npm:1.5.182"
+  checksum: 7c698db2733aea35cc76b3914af73ee46e4fe47009100a58e18313fca0b1179ddda3c37166354895765a918a2984cec2e18d4652c2f7b51dd76268ca84b718d3
   languageName: node
   linkType: hard
 
@@ -4142,6 +4082,15 @@ __metadata:
   version: 2.2.1
   resolution: "env-paths@npm:2.2.1"
   checksum: 65b5df55a8bab92229ab2b40dad3b387fad24613263d103a97f91c9fe43ceb21965cd3392b1ccb5d77088021e525c4e0481adb309625d0cb94ade1d1fb8dc17e
+  languageName: node
+  linkType: hard
+
+"equals@npm:^1.0.5":
+  version: 1.1.0
+  resolution: "equals@npm:1.1.0"
+  dependencies:
+    "@jkroso/type": 1
+  checksum: 8b4aafef92e7dfa795245700fc25d19a920a08da5a9ffb781649e272689daf3fb6b076d252da430cf49eb43760bf4115345c907b920069dde27fcd94690cfc50
   languageName: node
   linkType: hard
 
@@ -4562,24 +4511,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:^7.6.18":
-  version: 7.10.3
-  resolution: "framer-motion@npm:7.10.3"
-  dependencies:
-    "@emotion/is-prop-valid": ^0.8.2
-    "@motionone/dom": ^10.15.3
-    hey-listen: ^1.0.8
-    tslib: 2.4.0
-  peerDependencies:
-    react: ^18.0.0
-    react-dom: ^18.0.0
-  dependenciesMeta:
-    "@emotion/is-prop-valid":
-      optional: true
-  checksum: 20ce8459e7e3c631af5261215acd2217f57f15d64448e2bd64eecf74d3406552523082c182211af086e01b44daad7a0c216d5135a3f8ae56fb63e152e54233aa
-  languageName: node
-  linkType: hard
-
 "fs-extra@npm:^9.0.1":
   version: 9.1.0
   resolution: "fs-extra@npm:9.1.0"
@@ -4841,13 +4772,6 @@ __metadata:
   dependencies:
     function-bind: ^1.1.2
   checksum: e8516f776a15149ca6c6ed2ae3110c417a00b62260e222590e54aa367cbcd6ed99122020b37b7fbdf05748df57b265e70095d7bf35a47660587619b15ffb93db
-  languageName: node
-  linkType: hard
-
-"hey-listen@npm:^1.0.8":
-  version: 1.0.8
-  resolution: "hey-listen@npm:1.0.8"
-  checksum: 6bad60b367688f5348e25e7ca3276a74b59ac5a09b0455e6ff8ab7d4a9e38cd2116c708a7dcd8a954d27253ce1d8717ec891d175723ea739885b828cf44e4072
   languageName: node
   linkType: hard
 
@@ -6247,6 +6171,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pure-react-carousel@npm:^1.32.0":
+  version: 1.32.0
+  resolution: "pure-react-carousel@npm:1.32.0"
+  dependencies:
+    "@babel/runtime": ^7.5.5
+    deep-freeze: 0.0.1
+    deepmerge: ^2.2.1
+    equals: ^1.0.5
+    prop-types: ^15.6.2
+  peerDependencies:
+    react: 15.x || 16.x || 17.x || 18.x
+    react-dom: 15.x || 16.x || 17.x || 18.x
+  checksum: d181fae1776ed369ac5e3033f48b0ee3e788e5e78a328f7c94ac28851a3bd378a8adc4d337a020b2a29de2f0a01b2379e855b5e8154d221e50123688815b3a14
+  languageName: node
+  linkType: hard
+
 "querystringify@npm:^2.1.1":
   version: 2.2.0
   resolution: "querystringify@npm:2.2.0"
@@ -7026,9 +6966,9 @@ __metadata:
     date-fns: ^4.1.0
     dayjs: ^1.11.7
     firebase: ^9.14.0
-    framer-motion: ^7.6.18
     postcss: ^8.4.19
     prettier: ^2.8.0
+    pure-react-carousel: ^1.32.0
     react: ^18.2.0
     react-dom: ^18.2.0
     react-firebase-hooks: ^5.1.1
@@ -7074,12 +7014,12 @@ __metadata:
   linkType: hard
 
 "socks@npm:^2.8.3":
-  version: 2.8.5
-  resolution: "socks@npm:2.8.5"
+  version: 2.8.6
+  resolution: "socks@npm:2.8.6"
   dependencies:
     ip-address: ^9.0.5
     smart-buffer: ^4.2.0
-  checksum: d39a77a8c91cfacafc75c67dba45925eccfd884a8a4a68dcda6fb9ab7f37de6e250bb6db3721e8a16a066a8e1ebe872d4affc26f3eb763f4befedcc7b733b7ed
+  checksum: 3d2a696d42d94b05b2a7e797b9291483d6768b23300b015353f34f8046cce35f23fe59300a38a77a9f0dee4274dd6c333afbdef628cf48f3df171bfb86c2d21c
   languageName: node
   linkType: hard
 
@@ -7489,14 +7429,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 8c4aa6a3c5a754bf76aefc38026134180c053b7bd2f81338cb5e5ebf96fefa0f417bff221592bf801077f5bf990562f6264fecbc42cd3309b33872cb6fc3b113
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.1.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0":
+"tslib@npm:^2.1.0, tslib@npm:^2.4.0":
   version: 2.8.1
   resolution: "tslib@npm:2.8.1"
   checksum: e4aba30e632b8c8902b47587fd13345e2827fa639e7c3121074d5ee0880723282411a8838f830b55100cbe4517672f84a2472667d355b81e8af165a55dc6203a
@@ -7765,8 +7698,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:latest":
-  version: 7.0.3
-  resolution: "vite@npm:7.0.3"
+  version: 7.0.4
+  resolution: "vite@npm:7.0.4"
   dependencies:
     esbuild: ^0.25.0
     fdir: ^6.4.6
@@ -7815,7 +7748,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: d4a493d34af13d13becdb0ca0af4bf0db62bb64e0319bac1bddf1df322f2fa53e7681f9dabf02be7925bcb56472d39c1e48280d4b43c85259df7a126c16d9985
+  checksum: 2594edb5b0cc04ea202613d76606f4fd39fd1dee281ee2074fabb06319a7645225c40167f7957c4de9b2b436b36a1d7a43cd5dca242b699d5a1f0ab514be3e78
   languageName: node
   linkType: hard
 

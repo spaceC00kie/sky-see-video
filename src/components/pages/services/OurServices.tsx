@@ -14,7 +14,7 @@ interface Props {}
 
 export const OurServices: React.FC<Props> = () => (
   <>
-    <Helmet>
+    {/* <Helmet>
       <link
         rel="preload"
         as="image"
@@ -32,7 +32,7 @@ export const OurServices: React.FC<Props> = () => (
         name="description"
         content="Pre-production, production and post—see everything SkySee Video can do for your brand."
       />
-    </Helmet>
+    </Helmet> */}
 
     <div className="flex flex-col items-center justify-center">
       <HeroBanner img={ourServicesBanner} srcSet={ourServicesBannerSrcset} />
