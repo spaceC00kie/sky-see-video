@@ -13,7 +13,7 @@ export const CorporateMarketing: React.FC<Props> = ({}) => {
         <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
           <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
           <iframe
-            src="https://player.vimeo.com/video/810145426?h=af982b45c1&badge=0&autopause=0&player_id=0&app_id=58479"
+            src="https://player.vimeo.com/video/810145426?h=af982b45c1&badge=0&autopause=0&player_id=0&app_id=58479&dnt=1"
             className="absolute left-0 top-0 z-10 h-full w-full"
             title="Corporate Marketing Videography | SkySee Video"
             style={{ border: "none" }}
