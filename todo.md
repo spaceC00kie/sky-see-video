@@ -1,3 +1,3 @@
 - fill in missing links for our work pages in the ourWorkData.ts file
-- establish knowledge transfer for Soren
+- get soren to sign up for web3forms with their info@skyseevideo.com email
 - get soren to have the domain transferred to us

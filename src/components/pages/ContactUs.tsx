@@ -2,7 +2,6 @@ import { useState, ChangeEvent, FormEvent } from "react"
 import { Helmet } from "react-helmet-async"
 import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
-// Web3Forms is used to handle form submissions
 import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
 import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
@@ -21,6 +20,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
 
 const muiTheme = createTheme({ palette: { mode: "light" } })
 
+// @todo get soren to sign up and give you the access key, paste here
 const WEB3FORMS_ACCESS_KEY = "8b464d25-3c6f-4a8e-a029-033e6e23086d"
 
 interface FormData {
@@ -69,6 +69,12 @@ export const ContactUs: React.FC = () => {
   const submit = (e: FormEvent) => {
     e.preventDefault()
 
+    Swal.fire({
+      title: "Sending…",
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading(),
+    })
+
     const servicesArr = Object.entries(data.services)
       .filter(([, v]) => v)
       .map(
@@ -81,51 +87,45 @@ export const ContactUs: React.FC = () => {
             } as const
           )[k]),
       )
-    const servicesListText = servicesArr.join(", ") || "N/A"
-    const servicesListHtml =
-      servicesArr.length > 0
-        ? `<ul>${servicesArr.map((s) => `<li>${s}</li>`).join("")}</ul>`
-        : "N/A"
+
+    const servicesText = servicesArr.join(", ") || "N/A"
     const dateString = data.completionDate?.toISOString().split("T")[0] ?? "N/A"
-    const plainBody = `New Project Inquiry
 
-Name: ${data.firstName} ${data.lastName}
-Email: ${data.email}
-Company: ${data.company || "N/A"}
-Description:
-${data.description}
-
-Target Completion Date: ${dateString}
-Services Needed: ${servicesListText}`
-    const htmlBody = `
-      <h2>New Project Inquiry</h2>
-      <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
-      <p><strong>Email:</strong> <a href="mailto:${data.email}">${
-      data.email
-    }</a></p>
-      <p><strong>Company:</strong> ${data.company || "N/A"}</p>
-      <p><strong>Description:</strong><br/>${
-        data.description.replace(/\n/g, "<br/>").trim() || "N/A"
-      }</p>
-      <p><strong>Target Completion Date:</strong> ${dateString}</p>
-      <p><strong>Services Needed:</strong><br/>${servicesListHtml}</p>
-    `
+    const plainBody = [
+      "New Project Inquiry",
+      `Name: ${data.firstName} ${data.lastName}`,
+      `Email: ${data.email}`,
+      `Company: ${data.company || "N/A"}`,
+      "",
+      "Description:",
+      data.description || "N/A",
+      "",
+      `Target Completion Date: ${dateString}`,
+      `Services Needed: ${servicesText}`,
+    ].join("\n")
 
     fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
       body: JSON.stringify({
         access_key: WEB3FORMS_ACCESS_KEY,
         subject: "New Project Inquiry",
         from_name: `${data.firstName} ${data.lastName}`,
         replyto: data.email,
-        company: data.company,
-        message: htmlBody,
+        first_name: data.firstName,
+        last_name: data.lastName,
+        company: data.company || "N/A",
+        completion_date: dateString,
+        services_needed: servicesText,
+        message: plainBody,
       }),
     })
-      .then((res) => res.json())
-      .then((result) => {
-        if (result.success) {
+      .then((r) => r.json())
+      .then((res) => {
+        if (res.success) {
           Swal.close()
           Swal.fire({
             icon: "success",
@@ -134,7 +134,7 @@ Services Needed: ${servicesListText}`
           })
           setData(defaultData)
         } else {
-          throw new Error(result.message)
+          throw new Error(res.message)
         }
       })
       .catch(() => {
@@ -168,7 +168,7 @@ Services Needed: ${servicesListText}`
           />
 
           <div className="flex max-w-[70em] flex-col gap-8 px-6 py-20 md:flex-row md:gap-16">
-            <div className="grid place-content-center w-full md:w-1/2">
+            <div className="grid w-full place-content-center md:w-1/2">
               <div className="flex-1 space-y-4">
                 <p className="text-2xl">Make the most of your time & budget!</p>
                 <p>
@@ -213,7 +213,7 @@ Services Needed: ${servicesListText}`
 
             <form
               onSubmit={submit}
-              className="flex w-full md:w-1/2 flex-col gap-4"
+              className="flex w-full flex-col gap-4 md:w-1/2"
             >
               <div className="flex gap-2">
                 <TextField
@@ -267,7 +267,7 @@ Services Needed: ${servicesListText}`
                   label="Project Completion Date"
                   disablePast
                   value={data.completionDate}
-                  onChange={(newDate: Date | null) =>
+                  onChange={(newDate) =>
                     setData({ ...data, completionDate: newDate })
                   }
                   slotProps={{
