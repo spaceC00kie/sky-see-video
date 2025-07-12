@@ -8,7 +8,7 @@ import {
   ButtonNext,
 } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
-import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
+import { FiChevronLeft, FiChevronRight, FiShare2 } from "react-icons/fi"
 import { cards } from "./ourWorkData"
 import { WindowSize } from "../../../containers/WindowSize"
 
@@ -25,6 +25,15 @@ export const ProjectPage: React.FC<Props> = ({
 }) => {
   const { windowWidth, isSmall } = WindowSize.useContainer()
   const visibleSlides = windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3
+
+  const share = () => {
+    const url = window.location.href
+    if (navigator.share) {
+      navigator.share({ title, text: description, url }).catch(() => null)
+    } else {
+      navigator.clipboard.writeText(url)
+    }
+  }
 
   return (
     <>
@@ -48,6 +57,12 @@ export const ProjectPage: React.FC<Props> = ({
 
         <h1 className="text-center text-3xl font-bold">{title}</h1>
         <p className="max-w-4xl text-center">{description}</p>
+        <button
+          onClick={share}
+          className="flex items-center gap-2 rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
+        >
+          <FiShare2 /> Share
+        </button>
 
         <div className="relative mt-8 w-full max-w-6xl">
           <CarouselProvider
@@ -90,7 +105,11 @@ export const ProjectPage: React.FC<Props> = ({
               }}
             >
               {cards.map((card, idx) => (
-                <Slide key={card.path} index={idx} className="px-2 sm:px-3 border-b">
+                <Slide
+                  key={card.path}
+                  index={idx}
+                  className="px-2 sm:px-3 border-b"
+                >
                   <Link
                     to={card.path}
                     className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
@@ -108,7 +127,9 @@ export const ProjectPage: React.FC<Props> = ({
                     </div>
 
                     <div className="grow p-4">
-                      <h3 className="mb-1 text-lg font-semibold">{card.title}</h3>
+                      <h3 className="mb-1 text-lg font-semibold">
+                        {card.title}
+                      </h3>
                       <p className="line-clamp-2 text-sm text-gray-700">
                         {card.description}
                       </p>
