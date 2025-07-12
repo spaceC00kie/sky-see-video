@@ -2504,7 +2504,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mui/utils@npm:^7.1.1, @mui/utils@npm:^7.2.0":
+"@mui/utils@npm:^7.2.0":
   version: 7.2.0
   resolution: "@mui/utils@npm:7.2.0"
   dependencies:
@@ -2525,12 +2525,12 @@ __metadata:
   linkType: hard
 
 "@mui/x-date-pickers@npm:^8.7.0":
-  version: 8.7.0
-  resolution: "@mui/x-date-pickers@npm:8.7.0"
+  version: 8.8.0
+  resolution: "@mui/x-date-pickers@npm:8.8.0"
   dependencies:
     "@babel/runtime": ^7.27.6
-    "@mui/utils": ^7.1.1
-    "@mui/x-internals": 8.7.0
+    "@mui/utils": ^7.2.0
+    "@mui/x-internals": 8.8.0
     "@types/react-transition-group": ^4.4.12
     clsx: ^2.1.1
     prop-types: ^15.8.1
@@ -2568,21 +2568,21 @@ __metadata:
       optional: true
     moment-jalaali:
       optional: true
-  checksum: 448701edda96ffb01eb99ca8d2b4d8565ed13d70622f0643ce23ec08501f567d30093a31aaf927a0fc554217499ea0fc111f8a18f6dc35372da079ff2d2e1d9e
+  checksum: 3639d3972c45e4a1d4945c4ad6c5861429f5b98ce708a338f60b5f12173df176f820b759129a1bf1bb79a8f29f994dd245d901a77966b086531d47af72624682
   languageName: node
   linkType: hard
 
-"@mui/x-internals@npm:8.7.0":
-  version: 8.7.0
-  resolution: "@mui/x-internals@npm:8.7.0"
+"@mui/x-internals@npm:8.8.0":
+  version: 8.8.0
+  resolution: "@mui/x-internals@npm:8.8.0"
   dependencies:
     "@babel/runtime": ^7.27.6
-    "@mui/utils": ^7.1.1
+    "@mui/utils": ^7.2.0
     reselect: ^5.1.1
   peerDependencies:
     "@mui/system": ^5.15.14 || ^6.0.0 || ^7.0.0
     react: ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 5eab57f849d1998310f464d58973bea174c14796c15af1c77271089b697947ff8d0cb7d97361ba3e64921b7993c45beed2ec462334a5354f134fea1fc604cf5b
+  checksum: c5ad26e2c43e24d7c7b61c9a576b390b6bc19e5699d313cafce15e18d0a43945292875558b2a8e8d5652d664a34d54a172ca1858da91159eae90f4e11f26a23b
   languageName: node
   linkType: hard
 
@@ -3180,11 +3180,11 @@ __metadata:
   linkType: hard
 
 "@types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 24.0.12
-  resolution: "@types/node@npm:24.0.12"
+  version: 24.0.13
+  resolution: "@types/node@npm:24.0.13"
   dependencies:
     undici-types: ~7.8.0
-  checksum: fad1d824df644492f85fc1d29ae500672703145a1599ab59b48897a6fb868ed5065eb74c48027ac9ec68b2ad9557fe214a959884abc6e4cd82dbd85a7eb33b68
+  checksum: a98c3c7979e3c17e2853af4b5c4adfb0cbeaf3747a85bc349048ec068cf16d2a96186e005b76ad05f8f533f9b067f499e45ff0296dab0111297af634f71c792c
   languageName: node
   linkType: hard
 
@@ -4042,9 +4042,9 @@ __metadata:
   linkType: hard
 
 "electron-to-chromium@npm:^1.5.173":
-  version: 1.5.180
-  resolution: "electron-to-chromium@npm:1.5.180"
-  checksum: 52f5a42dec005c56d6894f1570136bf5f163e5e61a7e4414631a010c81eb24ff8e5c3a7c335e03bd87587cd73a3ca751f66a1d125e4e648ded0cae9404dc019a
+  version: 1.5.182
+  resolution: "electron-to-chromium@npm:1.5.182"
+  checksum: 7c698db2733aea35cc76b3914af73ee46e4fe47009100a58e18313fca0b1179ddda3c37166354895765a918a2984cec2e18d4652c2f7b51dd76268ca84b718d3
   languageName: node
   linkType: hard
 
@@ -7014,12 +7014,12 @@ __metadata:
   linkType: hard
 
 "socks@npm:^2.8.3":
-  version: 2.8.5
-  resolution: "socks@npm:2.8.5"
+  version: 2.8.6
+  resolution: "socks@npm:2.8.6"
   dependencies:
     ip-address: ^9.0.5
     smart-buffer: ^4.2.0
-  checksum: d39a77a8c91cfacafc75c67dba45925eccfd884a8a4a68dcda6fb9ab7f37de6e250bb6db3721e8a16a066a8e1ebe872d4affc26f3eb763f4befedcc7b733b7ed
+  checksum: 3d2a696d42d94b05b2a7e797b9291483d6768b23300b015353f34f8046cce35f23fe59300a38a77a9f0dee4274dd6c333afbdef628cf48f3df171bfb86c2d21c
   languageName: node
   linkType: hard
 
@@ -7698,8 +7698,8 @@ __metadata:
   linkType: hard
 
 "vite@npm:latest":
-  version: 7.0.3
-  resolution: "vite@npm:7.0.3"
+  version: 7.0.4
+  resolution: "vite@npm:7.0.4"
   dependencies:
     esbuild: ^0.25.0
     fdir: ^6.4.6
@@ -7748,7 +7748,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: d4a493d34af13d13becdb0ca0af4bf0db62bb64e0319bac1bddf1df322f2fa53e7681f9dabf02be7925bcb56472d39c1e48280d4b43c85259df7a126c16d9985
+  checksum: 2594edb5b0cc04ea202613d76606f4fd39fd1dee281ee2074fabb06319a7645225c40167f7957c4de9b2b436b36a1d7a43cd5dca242b699d5a1f0ab514be3e78
   languageName: node
   linkType: hard
 
