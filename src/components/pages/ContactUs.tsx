@@ -7,7 +7,6 @@ import { firebaseApp } from "../../../firestore.config"
 import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
 import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
-
 import {
   TextField,
   Checkbox,
@@ -67,51 +66,83 @@ export const ContactUs: React.FC = () => {
         services: { ...data.services, [k]: e.target.checked },
       })
 
-  const submit = async (e: FormEvent) => {
+  const submit = (e: FormEvent) => {
     e.preventDefault()
-    try {
-      const servicesSelected = Object.entries(data.services)
-        .filter(([, v]) => v)
-        .map(
-          ([k]) =>
-            ((
-              {
-                preProduction: "Pre-Production",
-                production: "Production",
-                postProduction: "Post-Production",
-              } as const
-            )[k]),
-        )
-        .join(", ")
-      const dateString =
-        data.completionDate?.toISOString().split("T")[0] ?? "N/A"
-      const emailBody = `New Project Inquiry
+
+    Swal.fire({
+      title: "Sending…",
+      allowOutsideClick: false,
+      didOpen: () => Swal.showLoading(),
+    })
+
+    const servicesArr = Object.entries(data.services)
+      .filter(([, v]) => v)
+      .map(
+        ([k]) =>
+          ((
+            {
+              preProduction: "Pre-Production",
+              production: "Production",
+              postProduction: "Post-Production",
+            } as const
+          )[k]),
+      )
+    const servicesListText = servicesArr.join(", ") || "N/A"
+    const servicesListHtml =
+      servicesArr.length > 0
+        ? `<ul>${servicesArr.map((s) => `<li>${s}</li>`).join("")}</ul>`
+        : "N/A"
+    const dateString = data.completionDate?.toISOString().split("T")[0] ?? "N/A"
+    const plainBody = `New Project Inquiry
 
 Name: ${data.firstName} ${data.lastName}
 Email: ${data.email}
-Company: ${data.company}
+Company: ${data.company || "N/A"}
 Description:
 ${data.description}
 
 Target Completion Date: ${dateString}
-Services Needed: ${servicesSelected || "N/A"}`
-      await addDoc(collection(db, "mail"), {
-        to: ["kirstie317@gmail.com"],
-        message: { subject: "New Project Inquiry", text: emailBody },
+Services Needed: ${servicesListText}`
+    const htmlBody = `
+      <h2>New Project Inquiry</h2>
+      <p><strong>Name:</strong> ${data.firstName} ${data.lastName}</p>
+      <p><strong>Email:</strong> <a href="mailto:${data.email}">${
+      data.email
+    }</a></p>
+      <p><strong>Company:</strong> ${data.company || "N/A"}</p>
+      <p><strong>Description:</strong><br/>${
+        data.description.replace(/\n/g, "<br/>").trim() || "N/A"
+      }</p>
+      <p><strong>Target Completion Date:</strong> ${dateString}</p>
+      <p><strong>Services Needed:</strong><br/>${servicesListHtml}</p>
+    `
+
+    addDoc(collection(db, "mail"), {
+      to: ["kirstie317@gmail.com"],
+      replyTo: data.email,
+      message: {
+        subject: "New Project Inquiry",
+        text: plainBody,
+        html: htmlBody,
+      },
+    })
+      .then(() => {
+        Swal.close()
+        Swal.fire({
+          icon: "success",
+          title: "Success!",
+          text: "Your project details were sent. We’ll be in touch soon.",
+        })
+        setData(defaultData)
       })
-      Swal.fire({
-        title: "Success!",
-        text: "Your project details were sent. We’ll be in touch soon.",
-        icon: "success",
+      .catch(() => {
+        Swal.close()
+        Swal.fire({
+          icon: "error",
+          title: "Something went wrong",
+          text: "Please call 678-304-9920 or email info@skyseevideo.com directly.",
+        })
       })
-      setData(defaultData)
-    } catch {
-      Swal.fire({
-        title: "Something went wrong",
-        text: "Please call 678-304-9920 or email info@skyseevideo.com directly.",
-        icon: "error",
-      })
-    }
   }
 
   return (
