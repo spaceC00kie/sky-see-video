@@ -2,8 +2,7 @@ import { useState, ChangeEvent, FormEvent } from "react"
 import { Helmet } from "react-helmet-async"
 import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
-import { addDoc, collection, getFirestore } from "firebase/firestore"
-import { firebaseApp } from "../../../firestore.config"
+// Web3Forms is used to handle form submissions
 import { HeroBanner } from "../common/HeroBanner"
 import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
 import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
@@ -21,7 +20,9 @@ import { DatePicker } from "@mui/x-date-pickers/DatePicker"
 import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
 
 const muiTheme = createTheme({ palette: { mode: "light" } })
-const db = getFirestore(firebaseApp)
+
+// Replace this access key with the one from your Web3Forms dashboard
+const WEB3FORMS_ACCESS_KEY = "REPLACE_WITH_YOUR_ACCESS_KEY"
 
 interface FormData {
   firstName: string
@@ -117,23 +118,31 @@ Services Needed: ${servicesListText}`
       <p><strong>Services Needed:</strong><br/>${servicesListHtml}</p>
     `
 
-    addDoc(collection(db, "mail"), {
-      to: ["kirstie317@gmail.com"],
-      replyTo: data.email,
-      message: {
+    fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: WEB3FORMS_ACCESS_KEY,
         subject: "New Project Inquiry",
-        text: plainBody,
-        html: htmlBody,
-      },
+        from_name: `${data.firstName} ${data.lastName}`,
+        replyto: data.email,
+        company: data.company,
+        message: htmlBody,
+      }),
     })
-      .then(() => {
-        Swal.close()
-        Swal.fire({
-          icon: "success",
-          title: "Success!",
-          text: "Your project details were sent. We’ll be in touch soon.",
-        })
-        setData(defaultData)
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.success) {
+          Swal.close()
+          Swal.fire({
+            icon: "success",
+            title: "Success!",
+            text: "Your project details were sent. We’ll be in touch soon.",
+          })
+          setData(defaultData)
+        } else {
+          throw new Error(result.message)
+        }
       })
       .catch(() => {
         Swal.close()
