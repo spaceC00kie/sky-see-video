@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async"
+import { LazyIframe } from "../../common/LazyIframe"
 import {
   CarouselProvider,
   ButtonBack,
@@ -43,14 +44,7 @@ export const ProjectPage: React.FC<Props> = ({
 
       <div className="flex h-full flex-col items-center justify-evenly">
         <div className="relative mx-auto mb-6 aspect-video w-full max-w-[73em]">
-          <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
-          <iframe
-            src={videoUrl}
-            className="absolute left-0 top-0 z-10 h-full w-full"
-            style={{ border: "none" }}
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
-          />
+          <LazyIframe src={videoUrl} title={title} />
         </div>
 
         <div className="flex flex-col items-center gap-6 px-4 sm:px-24">

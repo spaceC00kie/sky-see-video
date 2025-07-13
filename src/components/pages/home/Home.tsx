@@ -8,30 +8,13 @@ import { Link } from "react-router-dom"
 import { HomeCard1 } from "./HomeCard1"
 import { cards as workCards } from "../our-work/ourWorkData"
 import { GalleryCard } from "../../common/GalleryCard"
+import { LazyIframe } from "../../common/LazyIframe"
 
 interface Props {}
 
 export const Home: React.FC<Props> = () => (
   <>
     <Helmet>
-      <link rel="preconnect" href="https://player.vimeo.com" />
-      <link rel="preconnect" href="https://i.vimeocdn.com" />
-      <link rel="preconnect" href="https://f.vimeocdn.com" />
-      <link
-        rel="preload"
-        as="script"
-        href="https://player.vimeo.com/api/player.js"
-        crossOrigin="anonymous"
-      />
-      <link
-        rel="preload"
-        as="image"
-        href="https://i.vimeocdn.com/video/1742868944-1024x576.webp"
-        imageSrcSet="
-          https://i.vimeocdn.com/video/1742868944-640x360.webp 640w,
-          https://i.vimeocdn.com/video/1742868944-1024x576.webp 1024w"
-        imageSizes="(max-width: 64em) 100vw, 1024px"
-      />
       <title>SkySee Video | Make an Impact</title>
       <meta
         name="description"
@@ -41,14 +24,10 @@ export const Home: React.FC<Props> = () => (
 
     <div className="flex flex-col items-center justify-center">
       <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
-        <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
-        <iframe
+        <LazyIframe
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
-          className="absolute left-0 top-0 z-10 h-full w-full"
           title="SkySee Video Reel"
-          style={{ border: "none" }}
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
+          playLabel="Play SkySee Video Reel"
         />
       </div>
 
