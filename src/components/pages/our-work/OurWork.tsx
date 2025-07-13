@@ -21,13 +21,13 @@ export const OurWork: React.FC = () => (
     <div className="flex flex-col gap-4 py-20">
       {/* ——— client logos ——— */}
       <div className="xl:grid xl:grid-flow-col gap-4 flex flex-wrap justify-center">
-        {logos.map((src, i) => (
+        {logos.map((src) => (
           <img
             key={src}
             src={src}
             decoding="async"
             loading="eager"
-            className="w-32 xl:w-20"
+            className="w-32 xl:w-20 h-auto"
           />
         ))}
       </div>
