@@ -20,7 +20,7 @@ export const OurWork: React.FC = () => (
 
     <div className="flex flex-col gap-4 py-20">
       {/* ——— client logos ——— */}
-      <div className="xl:grid xl:grid-flow-col gap-4 flex flex-wrap justify-center">
+      <div className="xl:grid xl:grid-flow-col gap-4 flex flex-wrap justify-center px-6">
         {logos.map(({ src, alt }) => (
           <img
             key={src}
