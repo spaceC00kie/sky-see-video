@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async"
+import { LazyIframe } from "../../common/LazyIframe"
 
 interface Props {}
 
@@ -11,14 +12,9 @@ export const Documentaries: React.FC<Props> = ({}) => {
 
       <div className="flex flex-col items-center justify-center">
         <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
-          <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
-          <iframe
-            src="https://www.youtube.com/embed/-eHAiKjgp4U?si=Jq1v0cIwl-Sr7TJy"
-            className="absolute left-0 top-0 z-10 h-full w-full"
+          <LazyIframe
+            videoUrl="https://www.youtube.com/embed/-eHAiKjgp4U?si=Jq1v0cIwl-Sr7TJy"
             title="Documentary Videography | SkySee Video"
-            style={{ border: "none" }}
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowFullScreen
           />
         </div>
 

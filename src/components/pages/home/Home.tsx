@@ -8,6 +8,7 @@ import { Link } from "react-router-dom"
 import { HomeCard1 } from "./HomeCard1"
 import { cards as workCards } from "../our-work/ourWorkData"
 import { GalleryCard } from "../../common/GalleryCard"
+import { LazyIframe } from "../../common/LazyIframe"
 
 interface Props {}
 
@@ -41,13 +42,9 @@ export const Home: React.FC<Props> = () => (
 
     <div className="flex flex-col items-center justify-center">
       <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
-        <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
-        <iframe
-          src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
-          className="absolute left-0 top-0 z-10 h-full w-full"
+        <LazyIframe
+          videoUrl="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
           title="SkySee Video Reel"
-          allow="autoplay; fullscreen; picture-in-picture"
-          allowFullScreen
         />
       </div>
 
