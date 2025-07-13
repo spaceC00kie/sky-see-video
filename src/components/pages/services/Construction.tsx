@@ -24,9 +24,9 @@ export const Construction: React.FC<Props> = ({}) => {
 
         <div className="flex max-w-[70em] flex-col gap-8 pb-20">
           <div className="flex w-full flex-col gap-4 px-6">
-            <h1 className="text-3xl font-medium text-blue-500">
+            <p className="text-3xl font-medium text-blue-700">
               Construction Videography
-            </h1>
+            </p>
             <div className="flex flex-col gap-3 text-lg">
               <p>
                 The construction industry is highly competitive. Residential and
@@ -51,7 +51,7 @@ export const Construction: React.FC<Props> = ({}) => {
             </div>
           </div>
           <div className="flex w-full flex-col gap-4 px-6">
-            <h2 className="text-blue-500 text-2xl">
+            <h2 className="text-blue-700 text-2xl">
               Our Construction Industry Video Services
             </h2>
             <p className="text-lg">

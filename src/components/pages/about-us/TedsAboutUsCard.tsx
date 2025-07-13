@@ -10,26 +10,26 @@ export const TedsAboutUsCard: React.FC = () => (
       />
     </div>
     <span className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-40" />
-    <div className="text-blue-500">
+    <div className="text-blue-700">
       <h2>Ted Intorcio</h2>
       <h2>Creative Director</h2>
     </div>
     <p className="text-sm">
       Ted loves stuff that moves. Combined with his passion for the magic of
-      visual communication design, typography, illustration, and branding, he has
-      created a unique set of skills that have successfully been employed for
-      clients like Turner Broadcasting, Starz Entertainment, ESPN, NatGeo, and
-      Awkward Family Photos. Ted knows design and how to make the most of the
-      limited time and space each video has to make your company shine. You can
-      see his personal website{' '}
+      visual communication design, typography, illustration, and branding, he
+      has created a unique set of skills that have successfully been employed
+      for clients like Turner Broadcasting, Starz Entertainment, ESPN, NatGeo,
+      and Awkward Family Photos. Ted knows design and how to make the most of
+      the limited time and space each video has to make your company shine. You
+      can see
       <a
         href="https://tintorcio.myportfolio.com/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-600 underline hover:text-blue-800"
       >
-        here
-      </a>{' '}
+        his personal website
+      </a>{" "}
       to explore the breadth of his talents.
     </p>
   </div>

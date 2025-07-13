@@ -46,7 +46,6 @@ export const Home: React.FC<Props> = () => (
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
           className="absolute left-0 top-0 z-10 h-full w-full"
           title="SkySee Video Reel"
-          style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         />
@@ -54,7 +53,7 @@ export const Home: React.FC<Props> = () => (
 
       <div className="flex max-w-[70em] flex-col gap-4 pb-20">
         <div className="flex w-full flex-col gap-10 px-6">
-          <p className="text-3xl text-blue-500">Make an Impact</p>
+          <p className="text-3xl text-blue-700">Make an Impact</p>
 
           <div className="flex flex-col gap-7 text-2xl">
             <p>
@@ -90,7 +89,7 @@ export const Home: React.FC<Props> = () => (
             <span>Need an Estimate? Let&rsquo;s Talk</span>
           </Link>
 
-          <p className="text-3xl text-blue-500">Services</p>
+          <p className="text-3xl text-blue-700">Services</p>
           <hr />
 
           <div className="flex flex-col flex-wrap justify-evenly gap-5 text-center sm:flex-row">
@@ -111,7 +110,7 @@ export const Home: React.FC<Props> = () => (
             />
           </div>
 
-          <p className="text-3xl text-blue-500">Latest Projects</p>
+          <p className="text-3xl text-blue-700">Latest Projects</p>
           <hr />
 
           <div className="mx-auto grid max-w-fit justify-items-center gap-5 md:grid-cols-2">

@@ -17,7 +17,7 @@ export const AboutUsCard: React.FC<Props> = ({
         <img src={image} alt={title} className="h-full w-full object-cover" />
       </div>
       <span className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-40" />
-      <div className="text-blue-500">
+      <div className="text-blue-700">
         <h2>{name}</h2>
         <h2>{title}</h2>
       </div>

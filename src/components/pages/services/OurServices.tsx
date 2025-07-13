@@ -26,6 +26,8 @@ export const OurServices: React.FC<Props> = () => (
         as="image"
         href={ourServicesBannerSrcset}
         fetchPriority="high"
+        imageSrcSet={ourServicesBannerSrcset}
+        imageSizes="(max-width: 64em) 100vw, 1600px"
       />
       <title>Services | SkySee Video</title>
       <meta
@@ -42,7 +44,7 @@ export const OurServices: React.FC<Props> = () => (
       />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 py-20">
-        <p className="text-xl text-blue-500">OUR&nbsp;SERVICES</p>
+        <p className="text-xl text-blue-700">OUR&nbsp;SERVICES</p>
 
         <p className="text-2xl">
           SkySee Video offers pre-production, production and post-production
@@ -89,7 +91,7 @@ export const OurServices: React.FC<Props> = () => (
           />
         </div>
 
-        <p className="text-2xl text-blue-500">INDUSTRIES</p>
+        <p className="text-2xl text-blue-700">INDUSTRIES</p>
         <hr />
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4">

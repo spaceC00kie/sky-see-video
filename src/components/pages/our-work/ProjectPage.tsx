@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet-async"
-import {
-  CarouselProvider,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel"
+import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import { FiChevronLeft, FiChevronRight, FiShare2 } from "react-icons/fi"
 import { cards } from "./ourWorkData"
@@ -15,7 +11,6 @@ interface Props {
   description: string
   videoUrl: string
 }
-
 
 export const ProjectPage: React.FC<Props> = ({
   title,
@@ -49,18 +44,19 @@ export const ProjectPage: React.FC<Props> = ({
             className="absolute left-0 top-0 z-10 h-full w-full"
             style={{ border: "none" }}
             allow="autoplay; fullscreen; picture-in-picture"
+            title={title}
             allowFullScreen
           />
         </div>
 
         <div className="flex flex-col items-center gap-6 px-4 sm:px-24">
           <div className="flex gap-4">
-            <h1 className="grid place-content-center text-center text-3xl font-bold">
+            <p className="grid place-content-center text-center text-3xl font-bold">
               {title}
-            </h1>
+            </p>
             <button
               onClick={share}
-              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
+              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-500 border-blue-800 border"
             >
               <FiShare2 /> Share
             </button>
@@ -68,7 +64,7 @@ export const ProjectPage: React.FC<Props> = ({
           <p className="max-w-4xl text-center">{description}</p>
         </div>
 
-        <div className="relative w-full max-w-6xl overflow-x-hidden py-10">
+       <div className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10">
           <CarouselProvider
             naturalSlideWidth={4}
             naturalSlideHeight={5}
@@ -77,7 +73,6 @@ export const ProjectPage: React.FC<Props> = ({
             step={visibleSlides}
             dragEnabled
             touchEnabled
-            isPlaying
             infinite={false}
             className="w-full"
           >

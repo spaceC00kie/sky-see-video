@@ -1,10 +1,6 @@
 import { useState, useEffect, useContext } from "react"
 import { Link } from "react-router-dom"
-import {
-  Slider,
-  Slide,
-  CarouselContext,
-} from "pure-react-carousel"
+import { Slider, Slide, CarouselContext } from "pure-react-carousel"
 import { cards } from "./ourWorkData"
 
 interface Props {
@@ -29,8 +25,12 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
   return (
     <div className="relative">
       <Slider className="px-0 sm:px-6">
-        {cards.map((card, idx) => (
-          <Slide key={card.path} index={idx} className="border-b px-1 sm:px-3">
+        {cards.map((card, index) => (
+          <Slide
+            key={card.path}
+            index={index}
+            className="border-b px-1 sm:px-3"
+          >
             <Link
               to={card.path}
               className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
@@ -40,9 +40,10 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
                   {card.srcSet && <source srcSet={card.srcSet} />}
                   <img
                     src={card.image}
-                    alt={card.title}
+                    alt=""
+                    role="presentation"
                     className="absolute inset-0 h-full w-full object-cover"
-                    loading="lazy"
+                    loading={index > 5 ? "lazy" : "eager"}
                   />
                 </picture>
               </div>
