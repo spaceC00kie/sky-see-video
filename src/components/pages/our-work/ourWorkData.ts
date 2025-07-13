@@ -477,15 +477,16 @@ export const cards: readonly WorkCard[] = [
     path: "/project/emory-gbs-leadership-ftmba/",
     videoUrl: "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
   },
-  {
-    image: num56,
-    srcSet: num56Srcset,
-    title: "The Melting Pot / MBN Al Hurra",
-    description:
-      "13-part series on immigration in the United States of America, broadcast in the Middle East on American-owned network, Al Hurra. Audio is dubbed over in Arabic",
-    path: "/project/the-melting-pot-mbn-al-hurra/",
-    videoUrl: "",
-  },
+  // @TODO: Uncomment when the video is available
+  // {
+  //   image: num56,
+  //   srcSet: num56Srcset,
+  //   title: "The Melting Pot / MBN Al Hurra",
+  //   description:
+  //     "13-part series on immigration in the United States of America, broadcast in the Middle East on American-owned network, Al Hurra. Audio is dubbed over in Arabic",
+  //   path: "/project/the-melting-pot-mbn-al-hurra/",
+  //   videoUrl: "",
+  // },
   {
     image: num57,
     srcSet: num57Srcset,
