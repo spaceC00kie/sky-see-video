@@ -24,9 +24,9 @@ export const Documentaries: React.FC<Props> = ({}) => {
 
         <div className="flex max-w-[70em] flex-col gap-8 pb-20">
           <div className="flex w-full flex-col gap-4 px-6">
-            <h1 className="text-3xl font-medium text-blue-700">
+            <p className="text-3xl font-medium text-blue-700">
               Documentaries
-            </h1>
+            </p>
             <div className="flex flex-col gap-3 text-lg">
               <p>
                 Cinematography in the film and entertainment industry grows more

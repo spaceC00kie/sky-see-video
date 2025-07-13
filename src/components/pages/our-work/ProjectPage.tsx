@@ -51,9 +51,9 @@ export const ProjectPage: React.FC<Props> = ({
 
         <div className="flex flex-col items-center gap-6 px-4 sm:px-24">
           <div className="flex gap-4">
-            <h1 className="grid place-content-center text-center text-3xl font-bold">
+            <p className="grid place-content-center text-center text-3xl font-bold">
               {title}
-            </h1>
+            </p>
             <button
               onClick={share}
               className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-500 border-blue-800 border"

@@ -40,9 +40,10 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
                   {card.srcSet && <source srcSet={card.srcSet} />}
                   <img
                     src={card.image}
-                    alt={card.title}
+                    alt=""
+                    role="presentation"
                     className="absolute inset-0 h-full w-full object-cover"
-                    loading={index > 4 ? "lazy" : "eager"}
+                    loading={index > 5 ? "lazy" : "eager"}
                   />
                 </picture>
               </div>
