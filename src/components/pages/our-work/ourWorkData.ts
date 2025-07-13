@@ -353,7 +353,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Hurricane Ida wreaked havoc on New Orleans, and Liberty Welding was hit hard. BlueKey Restoration saved the day and got Liberty Welding the money needed to restore, and improve, the building.",
     path: "/project/bluekey-construction-liberty-welding/",
-    videoUrl: "",
+    videoUrl: "https://player.vimeo.com/video/718723332?h=e58df46c8d&dnt=1",
   },
   {
     image: num42,
@@ -389,7 +389,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "”Myong-hee,” played by Jennifer Sun Bell, who was abused by close members of her family. When she runs away from home, she finds herself on the street where predators await vulnerable girls like her.",
     path: "/project/life-less/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/hEfolHFsMLQ",
   },
   {
     image: num46,
