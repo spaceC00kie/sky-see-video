@@ -3,22 +3,32 @@ import { AboutUsCard } from "./AboutUsCard"
 import { TedsAboutUsCard } from "./TedsAboutUsCard"
 import { HeroBanner } from "../../common/HeroBanner"
 
-import aboutUsBanner from "/src/assets/about-us/about-us-banner.png?width=1600&format=webp"
-import aboutUsBannerSrcset from "/src/assets/about-us/about-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
-import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg?width=400&format=webp"
-import robinsonVil from "/src/assets/about-us/robinson-vil.jpg?width=400&format=webp"
-import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg?width=400&format=webp"
+import aboutUsBanner from "/src/assets/about-us/about-us-banner.png?w=1600&format=webp"
+import aboutUsBannerSrcset from "/src/assets/about-us/about-us-banner.png?w=640;1024;1600&format=webp&as=srcset"
+import sorenChristiansen from "/src/assets/about-us/soren-christiansen.jpg?w=400&format=webp"
+import robinsonVil from "/src/assets/about-us/robinson-vil.jpg?w=400&format=webp"
+import charlesFrederick from "/src/assets/about-us/charles-frederick.jpg?w=400&format=webp"
 
 interface Props {}
 
 export const AboutUs: React.FC<Props> = () => (
   <>
     <Helmet>
-      <link rel="preload" as="image" href={aboutUsBanner} fetchPriority="high" />
+      <link
+        rel="preload"
+        as="image"
+        href={aboutUsBanner}
+        fetchPriority="high"
+      />
       <link rel="preload" as="image" href={sorenChristiansen} />
       <link rel="preload" as="image" href={robinsonVil} />
       <link rel="preload" as="image" href={charlesFrederick} />
-      <link rel="preload" as="image" href={aboutUsBannerSrcset} />
+      <link
+        rel="preload"
+        as="image"
+        imageSrcSet={aboutUsBannerSrcset}
+        imageSizes="(max-width: 64em) 100vw, 1600px"
+      />
       <title>About Us | SkySee Video</title>
       <meta
         name="description"

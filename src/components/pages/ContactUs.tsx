@@ -3,8 +3,8 @@ import { Helmet } from "react-helmet-async"
 import Swal from "sweetalert2"
 import { RiFacebookFill, RiInstagramLine } from "react-icons/ri"
 import { HeroBanner } from "../common/HeroBanner"
-import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?width=1600&format=webp"
-import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?width=640;1024;1600&format=webp&as=srcset"
+import contactUsBanner from "/src/assets/contact-us/contact-us-banner.png?w=1600&format=webp"
+import contactUsBannerSrcset from "/src/assets/contact-us/contact-us-banner.png?w=640;1024;1600&format=webp&as=srcset"
 import {
   TextField,
   Checkbox,
