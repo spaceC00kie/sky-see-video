@@ -25,6 +25,7 @@ export const Home: React.FC<Props> = () => (
     <div className="flex flex-col items-center justify-center">
       <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
         <LazyIframe
+          autoLoad
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
           title="SkySee Video Reel"
           playLabel="Play SkySee Video Reel"
