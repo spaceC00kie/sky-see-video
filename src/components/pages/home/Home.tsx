@@ -46,7 +46,6 @@ export const Home: React.FC<Props> = () => (
           src="https://player.vimeo.com/video/821349989?autoplay=1&loop=1&muted=1&controls=1&background=0&dnt=1"
           className="absolute left-0 top-0 z-10 h-full w-full"
           title="SkySee Video Reel"
-          style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
         />
