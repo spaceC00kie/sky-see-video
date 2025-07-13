@@ -13,12 +13,16 @@ export const HeaderLeft: React.FC<Props> = ({ onMenuClick }) => {
   return (
     <div className="grid place-content-center">
       {isSmall ? (
-        <button onClick={onMenuClick} className="grid place-content-center p-1">
+        <button
+          onClick={onMenuClick}
+          className="grid place-content-center p-1"
+          aria-label="Open menu"
+        >
           <GiHamburgerMenu size={25} />
         </button>
       ) : (
         <Link to="/" className="flex-none py-1">
-          <img src={skyseeLogo} className="h-16 w-auto" />
+          <img src={skyseeLogo} alt="Sky See Video" className="h-16 w-auto" />
         </Link>
       )}
     </div>

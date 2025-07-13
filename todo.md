@@ -1,4 +1,4 @@
-- send email from contact form
-*- establish knowledge transfer for Soren
+- fill in missing links for our work pages in the ourWorkData.ts file
+- get soren to sign up for web3forms.com with their info@skyseevideo.com email
 - get soren to have the domain transferred to us
-- captcha in front of contact form?
+- add 3 recent projects soren requested

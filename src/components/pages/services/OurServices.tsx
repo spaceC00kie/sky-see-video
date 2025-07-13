@@ -2,8 +2,8 @@ import { Helmet } from "react-helmet-async"
 import { Outlet } from "react-router-dom"
 import { OurServicesCard1 } from "./OurServicesCard1"
 import { OurServicesCard2 } from "./OurServicesCard2"
-import ourServicesBanner from "/src/assets/services/services-banner.png?width=1600&format=webp"
-import ourServicesBannerSrcset from "/src/assets/services/services-banner.png?width=640;1024;1600&format=webp&as=srcset"
+import ourServicesBanner from "/src/assets/services/services-banner.png?w=1600&format=webp"
+import ourServicesBannerSrcset from "/src/assets/services/services-banner.png?w=640;1024;1600&format=webp&as=srcset"
 import { HeroBanner } from "../../common/HeroBanner"
 import construction from "/src/assets/services/construction.png?format=webp"
 import tourism from "/src/assets/services/tourism.jpg?format=webp"
@@ -14,7 +14,7 @@ interface Props {}
 
 export const OurServices: React.FC<Props> = () => (
   <>
-    {/* <Helmet>
+    <Helmet>
       <link
         rel="preload"
         as="image"
@@ -32,10 +32,14 @@ export const OurServices: React.FC<Props> = () => (
         name="description"
         content="Pre-production, production and post—see everything SkySee Video can do for your brand."
       />
-    </Helmet> */}
+    </Helmet>
 
     <div className="flex flex-col items-center justify-center">
-      <HeroBanner img={ourServicesBanner} srcSet={ourServicesBannerSrcset} />
+      <HeroBanner
+        img={ourServicesBanner}
+        srcSet={ourServicesBannerSrcset}
+        alt="SkySee Video services"
+      />
 
       <div className="flex max-w-[70em] flex-col gap-4 px-6 py-20">
         <p className="text-xl text-blue-500">OUR&nbsp;SERVICES</p>

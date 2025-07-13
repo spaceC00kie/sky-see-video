@@ -13,13 +13,12 @@ export const TourismAndResort: React.FC<Props> = ({}) => {
         <div className="relative mx-auto mb-6 aspect-video w-full max-w-[95em]">
           <div className="absolute inset-0 grid place-content-center rounded-sm bg-black" />
           <iframe
-            src="https://player.vimeo.com/video/191655429?h=af982b45c1&badge=0&autopause=0&player_id=0&app_id=58479"
+            src="https://player.vimeo.com/video/191655429?h=af982b45c1&dnt=1"
             className="absolute left-0 top-0 z-10 h-full w-full"
             title="Tourism & Resort Videography | SkySee Video"
             style={{ border: "none" }}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            fetchpriority="high"
           />
         </div>
 
