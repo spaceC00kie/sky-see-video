@@ -56,7 +56,7 @@ export const ProjectPage: React.FC<Props> = ({
             </h1>
             <button
               onClick={share}
-              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-300"
+              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-500 border-blue-800 border"
             >
               <FiShare2 /> Share
             </button>
