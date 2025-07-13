@@ -68,7 +68,7 @@ export const ProjectPage: React.FC<Props> = ({
           <p className="max-w-4xl text-center">{description}</p>
         </div>
 
-        <div className="relative w-full max-w-6xl overflow-x-hidden py-10">
+       <div className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10">
           <CarouselProvider
             naturalSlideWidth={4}
             naturalSlideHeight={5}
