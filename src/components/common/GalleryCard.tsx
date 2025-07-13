@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 
 interface Props {
   image: string
-  srcSet?: string
+  srcSet: string
   title: string
   description: string
   path: string
@@ -16,6 +16,7 @@ export const GalleryCard: React.FC<Props> = ({
   title,
   description,
   path,
+  lazy,
 }) => (
   <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
     <Link
@@ -27,8 +28,7 @@ export const GalleryCard: React.FC<Props> = ({
           src={image}
           srcSet={srcSet}
           alt={title}
-          loading="lazy"
-          decoding="async"
+          loading={lazy ? "lazy" : "eager"}
           className="h-full w-full object-cover"
         />
       </div>

@@ -6,9 +6,8 @@ import { TiCamera } from "react-icons/ti"
 import { Link } from "react-router-dom"
 
 import { HomeCard1 } from "./HomeCard1"
-import { HomeCard2 } from "./HomeCard2"
-
 import { cards as workCards } from "../our-work/ourWorkData"
+import { GalleryCard } from "../../common/GalleryCard"
 
 interface Props {}
 
@@ -50,7 +49,6 @@ export const Home: React.FC<Props> = () => (
           style={{ border: "none" }}
           allow="autoplay; fullscreen; picture-in-picture"
           allowFullScreen
-          fetchpriority="high"
         />
       </div>
 
@@ -118,7 +116,7 @@ export const Home: React.FC<Props> = () => (
 
           <div className="mx-auto grid max-w-fit justify-items-center gap-5 md:grid-cols-2">
             {workCards.slice(0, 2).map((card) => (
-              <HomeCard2 key={card.title} {...card} />
+              <GalleryCard key={card.title} {...card} />
             ))}
           </div>
         </div>

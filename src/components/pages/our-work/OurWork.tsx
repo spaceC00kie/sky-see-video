@@ -45,12 +45,19 @@ export const OurWork: React.FC = () => (
 
         {/* ——— gallery ——— */}
         <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {cards.map((card) => (
+          {cards.map(({ image, srcSet, title, description, path }, index) => (
             <div
-              key={card.image}
+              key={image}
               className="content-visibility-auto flex justify-center mb-5"
             >
-              <GalleryCard {...card} />
+              <GalleryCard
+                image={image}
+                srcSet={srcSet}
+                title={title}
+                description={description}
+                path={path}
+                lazy={index < 12}
+              />
             </div>
           ))}
         </div>

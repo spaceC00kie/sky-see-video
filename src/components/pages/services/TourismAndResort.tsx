@@ -19,7 +19,6 @@ export const TourismAndResort: React.FC<Props> = ({}) => {
             style={{ border: "none" }}
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
-            fetchpriority="high"
           />
         </div>
 
