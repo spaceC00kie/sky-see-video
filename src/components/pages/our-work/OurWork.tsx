@@ -5,7 +5,7 @@ import { GalleryCard } from "../../common/GalleryCard"
 export const OurWork: React.FC = () => (
   <>
     <Helmet>
-      {logos.map((src) => (
+      {logos.map(({ src }) => (
         <link key={src} rel="preload" as="image" href={src} />
       ))}
       {cards.map(({ image }) => (
@@ -21,10 +21,11 @@ export const OurWork: React.FC = () => (
     <div className="flex flex-col gap-4 py-20">
       {/* ——— client logos ——— */}
       <div className="xl:grid xl:grid-flow-col gap-4 flex flex-wrap justify-center">
-        {logos.map((src, i) => (
+        {logos.map(({ src, alt }, i) => (
           <img
             key={src}
             src={src}
+            alt={alt}
             decoding="async"
             loading="eager"
             className="w-32 xl:w-20"

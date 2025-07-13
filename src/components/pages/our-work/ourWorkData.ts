@@ -132,23 +132,28 @@ import num71 from "/src/assets/our-work/examples/71.jpg?w=600&format=webp"
 import num71Srcset from "/src/assets/our-work/examples/71.jpg?w=300;600&format=webp&as=srcset"
 
 /* ——— arrays ——— */
-export const logos: readonly string[] = [
-  cnnLogo,
-  horizonLogo,
-  ballyLogo,
-  starzLogo,
-  hyundaiLogo,
-  canesLogo,
-  alhurraLogo,
-  channel7Logo,
-  blueKeyLogo,
-  cbsnLogo,
-  emoryLogo,
-  foxLogo,
-  hlnLogo,
-  natGeoLogo,
-  espnLogo,
-  pbsLogo,
+export interface Logo {
+  src: string
+  alt: string
+}
+
+export const logos: readonly Logo[] = [
+  { src: cnnLogo, alt: "CNN" },
+  { src: horizonLogo, alt: "Horizon Roofing" },
+  { src: ballyLogo, alt: "Bally Sports" },
+  { src: starzLogo, alt: "Starz" },
+  { src: hyundaiLogo, alt: "Hyundai Construction" },
+  { src: canesLogo, alt: "Raising Cane's" },
+  { src: alhurraLogo, alt: "Alhurra" },
+  { src: channel7Logo, alt: "Channel 7" },
+  { src: blueKeyLogo, alt: "Blue Key" },
+  { src: cbsnLogo, alt: "CBSN" },
+  { src: emoryLogo, alt: "Emory University" },
+  { src: foxLogo, alt: "Fox Sports" },
+  { src: hlnLogo, alt: "HLN" },
+  { src: natGeoLogo, alt: "National Geographic" },
+  { src: espnLogo, alt: "ESPN" },
+  { src: pbsLogo, alt: "PBS" },
 ] as const
 
 export const cards: readonly WorkCard[] = [
