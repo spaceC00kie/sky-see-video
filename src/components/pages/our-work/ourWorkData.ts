@@ -159,8 +159,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service.",
     path: "/project/kompas-show-reel/",
-    videoUrl:
-      "https://player.vimeo.com/video/818118738?h=2c2804b3da&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/818118738?h=2c2804b3da&dnt=1",
   },
   {
     image: num21,
@@ -169,8 +168,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Hyundai Construction Equipment of America talked with the owner of Amerigo Recycling in Atlanta about his satisfaction with HCEA equipment, dedication to service, and quick turnaround on delivery.",
     path: "/project/hyundai-hcea-amerigo-recycling/",
-    videoUrl:
-      "https://player.vimeo.com/video/810145291?h=29898794b4&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810145291?h=29898794b4&dnt=1",
   },
   {
     image: num22,
@@ -188,8 +186,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7Siiis & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
     path: "/project/situsamc-habitat-for-humanity-atl/",
-    videoUrl:
-      "https://player.vimeo.com/video/810145426?h=64456897b1&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810145426?h=64456897b1&dnt=1",
   },
   {
     image: num24,
@@ -198,8 +195,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Larger than life NBA players light up the Charlotte skyline. Combining video and animation, this Fox Sports promo gears up the fans for the Charlotte Hornets plan to “dominate” all season long.",
     path: "/project/charlotte-hornets/",
-    videoUrl:
-      "https://player.vimeo.com/video/819562921?h=c940e3203f&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/819562921?h=c940e3203f&dnt=1",
   },
   {
     image: num25,
@@ -226,8 +222,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "ACC college football is back and better than ever! For this spot, we combined graphic animation, talent shots, upbeat music and sound bites to promote this quirky crew of football fanatics at their best.",
     path: "/project/fox-sports-cfb-talent-promo/",
-    videoUrl:
-      "https://player.vimeo.com/video/819545063?h=371cb34ea8&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/819545063?h=371cb34ea8&dnt=1",
   },
   {
     image: num28,
@@ -236,7 +231,8 @@ export const cards: readonly WorkCard[] = [
     description:
       "During the pandemic, Proper Cloth introduced a high-end line of masks with comfort, style, and efficacy as key selling points. Tracked GFX highlight the technology and product’s superiority.",
     path: "/project/proper-cloth-cvc-masks/",
-    videoUrl: "",
+    videoUrl:
+      "https://player.vimeo.com/video/447499019?dnt=1",
   },
   {
     image: num29,
@@ -244,8 +240,7 @@ export const cards: readonly WorkCard[] = [
     title: "Atlanta Braves Opening Week",
     description: "",
     path: "/project/atlanta-braves-opening-week/",
-    videoUrl:
-      "https://player.vimeo.com/video/819566632?h=43fe3101d0&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/819566632?h=43fe3101d0&dnt=1",
   },
   {
     image: num30,
@@ -290,8 +285,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "A guided tour of the Roberto C. Goizueta Business School campus at Emory University. Learn about the programs offered and what Emory GBS has to offer candidates for higher learning.",
     path: "/project/emory-gbs-virtual-tour/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134546?h=5ffed2b6e4&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134546?h=5ffed2b6e4&dnt=1",
   },
   {
     image: num35,
@@ -335,7 +329,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "You could say that Crocker Snow Jr. has been writing his latest book, about the tiny island off the coast of Nantucket called Muskeget, ever since his father flew him there some 70 years ago. He shares his memories of a bygone era.",
     path: "/project/nantucket-book-festival-at-home-with-authors-crocker-snow-jr-with-rob-cocuzzo/",
-      videoUrl: "https://www.youtube.com/embed/FuyDvRxljOQ?si=0lThOwgmIVewMKYi",
+    videoUrl: "https://www.youtube.com/embed/FuyDvRxljOQ?si=0lThOwgmIVewMKYi",
   },
   {
     image: num40,
@@ -353,7 +347,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Hurricane Ida wreaked havoc on New Orleans, and Liberty Welding was hit hard. BlueKey Restoration saved the day and got Liberty Welding the money needed to restore, and improve, the building.",
     path: "/project/bluekey-construction-liberty-welding/",
-    videoUrl: "",
+    videoUrl: "https://player.vimeo.com/video/718723332?h=e58df46c8d&dnt=1",
   },
   {
     image: num42,
@@ -361,8 +355,7 @@ export const cards: readonly WorkCard[] = [
     title: "Your Teams Play Here",
     description: "",
     path: "/project/your-teams-play-here/",
-    videoUrl:
-      "https://player.vimeo.com/video/819568010?h=7874e5197a&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/819568010?h=7874e5197a&dnt=1",
   },
   {
     image: num43,
@@ -371,7 +364,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Black Friday promotional event for Mercedes-Benz of Buckhead. SkySee Video’s camera and drone crew followed the Black Friday caravan around the Buckhead area, including the Lennox Mall roundabout.",
     path: "/project/mercedes-benz-of-buckhead-black-friday/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/szwy97LvzTU?si=m6dlkqwLp-Ss031i",
   },
   {
     image: num44,
@@ -389,7 +382,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "”Myong-hee,” played by Jennifer Sun Bell, who was abused by close members of her family. When she runs away from home, she finds herself on the street where predators await vulnerable girls like her.",
     path: "/project/life-less/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/hEfolHFsMLQ",
   },
   {
     image: num46,
@@ -398,7 +391,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
     path: "/project/rasin-mwen-l-amour-du-fric/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
   },
   {
     image: num47,
@@ -407,8 +400,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Overview of the Goizueta Business School’s Executive MBA program at Emory University in Atlanta, GA. Learn about the programs offered and what Emory GBS has to offer candidates for higher learning.",
     path: "/project/emory-gbs-leadership-execmba/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134426?h=a08dd44dbe&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134426?h=a08dd44dbe&dnt=1",
   },
   {
     image: num48,
@@ -417,8 +409,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Overview of Emory’s Entrepreneurship program for undergraduate students of the Roberto C. Goizueta Business School.",
     path: "/project/emory-gbs-entrepreneurship/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134261?h=158c3952a4&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134261?h=158c3952a4&dnt=1",
   },
   {
     image: num49,
@@ -427,8 +418,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "The Emory Goizueta Business School prides itself on helping to develop the next generation of business leaders. Emory GBS is preparing these leaders to overcome these challenges our planet faces.",
     path: "/project/emory-goizueta-business-school/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134643?h=a8f4375e6f&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134643?h=a8f4375e6f&dnt=1",
   },
   {
     image: num50,
@@ -437,7 +427,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "When Friendship Baptist Church, its school and gym were devastated by a hurricane, Horizon Roofing was able to secure $2,500,000 to repair all of the damages and restore the property.",
     path: "/project/horizon-roofing-friendship-baptist-church/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/4dSox8UpUOk?si=bw7guCQdxn7baiUE",
   },
   {
     image: num51,
@@ -446,7 +436,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-lifestyle-girlfriends-getaway/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/0PMK2CxixFw?si=q2RQ1HHNSWDwEXbT",
   },
   {
     image: num52,
@@ -455,8 +445,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-resort-lifestyle-romantic-couple/",
-    videoUrl:
-      "https://player.vimeo.com/video/323272396?h=93cf4999d4&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/323272396?h=93cf4999d4&dnt=1",
   },
   {
     image: num53,
@@ -465,8 +454,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Created for Coronavirus Cleanup GA, a company specializing in disinfecting businesses and schools. The video includes 3-D animation of viruses and bacteria eliminated by CVCGA.",
     path: "/project/coronavirus-cleanup-ga-cbs-46/",
-    videoUrl:
-      "https://player.vimeo.com/video/481297068?h=fe2336c494&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/481297068?h=fe2336c494&dnt=1",
   },
   {
     image: num54,
@@ -474,8 +462,7 @@ export const cards: readonly WorkCard[] = [
     title: "Emory GBS Leadership EvMBA",
     description: "Overview of Executive MBA program at Emory GBS.",
     path: "/project/emory-gbs-leadership-evmba/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134355?h=b7cca93ae9&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134355?h=b7cca93ae9&dnt=1",
   },
   {
     image: num55,
@@ -484,8 +471,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "Overview of Emory Goizueta Business School’s full-time Leadership MBA program.",
     path: "/project/emory-gbs-leadership-ftmba/",
-    videoUrl:
-      "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
+    videoUrl: "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
   },
   {
     image: num56,
@@ -559,7 +545,7 @@ export const cards: readonly WorkCard[] = [
     title: "Kearns Marine Construction",
     description: "",
     path: "/project/kearns-marine-construction/",
-    videoUrl: "",
+    videoUrl: "https://www.youtube.com/embed/FeSDL4-uLHk?si=h36lM215x6g4UZSB",
   },
   {
     image: num65,
