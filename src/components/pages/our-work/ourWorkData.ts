@@ -160,7 +160,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num20,
     srcSet: num20Srcset,
-    title: "Kompas Communications / Mission",
+    title: "Kompas Communications: Mission",
     description:
       "Kompas Communications is a strategic, creative and digital marketing & communications company. In this promo their graphic mark illustrates the company’s mission statement and customer service.",
     path: "/project/kompas-show-reel/",
@@ -169,7 +169,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num21,
     srcSet: num21Srcset,
-    title: "Hyundai HCEA / Amerigo Recycling",
+    title: "Hyundai HCEA: Amerigo Recycling",
     description:
       "Hyundai Construction Equipment of America talked with the owner of Amerigo Recycling in Atlanta about his satisfaction with HCEA equipment, dedication to service, and quick turnaround on delivery.",
     path: "/project/hyundai-hcea-amerigo-recycling/",
@@ -178,7 +178,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num22,
     srcSet: num22Srcset,
-    title: "805 Wine / Animated Logo",
+    title: "805 Wine: Animated Logo",
     description:
       "Paso Robles, California wine company. Animated logo used to brand the company with the region from which its unique flavors are produced. Character was created to establish itself in the Japanese marketplace.",
     path: "/project/805-wine-animated-logo/",
@@ -187,7 +187,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num23,
     srcSet: num23Srcset,
-    title: "SitusAMC/Habitat for Humanity ATL",
+    title: "SitusAMC: Habitat for Humanity ATL",
     description:
       "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7Siiis & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
     path: "/project/situsamc-habitat-for-humanity-atl/",
@@ -214,7 +214,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num26,
     srcSet: num26Srcset,
-    title: "Awkward Fam Photos/American Goth",
+    title: "Awkward Family Photos: American Goth",
     description:
       "Documentary graphics for a segment of Awkward Family Photos, a show pilot which premiered at the 2020 Sundance Film Festival. Tools included After Effects and Photoshop.",
     path: "/project/awkward-family-photos-american-goth/",
@@ -223,7 +223,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num27,
     srcSet: num27Srcset,
-    title: "Fox Sports / CFB Talent Promo",
+    title: "Fox Sports: CFB Talent Promo",
     description:
       "ACC college football is back and better than ever! For this spot, we combined graphic animation, talent shots, upbeat music and sound bites to promote this quirky crew of football fanatics at their best.",
     path: "/project/fox-sports-cfb-talent-promo/",
@@ -232,7 +232,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num28,
     srcSet: num28Srcset,
-    title: "Proper Cloth / Coronavirus Masks",
+    title: "Proper Cloth: Coronavirus Masks",
     description:
       "During the pandemic, Proper Cloth introduced a high-end line of masks with comfort, style, and efficacy as key selling points. Tracked GFX highlight the technology and product’s superiority.",
     path: "/project/proper-cloth-cvc-masks/",
@@ -258,7 +258,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num31,
     srcSet: num31Srcset,
-    title: "Starz Graveyard Shift",
+    title: "Starz Entertainment: Graveyard Shift",
     description:
       "A promo package for an ongoing block of horror movie programming for Starz Entertainment. Tracking and graphics accomplished with Cinema 4D, After Effects, and in-camera effects.",
     path: "/project/starz-graveyard-shift/",
@@ -267,7 +267,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num32,
     srcSet: num32Srcset,
-    title: "Awkward Family Photos Open",
+    title: "Awkward Family Photos: Opening Credits",
     description:
       "Documentary show that tells the stories behind America’s most popular awkward family photos. What better way to communicate the silliness of the show than wrapping it in a retro-style photo album?",
     path: "/project/awkward-family-photos-open/",
@@ -285,7 +285,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num34,
     srcSet: num34Srcset,
-    title: "Emory GBS Virtual Tour",
+    title: "Emory GBS: Virtual Tour",
     description:
       "A guided tour of the Roberto C. Goizueta Business School campus at Emory University. Learn about the programs offered and what Emory GBS has to offer candidates for higher learning.",
     path: "/project/emory-gbs-virtual-tour/",
@@ -311,7 +311,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num37,
     srcSet: num37Srcset,
-    title: "MBN Alhurra “The Melting Pot”",
+    title: "MBN Alhurra: “The Melting Pot”",
     description:
       "13-Part Series on families who immigrated to the United States. 3 generations of each family were interviewed for this series, with each generation offering its own unique perspective on America.",
     path: "/project/mbn-alhurra-the-melting-pot/",
@@ -320,7 +320,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num38,
     srcSet: num38Srcset,
-    title: "At Home with Authors/In That Time",
+    title: "At Home with Authors: In That Time",
     description:
       "Daniel Weiss, CEO of the Metropolitan Museum of Art, finds poetry in one soldier’s life and captures a portrait of the Vietnam era with his new book, In That Time. The book is a tribute to Major Michael O’Donnell.",
     path: "/project/nantucket-book-festival-at-home-with-authors-in-that-time/",
@@ -329,7 +329,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num39,
     srcSet: num39Srcset,
-    title: "At Home with Authors/Crocker Snow, Jr.",
+    title: "At Home with Authors: Crocker Snow, Jr.",
     description:
       "You could say that Crocker Snow Jr. has been writing his latest book, about the tiny island off the coast of Nantucket called Muskeget, ever since his father flew him there some 70 years ago. He shares his memories of a bygone era.",
     path: "/project/nantucket-book-festival-at-home-with-authors-crocker-snow-jr-with-rob-cocuzzo/",
@@ -338,7 +338,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num40,
     srcSet: num40Srcset,
-    title: "At Home with Authors/The Right To Vote",
+    title: "At Home with Authors: The Right To Vote",
     description:
       "Elaine Weiss, author of The Woman’s Hour: The Great Fight To Win The Vote, says her book “is about how change is made in a democracy….what it takes to make change, and how hard it is.”",
     path: "/project/nantucket-book-festival-at-home-with-authors-the-right-to-vote/",
@@ -347,7 +347,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num41,
     srcSet: num41Srcset,
-    title: "BlueKey Construction Liberty Welding",
+    title: "BlueKey Construction: Liberty Welding",
     description:
       "Hurricane Ida wreaked havoc on New Orleans, and Liberty Welding was hit hard. BlueKey Restoration saved the day and got Liberty Welding the money needed to restore, and improve, the building.",
     path: "/project/bluekey-construction-liberty-welding/",
@@ -364,7 +364,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num43,
     srcSet: num43Srcset,
-    title: "Mercedes-Benz of Buckhead / Black Friday",
+    title: "Mercedes-Benz of Buckhead: Black Friday",
     description:
       "Black Friday promotional event for Mercedes-Benz of Buckhead. SkySee Video’s camera and drone crew followed the Black Friday caravan around the Buckhead area, including the Lennox Mall roundabout.",
     path: "/project/mercedes-benz-of-buckhead-black-friday/",
@@ -400,7 +400,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num47,
     srcSet: num47Srcset,
-    title: "Emory GBS Leadership ExecMBA",
+    title: "Emory GBS: Leadership ExecMBA",
     description:
       "Overview of the Goizueta Business School’s Executive MBA program at Emory University in Atlanta, GA. Learn about the programs offered and what Emory GBS has to offer candidates for higher learning.",
     path: "/project/emory-gbs-leadership-execmba/",
@@ -409,7 +409,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num48,
     srcSet: num48Srcset,
-    title: "Emory GBS Entrepreneurship",
+    title: "Emory GBS: Entrepreneurship",
     description:
       "Overview of Emory’s Entrepreneurship program for undergraduate students of the Roberto C. Goizueta Business School.",
     path: "/project/emory-gbs-entrepreneurship/",
@@ -427,16 +427,16 @@ export const cards: readonly WorkCard[] = [
   {
     image: num50,
     srcSet: num50Srcset,
-    title: "Horizon Roofing / Friendship Baptist Church",
+    title: "Horizon Roofing: Friendship Baptist Church",
     description:
       "When Friendship Baptist Church, its school and gym were devastated by a hurricane, Horizon Roofing was able to secure $2,500,000 to repair all of the damages and restore the property.",
     path: "/project/horizon-roofing-friendship-baptist-church/",
     videoUrl: "https://www.youtube.com/embed/4dSox8UpUOk?si=bw7guCQdxn7baiUE",
   },
-  {
+    {
     image: num51,
     srcSet: num51Srcset,
-    title: "Chetola Lifestyle / Girlfriends Getaway",
+    title: "Chetola Resort: The Ultimate Girls Getaway",
     description:
       "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-lifestyle-girlfriends-getaway/",
@@ -445,7 +445,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num52,
     srcSet: num52Srcset,
-    title: "Chetola Resort Lifestyle / Romantic Couple",
+    title: "Chetola Resort: Just the Two of Us",
     description:
       "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-resort-lifestyle-romantic-couple/",
@@ -463,7 +463,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num54,
     srcSet: num54Srcset,
-    title: "Emory GBS Leadership EvMBA",
+    title: "Emory GBS: Leadership EvMBA",
     description: "Overview of Executive MBA program at Emory GBS.",
     path: "/project/emory-gbs-leadership-evmba/",
     videoUrl: "https://player.vimeo.com/video/810134355?h=b7cca93ae9&dnt=1",
@@ -471,25 +471,26 @@ export const cards: readonly WorkCard[] = [
   {
     image: num55,
     srcSet: num55Srcset,
-    title: "Emory GBS Leadership FTMBA",
+    title: "Emory GBS: Leadership FTMBA",
     description:
       "Overview of Emory Goizueta Business School’s full-time Leadership MBA program.",
     path: "/project/emory-gbs-leadership-ftmba/",
     videoUrl: "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
   },
-  {
-    image: num56,
-    srcSet: num56Srcset,
-    title: "The Melting Pot / MBN Al Hurra",
-    description:
-      "13-part series on immigration in the United States of America, broadcast in the Middle East on American-owned network, Al Hurra. Audio is dubbed over in Arabic",
-    path: "/project/the-melting-pot-mbn-al-hurra/",
-    videoUrl: "",
-  },
+  // @TODO: Uncomment when the video is available
+  // {
+  //   image: num56,
+  //   srcSet: num56Srcset,
+  //   title: "The Melting Pot / MBN Al Hurra",
+  //   description:
+  //     "13-part series on immigration in the United States of America, broadcast in the Middle East on American-owned network, Al Hurra. Audio is dubbed over in Arabic",
+  //   path: "/project/the-melting-pot-mbn-al-hurra/",
+  //   videoUrl: "",
+  // },
   {
     image: num57,
     srcSet: num57Srcset,
-    title: "Clayton Homes / Hurricane Michael",
+    title: "Clayton Homes: Hurricane Michael",
     description:
       "Clayton Homes manufactures modular houses that are not only aesthetically stylish, they’re built to withstand the worst that Mother Nature can throw at it. Hurricane Michael proved their case.",
     path: "/project/clayton-homes-1-hurricane-michael-0/",
@@ -498,7 +499,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num58,
     srcSet: num58Srcset,
-    title: "Blowing Rock Family Getaway",
+    title: "Blowing Rock: Family Getaway",
     description: "",
     path: "/project/blowing-rock-family-getaway/",
     videoUrl: "https://player.vimeo.com/video/273605317?h=d62089c2d1&dnt=1",
@@ -506,7 +507,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num59,
     srcSet: num59Srcset,
-    title: "Blowing Rock Girlfriends Getaway",
+    title: "Blowing Rock: Girlfriends Getaway",
     description: "",
     path: "/project/blowing-rock-girlfriends-getaway/",
     videoUrl: "https://player.vimeo.com/video/273022160?h=eceb188db2&dnt=1",
@@ -514,7 +515,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num60,
     srcSet: num60Srcset,
-    title: "Blowing Rock Romantic Getaway",
+    title: "Blowing Rock: Romantic Getaway",
     description: "",
     path: "/project/blowing-rock-romantic-getaway/",
     videoUrl: "https://player.vimeo.com/video/273374202?h=8813d935b0&dnt=1",
@@ -522,7 +523,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num61,
     srcSet: num61Srcset,
-    title: "Chetola Winter Wonderland",
+    title: "Chetola Resort: Winter Wonderland",
     description: "",
     path: "/project/chetola-winter-wonderland/",
     videoUrl: "https://player.vimeo.com/video/248217852?h=2b0e41f6f7&dnt=1",
@@ -530,7 +531,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num62,
     srcSet: num62Srcset,
-    title: "Chetola Resort @ Blowing Rock/Fall Season",
+    title: "Chetola Resort at Blowing Rock: Fall Season",
     description: "",
     path: "/project/chetola-resort-at-blowing-rock/",
     videoUrl: "https://player.vimeo.com/video/191655429?h=2131f7e88f&dnt=1",
@@ -554,7 +555,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num65,
     srcSet: num65Srcset,
-    title: "SkySee Video | PT Stearman Biplane",
+    title: "PT Stearman Biplane",
     description: "",
     path: "/project/pt-stearman-airplane-drone-1/",
     videoUrl: "https://player.vimeo.com/video/191636395?h=e5608067e9&dnt=1",
@@ -562,7 +563,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num66,
     srcSet: num66Srcset,
-    title: "This American Land on PBS / Land of Legends",
+    title: "This American Land: Land of Legends",
     description: "",
     path: "/project/this-american-land-land-of-legends/",
     videoUrl: "https://player.vimeo.com/video/194558172?h=26b65ca8d0&dnt=1",
@@ -578,7 +579,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num68,
     srcSet: num68Srcset,
-    title: "This American Land: Farming The Upstream",
+    title: "This American Land: Farming the Upstream",
     description: "",
     path: "/project/this-american-land-farming-the-upstream/",
     videoUrl: "https://player.vimeo.com/video/193980833?h=11978f6104&dnt=1",
@@ -586,7 +587,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num69,
     srcSet: num69Srcset,
-    title: "This American Land / Megaloads",
+    title: "This American Land: Megaloads Blocked from Wild & Scenic River Route",
     description:
       "Protestors stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
     path: "/project/this-american-land-megaloads-blocked-from-wild-scenic-river-route/",
@@ -595,7 +596,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num70,
     srcSet: num70Srcset,
-    title: "This American Land / Back To Organics",
+    title: "This American Land: Back To Organics",
     description:
       "Small-scale farmers in Montana learn how to grow crops organically with helpful support from advisers with the Natural Resources Conservation Service.",
     path: "/project/this-american-land-back-to-organics/",
@@ -604,7 +605,7 @@ export const cards: readonly WorkCard[] = [
   {
     image: num71,
     srcSet: num71Srcset,
-    title: "This American Land / Sold on Organics",
+    title: "This American Land: Sold on Organics",
     description: "",
     path: "/project/this-american-land-sold-on-organics/",
     videoUrl: "https://player.vimeo.com/video/194571431?h=1c76ff2e1c&dnt=1",

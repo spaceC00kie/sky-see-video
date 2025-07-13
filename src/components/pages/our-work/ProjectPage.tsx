@@ -75,6 +75,7 @@ export const ProjectPage: React.FC<Props> = ({
             touchEnabled
             infinite={false}
             className="w-full"
+            isPlaying
           >
             <ButtonBack
               aria-label="Previous"
