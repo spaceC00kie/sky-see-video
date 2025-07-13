@@ -20,7 +20,7 @@ export const OurServicesCard2: React.FC<Props> = ({
       </Link>
     </div>
     <Link to={path}>
-      <h2 className="text-lg text-blue-500 underline">{title}</h2>
+      <h2 className="text-lg text-blue-700 underline">{title}</h2>
     </Link>
     <p className="text-md text-center">{description}</p>
   </div>

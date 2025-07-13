@@ -24,7 +24,7 @@ export const CorporateMarketing: React.FC<Props> = ({}) => {
 
         <div className="flex max-w-[70em] flex-col gap-8 pb-20">
           <div className="flex w-full flex-col gap-4 px-6">
-            <h1 className="text-3xl font-medium text-blue-500">
+            <h1 className="text-3xl font-medium text-blue-700">
               Corporate Marketing
             </h1>
             <div className="flex flex-col gap-3 text-lg">
@@ -54,7 +54,7 @@ export const CorporateMarketing: React.FC<Props> = ({}) => {
             </div>
           </div>
           <div className="flex w-full flex-col gap-4 px-6">
-            <h2 className="text-blue-500 text-2xl">
+            <h2 className="text-blue-700 text-2xl">
               Video Services for B2C, B2B, and Nonprofit Marketers
             </h2>
             <p className="text-lg">
@@ -109,7 +109,7 @@ export const CorporateMarketing: React.FC<Props> = ({}) => {
             </p>
           </div>
           <div className="flex w-full flex-col gap-4 px-6">
-            <h2 className="text-blue-500 text-2xl">
+            <h2 className="text-blue-700 text-2xl">
               SkySee Video: Premier Corporate Marketing
             </h2>
             <p className="text-lg">

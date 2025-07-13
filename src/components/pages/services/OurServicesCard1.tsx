@@ -5,7 +5,7 @@ interface Props {
 
 export const OurServicesCard1: React.FC<Props> = ({ title, bulletPoints }) => (
   <div className="flex flex-col justify-start gap-3 w-full sm:max-w-64">
-    <h2 className="w-full text-xl text-blue-500">{title}</h2>
+    <h2 className="w-full text-xl text-blue-700">{title}</h2>
     <ul className="list-none w-full space-y-1">
       {bulletPoints.map((point, index) => (
         <li key={index} className="flex items-start gap-2 pl-2 text-xl">

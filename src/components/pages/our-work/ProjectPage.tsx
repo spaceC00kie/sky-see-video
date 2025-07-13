@@ -1,9 +1,5 @@
 import { Helmet } from "react-helmet-async"
-import {
-  CarouselProvider,
-  ButtonBack,
-  ButtonNext,
-} from "pure-react-carousel"
+import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import { FiChevronLeft, FiChevronRight, FiShare2 } from "react-icons/fi"
 import { cards } from "./ourWorkData"
@@ -15,7 +11,6 @@ interface Props {
   description: string
   videoUrl: string
 }
-
 
 export const ProjectPage: React.FC<Props> = ({
   title,
@@ -60,7 +55,7 @@ export const ProjectPage: React.FC<Props> = ({
             </h1>
             <button
               onClick={share}
-              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-500 px-3 py-2 text-white hover:bg-blue-300"
+              className="flex h-12 w-28 items-center justify-evenly gap-2 rounded-md bg-blue-700 px-3 py-2 text-white hover:bg-blue-300"
             >
               <FiShare2 /> Share
             </button>
@@ -77,7 +72,6 @@ export const ProjectPage: React.FC<Props> = ({
             step={visibleSlides}
             dragEnabled
             touchEnabled
-            isPlaying
             infinite={false}
             className="w-full"
           >
