@@ -25,8 +25,8 @@ export const OurWork: React.FC = () => (
           <img
             key={src}
             src={src}
-            width={150}
-            height={150}
+            width={128}
+            height={128}
             decoding="async"
             loading="eager"
             className="w-32 xl:w-20 h-auto"
