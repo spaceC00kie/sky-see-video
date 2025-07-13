@@ -21,14 +21,14 @@ export const TedsAboutUsCard: React.FC = () => (
       clients like Turner Broadcasting, Starz Entertainment, ESPN, NatGeo, and
       Awkward Family Photos. Ted knows design and how to make the most of the
       limited time and space each video has to make your company shine. You can
-      see his personal website{' '}
+      see
       <a
         href="https://tintorcio.myportfolio.com/"
         target="_blank"
         rel="noopener noreferrer"
         className="text-blue-600 underline hover:text-blue-800"
       >
-        here
+        his personal website
       </a>{' '}
       to explore the breadth of his talents.
     </p>
