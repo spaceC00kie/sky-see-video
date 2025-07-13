@@ -26,6 +26,8 @@ export const OurServices: React.FC<Props> = () => (
         as="image"
         href={ourServicesBannerSrcset}
         fetchPriority="high"
+        imageSrcSet={ourServicesBannerSrcset}
+        imageSizes="(max-width: 64em) 100vw, 1600px"
       />
       <title>Services | SkySee Video</title>
       <meta

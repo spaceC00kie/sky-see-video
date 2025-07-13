@@ -44,6 +44,7 @@ export const ProjectPage: React.FC<Props> = ({
             className="absolute left-0 top-0 z-10 h-full w-full"
             style={{ border: "none" }}
             allow="autoplay; fullscreen; picture-in-picture"
+            title={title}
             allowFullScreen
           />
         </div>
