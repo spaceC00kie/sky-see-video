@@ -1,4 +1,4 @@
-- fill in missing links for our work pages in the ourWorkData.ts file
+- fill in missing link for "The Melting Pot / MBN Al Hurra" in ourWorkData.ts file (num56)
 - get soren to sign up for web3forms.com with their info@skyseevideo.com email
 - get soren to have the domain transferred to us
 - add 3 recent projects soren requested
