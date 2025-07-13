@@ -231,8 +231,7 @@ export const cards: readonly WorkCard[] = [
     description:
       "During the pandemic, Proper Cloth introduced a high-end line of masks with comfort, style, and efficacy as key selling points. Tracked GFX highlight the technology and product’s superiority.",
     path: "/project/proper-cloth-cvc-masks/",
-    videoUrl:
-      "https://player.vimeo.com/video/447499019?dnt=1",
+    videoUrl: "https://player.vimeo.com/video/447499019?dnt=1",
   },
   {
     image: num29,
