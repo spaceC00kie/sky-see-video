@@ -46,6 +46,7 @@ export const ProjectPage: React.FC<Props> = ({
             allow="autoplay; fullscreen; picture-in-picture"
             title={title}
             allowFullScreen
+            tabIndex={-1}
           />
         </div>
 

@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Slider, Slide, CarouselContext } from "pure-react-carousel"
 import { cards } from "./ourWorkData"
 
@@ -9,6 +9,7 @@ interface Props {
 
 export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
   const carouselContext = useContext(CarouselContext)
+  const navigate = useNavigate()
   const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide,
   )
@@ -33,6 +34,10 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
           >
             <Link
               to={card.path}
+              onClick={(e) => {
+                e.preventDefault()
+                navigate(card.path)
+              }}
               className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
             >
               <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">
