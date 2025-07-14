@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async"
 import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel"
+import { useLocation } from "react-router-dom"
 import "pure-react-carousel/dist/react-carousel.es.css"
 import { FiChevronLeft, FiChevronRight, FiShare2 } from "react-icons/fi"
 import { cards } from "./ourWorkData"
@@ -17,6 +18,7 @@ export const ProjectPage: React.FC<Props> = ({
   description,
   videoUrl,
 }) => {
+  const location = useLocation()
   const { windowWidth } = WindowSize.useContainer()
   const visibleSlides = windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3
 
@@ -65,8 +67,9 @@ export const ProjectPage: React.FC<Props> = ({
           <p className="max-w-4xl text-center">{description}</p>
         </div>
 
-       <div className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10">
+        <div className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10">
           <CarouselProvider
+            key={location.pathname}
             naturalSlideWidth={4}
             naturalSlideHeight={5}
             totalSlides={cards.length}
