@@ -49,13 +49,16 @@ export const MainContent: React.FC = () => (
           />
           <Route path="/film-and-video" element={<Documentaries />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          {cards.map((card) => (
-            <Route
-              key={card.path}
-              path={card.path}
-              element={<ProjectPage {...card} />}
-            />
-          ))}
+          {cards.map((card) => {
+            const path = card.path.startsWith("/") ? card.path : `/${card.path}`
+            return (
+              <Route
+                key={card.path}
+                path={path}
+                element={<ProjectPage {...card} />}
+              />
+            )
+          })}
         </Routes>
       </Suspense>
     </div>

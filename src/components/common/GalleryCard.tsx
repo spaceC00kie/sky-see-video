@@ -20,7 +20,7 @@ export const GalleryCard: React.FC<Props> = ({
 }) => (
   <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
     <Link
-      to={path}
+      to={path.startsWith("/") ? path : `/${path}`}
       className="group relative block w-full overflow-hidden rounded"
     >
       <div className="aspect-[4/3] w-full overflow-hidden">

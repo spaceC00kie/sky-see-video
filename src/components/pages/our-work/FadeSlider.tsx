@@ -25,16 +25,18 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
   return (
     <div className="relative">
       <Slider className="px-0 sm:px-6">
-        {cards.map((card, index) => (
-          <Slide
-            key={card.path}
-            index={index}
-            className="border-b px-1 sm:px-3"
-          >
-            <Link
-              to={card.path}
-              className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
+        {cards.map((card, index) => {
+          const to = card.path.startsWith("/") ? card.path : `/${card.path}`
+          return (
+            <Slide
+              key={card.path}
+              index={index}
+              className="border-b px-1 sm:px-3"
             >
+              <Link
+                to={to}
+                className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
+              >
               <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">
                 <picture>
                   {card.srcSet && <source srcSet={card.srcSet} />}
@@ -57,7 +59,8 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
               </div>
             </Link>
           </Slide>
-        ))}
+        );
+        })}
       </Slider>
 
       <div
