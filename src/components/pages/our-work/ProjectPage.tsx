@@ -5,18 +5,13 @@ import { FiChevronLeft, FiChevronRight, FiShare2 } from "react-icons/fi"
 import { cards } from "./ourWorkData"
 import { FadeSlider } from "./FadeSlider"
 import { WindowSize } from "../../../containers/WindowSize"
+import { useParams, Navigate } from "react-router-dom"
 
-interface Props {
-  title: string
-  description: string
-  videoUrl: string
-}
-
-export const ProjectPage: React.FC<Props> = ({
-  title,
-  description,
-  videoUrl,
-}) => {
+export const ProjectPage: React.FC = () => {
+  const { slug } = useParams<{ slug: string }>()
+  const project = cards.find((c) => c.slug === slug)
+  if (!project) return <Navigate to="/our-work" replace />
+  const { title, description, videoUrl } = project
   const { windowWidth } = WindowSize.useContainer()
   const visibleSlides = windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3
 

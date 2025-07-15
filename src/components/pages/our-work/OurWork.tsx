@@ -46,7 +46,7 @@ export const OurWork: React.FC = () => (
 
         {/* ——— gallery ——— */}
         <div className="content-auto grid gap-5 md:grid-cols-2 lg:grid-cols-4">
-          {cards.map(({ image, srcSet, title, description, path }, index) => (
+          {cards.map(({ image, srcSet, title, description, slug }, index) => (
             <div
               key={image}
               className="content-visibility-auto flex justify-center mb-5"
@@ -56,7 +56,7 @@ export const OurWork: React.FC = () => (
                 srcSet={srcSet}
                 title={title}
                 description={description}
-                path={path}
+                slug={slug}
                 lazy={index < 12}
               />
             </div>

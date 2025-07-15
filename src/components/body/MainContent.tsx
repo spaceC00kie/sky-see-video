@@ -49,13 +49,7 @@ export const MainContent: React.FC = () => (
           />
           <Route path="/film-and-video" element={<Documentaries />} />
           <Route path="/contact-us" element={<ContactUs />} />
-          {cards.map((card) => (
-            <Route
-              key={card.path}
-              path={card.path}
-              element={<ProjectPage {...card} />}
-            />
-          ))}
+          <Route path="/project/:slug" element={<ProjectPage />} />
         </Routes>
       </Suspense>
     </div>

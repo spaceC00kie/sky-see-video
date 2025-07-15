@@ -27,12 +27,12 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
       <Slider className="px-0 sm:px-6">
         {cards.map((card, index) => (
           <Slide
-            key={card.path}
+            key={card.slug}
             index={index}
             className="border-b px-1 sm:px-3"
           >
             <Link
-              to={card.path}
+              to={`/project/${card.slug}`}
               className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
             >
               <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">

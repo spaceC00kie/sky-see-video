@@ -6,7 +6,7 @@ interface Props {
   srcSet: string
   title: string
   description: string
-  path: string
+  slug: string
   lazy?: boolean
 }
 
@@ -15,12 +15,12 @@ export const GalleryCard: React.FC<Props> = ({
   srcSet,
   title,
   description,
-  path,
+  slug,
   lazy,
 }) => (
   <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
     <Link
-      to={path}
+      to={`/project/${slug}`}
       className="group relative block w-full overflow-hidden rounded"
     >
       <div className="aspect-[4/3] w-full overflow-hidden">
