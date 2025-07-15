@@ -2,7 +2,7 @@ import { useEffect } from "react"
 
 export const useMouseNavigation = (): void => {
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
+    const handler = (e: MouseEvent | PointerEvent) => {
       if (e.button === 3) {
         e.preventDefault()
         window.history.back()
@@ -11,7 +11,11 @@ export const useMouseNavigation = (): void => {
         window.history.forward()
       }
     }
-    window.addEventListener("mouseup", handler)
-    return () => window.removeEventListener("mouseup", handler)
+    window.addEventListener("pointerup", handler, true)
+    window.addEventListener("mouseup", handler, true)
+    return () => {
+      window.removeEventListener("pointerup", handler, true)
+      window.removeEventListener("mouseup", handler, true)
+    }
   }, [])
 }
