@@ -1,5 +1,5 @@
 import { useState, useEffect, useContext } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { Slider, Slide, CarouselContext } from "pure-react-carousel"
 import { cards } from "./ourWorkData"
 
@@ -12,6 +12,7 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
   const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide,
   )
+  const navigate = useNavigate()
 
   useEffect(() => {
     const sync = () => setCurrentSlide(carouselContext.state.currentSlide)
@@ -35,31 +36,35 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
             >
               <Link
                 to={to}
+                onClick={(e) => {
+                  e.preventDefault()
+                  navigate(to)
+                }}
                 className="flex h-full flex-col overflow-hidden rounded-sm shadow transition hover:shadow-lg"
               >
-              <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">
-                <picture>
-                  {card.srcSet && <source srcSet={card.srcSet} />}
-                  <img
-                    src={card.image}
-                    alt=""
-                    role="presentation"
-                    className="absolute inset-0 h-full w-full object-cover"
-                    loading={index > 5 ? "lazy" : "eager"}
-                  />
-                </picture>
-              </div>
-              <div className="grow p-4">
-                <h3 className="mb-1 text-3xl font-semibold sm:text-lg">
-                  {card.title}
-                </h3>
-                <p className="line-clamp-2 text-2xl text-gray-700 sm:text-sm">
-                  {card.description}
-                </p>
-              </div>
-            </Link>
-          </Slide>
-        );
+                <div className="relative aspect-[4/3] w-full flex-none overflow-hidden border-b">
+                  <picture>
+                    {card.srcSet && <source srcSet={card.srcSet} />}
+                    <img
+                      src={card.image}
+                      alt=""
+                      role="presentation"
+                      className="absolute inset-0 h-full w-full object-cover"
+                      loading={index > 5 ? "lazy" : "eager"}
+                    />
+                  </picture>
+                </div>
+                <div className="grow p-4">
+                  <h3 className="mb-1 text-3xl font-semibold sm:text-lg">
+                    {card.title}
+                  </h3>
+                  <p className="line-clamp-2 text-2xl text-gray-700 sm:text-sm">
+                    {card.description}
+                  </p>
+                </div>
+              </Link>
+            </Slide>
+          )
         })}
       </Slider>
 

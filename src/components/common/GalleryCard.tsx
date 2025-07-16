@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 interface Props {
   image: string
@@ -17,24 +17,34 @@ export const GalleryCard: React.FC<Props> = ({
   description,
   path,
   lazy,
-}) => (
-  <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
-    <Link
-      to={path.startsWith("/") ? path : `/${path}`}
-      className="group relative block w-full overflow-hidden rounded"
-    >
-      <div className="aspect-[4/3] w-full overflow-hidden">
-        <img
-          src={image}
-          srcSet={srcSet}
-          alt={title}
-          loading={lazy ? "lazy" : "eager"}
-          className="h-full w-full object-cover"
-        />
-      </div>
-      <span className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-40" />
-    </Link>
-    <h2 className="font-bold">{title}</h2>
-    <p>{description}</p>
-  </div>
-)
+}) => {
+  const navigate = useNavigate()
+
+  const to = path.startsWith("/") ? path : `/${path}`
+
+  return (
+    <div className="flex max-w-xl flex-col items-start gap-2 text-lg w-full">
+      <Link
+        to={to}
+        onClick={(e) => {
+          e.preventDefault()
+          navigate(to)
+        }}
+        className="group relative block w-full overflow-hidden rounded"
+      >
+        <div className="aspect-[4/3] w-full overflow-hidden">
+          <img
+            src={image}
+            srcSet={srcSet}
+            alt={title}
+            loading={lazy ? "lazy" : "eager"}
+            className="h-full w-full object-cover"
+          />
+        </div>
+        <span className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity group-hover:opacity-40" />
+      </Link>
+      <h2 className="font-bold">{title}</h2>
+      <p>{description}</p>
+    </div>
+  )
+}
