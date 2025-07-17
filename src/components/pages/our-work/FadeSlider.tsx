@@ -43,7 +43,7 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
                     alt=""
                     role="presentation"
                     className="absolute inset-0 h-full w-full object-cover"
-                    loading={index > 5 ? "lazy" : "eager"}
+                    loading={index > 4 ? "lazy" : "eager"}
                   />
                 </picture>
               </div>
