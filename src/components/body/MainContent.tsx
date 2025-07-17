@@ -53,7 +53,7 @@ export const MainContent: React.FC = () => (
             <Route
               key={card.path}
               path={card.path}
-              element={<ProjectPage {...card} />}
+              element={<ProjectPage key={card.path} {...card} />}
             />
           ))}
         </Routes>
