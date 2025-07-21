@@ -1,5 +1,5 @@
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  label: string;
+  label: string
 }
 
 export const Checkbox: React.FC<Props> = ({ label, className, ...props }) => (
@@ -7,4 +7,4 @@ export const Checkbox: React.FC<Props> = ({ label, className, ...props }) => (
     <input type="checkbox" {...props} />
     {label}
   </label>
-);
+)

@@ -1,12 +1,12 @@
 // components/header/Header.tsx
-import { useState } from "react";
-import { HeaderLeft } from "./HeaderLeft";
-import { HeaderMiddle } from "./HeaderMiddle";
-import { DesktopNav } from "./DesktopNav";
-import { MobileMenu } from "./MobileMenu";
+import { useState } from "react"
+import { HeaderLeft } from "./HeaderLeft"
+import { HeaderMiddle } from "./HeaderMiddle"
+import { DesktopNav } from "./DesktopNav"
+import { MobileMenu } from "./MobileMenu"
 
 export const Header: React.FC = () => {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false)
   return (
     <>
       <div className="sticky top-0 z-50 flex h-28 w-full shrink-0 items-center justify-center bg-white px-4 text-xl">
@@ -18,5 +18,5 @@ export const Header: React.FC = () => {
       </div>
       <MobileMenu open={open} onClose={() => setOpen(false)} />
     </>
-  );
-};
+  )
+}

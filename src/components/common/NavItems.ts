@@ -4,6 +4,6 @@ export const NAV_ITEMS = [
   { label: "OUR WORK", path: "/our-work" },
   { label: "OUR SERVICES", path: "/services" },
   { label: "CONTACT US", path: "/contact-us" },
-] as const;
+] as const
 
-export const QUOTE_ITEM = { label: "GET QUOTE", path: "/contact-us" } as const;
+export const QUOTE_ITEM = { label: "GET QUOTE", path: "/contact-us" } as const
