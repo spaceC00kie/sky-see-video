@@ -1,6 +1,6 @@
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
-  label?: string;
-  containerClassName?: string;
+  label?: string
+  containerClassName?: string
 }
 
 export const TextInput: React.FC<Props> = ({
@@ -13,4 +13,4 @@ export const TextInput: React.FC<Props> = ({
     {label && <label className="font-semibold">{label}</label>}
     <input {...props} className={`border p-2 ${className ?? ""}`} />
   </div>
-);
+)
