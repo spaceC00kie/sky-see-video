@@ -189,7 +189,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num23Srcset,
     title: "SitusAMC: Habitat for Humanity ATL",
     description:
-      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7Siiis & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
+      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7SIIIs & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
     path: "/project/situsamc-habitat-for-humanity-atl/",
     videoUrl: "https://player.vimeo.com/video/810145426?h=64456897b1&dnt=1",
   },
@@ -198,7 +198,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num24Srcset,
     title: "Charlotte Hornets Promo",
     description:
-      "Larger than life NBA players light up the Charlotte skyline. Combining video and animation, this Fox Sports promo gears up the fans for the Charlotte Hornets plan to “dominate” all season long.",
+      "Larger-than-life NBA players light up the Charlotte skyline. Combining video and animation, this Fox Sports promo gears up the fans for the Charlotte Hornets plan to “dominate” all season long.",
     path: "/project/charlotte-hornets/",
     videoUrl: "https://player.vimeo.com/video/819562921?h=c940e3203f&dnt=1",
   },
@@ -438,7 +438,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num51Srcset,
     title: "Chetola Resort: The Ultimate Girls Getaway",
     description:
-      "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
+      "Social media promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-lifestyle-girlfriends-getaway/",
     videoUrl: "https://www.youtube.com/embed/0PMK2CxixFw?si=q2RQ1HHNSWDwEXbT",
   },
@@ -447,7 +447,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num52Srcset,
     title: "Chetola Resort: Just the Two of Us",
     description:
-      "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
+      "Social media promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-resort-lifestyle-romantic-couple/",
     videoUrl: "https://player.vimeo.com/video/323272396?h=93cf4999d4&dnt=1",
   },
@@ -589,7 +589,7 @@ export const cards: readonly WorkCard[] = [
     title:
       "This American Land: Megaloads Blocked from Wild & Scenic River Route",
     description:
-      "Protestors stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
+      "Protesters stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
     path: "/project/this-american-land-megaloads-blocked-from-wild-scenic-river-route/",
     videoUrl: "https://player.vimeo.com/video/194552658?h=4491c5108a&dnt=1",
   },
