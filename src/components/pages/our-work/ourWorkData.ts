@@ -189,7 +189,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num23Srcset,
     title: "SitusAMC: Habitat for Humanity ATL",
     description:
-      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7Siiis & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
+      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7S IIIs & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
     path: "/project/situsamc-habitat-for-humanity-atl/",
     videoUrl: "https://player.vimeo.com/video/810145426?h=64456897b1&dnt=1",
   },
@@ -198,7 +198,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num24Srcset,
     title: "Charlotte Hornets Promo",
     description:
-      "Larger than life NBA players light up the Charlotte skyline. Combining video and animation, this Fox Sports promo gears up the fans for the Charlotte Hornets plan to “dominate” all season long.",
+      "Larger-than-life NBA players light up the Charlotte skyline. Combining video and animation, this Fox Sports promo gears up the fans for the Charlotte Hornets plan to “dominate” all season long.",
     path: "/project/charlotte-hornets/",
     videoUrl: "https://player.vimeo.com/video/819562921?h=c940e3203f&dnt=1",
   },
@@ -388,15 +388,15 @@ export const cards: readonly WorkCard[] = [
     path: "/project/life-less/",
     videoUrl: "https://www.youtube.com/embed/hEfolHFsMLQ",
   },
-  {
-    image: num46,
-    srcSet: num46Srcset,
-    title: "Rasin Mwen – L’ Amour Du Fric",
-    description:
-      "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
-    path: "/project/rasin-mwen-l-amour-du-fric/",
-    videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
-  },
+  // {
+  //   image: num46,
+  //   srcSet: num46Srcset,
+  //   title: "Rasin Mwen – L’ Amour Du Fric",
+  //   description:
+  //     "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
+  //   path: "/project/rasin-mwen-l-amour-du-fric/",
+  //   videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
+  // },
   {
     image: num47,
     srcSet: num47Srcset,
@@ -433,12 +433,12 @@ export const cards: readonly WorkCard[] = [
     path: "/project/horizon-roofing-friendship-baptist-church/",
     videoUrl: "https://www.youtube.com/embed/4dSox8UpUOk?si=bw7guCQdxn7baiUE",
   },
-    {
+  {
     image: num51,
     srcSet: num51Srcset,
     title: "Chetola Resort: The Ultimate Girls Getaway",
     description:
-      "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
+      "Social media promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-lifestyle-girlfriends-getaway/",
     videoUrl: "https://www.youtube.com/embed/0PMK2CxixFw?si=q2RQ1HHNSWDwEXbT",
   },
@@ -447,7 +447,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num52Srcset,
     title: "Chetola Resort: Just the Two of Us",
     description:
-      "Social medial promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
+      "Social media promo for Chetola Resort in Blowing Rock, NC, highlighting the surrounding area and its amenities, including trout fishing, hiking, horseback riding, fine dining, picnicking, and more.",
     path: "/project/chetola-resort-lifestyle-romantic-couple/",
     videoUrl: "https://player.vimeo.com/video/323272396?h=93cf4999d4&dnt=1",
   },
@@ -477,7 +477,6 @@ export const cards: readonly WorkCard[] = [
     path: "/project/emory-gbs-leadership-ftmba/",
     videoUrl: "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
   },
-  // @TODO: Uncomment when the video is available
   // {
   //   image: num56,
   //   srcSet: num56Srcset,
@@ -587,9 +586,10 @@ export const cards: readonly WorkCard[] = [
   {
     image: num69,
     srcSet: num69Srcset,
-    title: "This American Land: Megaloads Blocked from Wild & Scenic River Route",
+    title:
+      "This American Land: Megaloads Blocked from Wild & Scenic River Route",
     description:
-      "Protestors stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
+      "Protesters stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
     path: "/project/this-american-land-megaloads-blocked-from-wild-scenic-river-route/",
     videoUrl: "https://player.vimeo.com/video/194552658?h=4491c5108a&dnt=1",
   },
