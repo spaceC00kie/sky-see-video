@@ -23,30 +23,30 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>6/18</span>
+                <span class='fraction'>18/18</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">80% </span>
                 <span class="quiet">Branches</span>
-                <span class='fraction'>0/10</span>
+                <span class='fraction'>8/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">0% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/5</span>
+                <span class='fraction'>5/5</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">33.33% </span>
+                <span class="strong">100% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>5/15</span>
+                <span class='fraction'>15/15</span>
             </div>
         
             
@@ -61,7 +61,7 @@
             </div>
         </template>
     </div>
-    <div class='status-line low'></div>
+    <div class='status-line high'></div>
     <pre><table class="coverage">
 <tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
 <a name='L2'></a><a href='#L2'>2</a>
@@ -142,35 +142,35 @@
 <a name='L77'></a><a href='#L77'>77</a>
 <a name='L78'></a><a href='#L78'>78</a>
 <a name='L79'></a><a href='#L79'>79</a>
-<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L80'></a><a href='#L80'>80</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">96x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -230,26 +230,26 @@ interface Props {
   visibleSlides: number
 }
 &nbsp;
-export const FadeSlider: React.FC&lt;Props&gt; = <span class="fstat-no" title="function not covered" >({</span> visibleSlides }) =&gt; {
-  const carouselContext = <span class="cstat-no" title="statement not covered" >useContext(CarouselContext)</span>
-  const [currentSlide, setCurrentSlide] = <span class="cstat-no" title="statement not covered" >useState(</span>
+export const FadeSlider: React.FC&lt;Props&gt; = ({ visibleSlides }) =&gt; {
+  const carouselContext = useContext(CarouselContext)
+  const [currentSlide, setCurrentSlide] = useState(
     carouselContext.state.currentSlide,
   )
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  useEffect(<span class="fstat-no" title="function not covered" >() =</span>&gt; {</span>
-    const sync = <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >setCurrentSlide(carouselContext.state.currentSlide)</span></span>
-<span class="cstat-no" title="statement not covered" >    carouselContext.subscribe(sync)</span>
-<span class="cstat-no" title="statement not covered" >    return <span class="fstat-no" title="function not covered" >() =</span>&gt; <span class="cstat-no" title="statement not covered" >carouselContext.unsubscribe(sync)</span></span>
+  useEffect(() =&gt; {
+    const sync = () =&gt; setCurrentSlide(carouselContext.state.currentSlide)
+    carouselContext.subscribe(sync)
+    return () =&gt; carouselContext.unsubscribe(sync)
   }, [carouselContext])
 &nbsp;
-  const isAtStart = <span class="cstat-no" title="statement not covered" >currentSlide === 0</span>
-  const isAtEnd = <span class="cstat-no" title="statement not covered" >currentSlide + visibleSlides &gt;= cards.length</span>
+  const isAtStart = currentSlide === 0
+  const isAtEnd = currentSlide + visibleSlides &gt;= cards.length
 &nbsp;
-<span class="cstat-no" title="statement not covered" >  return (</span>
+  return (
     &lt;div className="relative"&gt;
       &lt;Slider className="px-0 sm:px-6"&gt;
-        {cards.map(<span class="fstat-no" title="function not covered" >(c</span>ard, index) =&gt; (
-<span class="cstat-no" title="statement not covered" >          &lt;Slide</span>
+        {cards.map((card, index) =&gt; (
+          &lt;Slide
             key={card.path}
             index={index}
             className="border-b px-1 sm:px-3"
@@ -287,12 +287,12 @@ export const FadeSlider: React.FC&lt;Props&gt; = <span class="fstat-no" title="f
         &lt;&gt;
           &lt;div
             className={`pointer-events-none absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-white to-transparent transition-opacity duration-300 ${
-              isAtStart ? "opacity-0" : "opacity-100"
+              isAtStart ? "opacity-0" : <span class="branch-1 cbranch-no" title="branch not covered" >"opacity-100"</span>
             }`}
           /&gt;
           &lt;div
             className={`pointer-events-none absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-white to-transparent transition-opacity duration-300 ${
-              isAtEnd ? "opacity-0" : "opacity-100"
+              isAtEnd ? <span class="branch-0 cbranch-no" title="branch not covered" >"opacity-0" </span>: "opacity-100"
             }`}
           /&gt;
         &lt;/&gt;
@@ -307,7 +307,7 @@ export const FadeSlider: React.FC&lt;Props&gt; = <span class="fstat-no" title="f
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-07-21T21:48:55.757Z
+                at 2025-07-21T22:23:30.634Z
             </div>
         <script src="../../../../prettify.js"></script>
         <script>
