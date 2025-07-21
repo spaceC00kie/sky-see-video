@@ -20,8 +20,7 @@ import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns"
 
 const muiTheme = createTheme({ palette: { mode: "light" } })
 
-// @todo get soren to sign up and give you the access key, paste here
-const WEB3FORMS_ACCESS_KEY = "8b464d25-3c6f-4a8e-a029-033e6e23086d"
+const WEB3FORMS_ACCESS_KEY = "fd1dab9a-98cf-4370-adff-008d0be12624"
 
 interface FormData {
   firstName: string
