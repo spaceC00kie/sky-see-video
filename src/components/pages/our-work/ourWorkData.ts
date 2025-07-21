@@ -388,15 +388,15 @@ export const cards: readonly WorkCard[] = [
     path: "/project/life-less/",
     videoUrl: "https://www.youtube.com/embed/hEfolHFsMLQ",
   },
-  {
-    image: num46,
-    srcSet: num46Srcset,
-    title: "Rasin Mwen – L’ Amour Du Fric",
-    description:
-      "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
-    path: "/project/rasin-mwen-l-amour-du-fric/",
-    videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
-  },
+  // {
+  //   image: num46,
+  //   srcSet: num46Srcset,
+  //   title: "Rasin Mwen – L’ Amour Du Fric",
+  //   description:
+  //     "“For The Love Of Money” A film by Robinson Vil, shot entirely on location in Haiti, is a Hollywood-styled film that combines great visuals of the island & a story full of plot twists that will entertain from start to finish.",
+  //   path: "/project/rasin-mwen-l-amour-du-fric/",
+  //   videoUrl: "https://www.youtube.com/embed/zwOMKK1LFyU?si=WNDa4zXnhV9r-e0g",
+  // },
   {
     image: num47,
     srcSet: num47Srcset,
@@ -433,7 +433,7 @@ export const cards: readonly WorkCard[] = [
     path: "/project/horizon-roofing-friendship-baptist-church/",
     videoUrl: "https://www.youtube.com/embed/4dSox8UpUOk?si=bw7guCQdxn7baiUE",
   },
-    {
+  {
     image: num51,
     srcSet: num51Srcset,
     title: "Chetola Resort: The Ultimate Girls Getaway",
@@ -477,7 +477,6 @@ export const cards: readonly WorkCard[] = [
     path: "/project/emory-gbs-leadership-ftmba/",
     videoUrl: "https://player.vimeo.com/video/810134477?h=af982b45c1&dnt=1",
   },
-  // @TODO: Uncomment when the video is available
   // {
   //   image: num56,
   //   srcSet: num56Srcset,
@@ -587,7 +586,8 @@ export const cards: readonly WorkCard[] = [
   {
     image: num69,
     srcSet: num69Srcset,
-    title: "This American Land: Megaloads Blocked from Wild & Scenic River Route",
+    title:
+      "This American Land: Megaloads Blocked from Wild & Scenic River Route",
     description:
       "Protestors stand up to oil companies attempting to transport “Megaloads” through scenic routes on federal lands, often requiring the disassembly and reassembly of bridges.",
     path: "/project/this-american-land-megaloads-blocked-from-wild-scenic-river-route/",
