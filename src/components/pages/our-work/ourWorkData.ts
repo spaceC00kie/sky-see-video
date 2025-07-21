@@ -189,7 +189,7 @@ export const cards: readonly WorkCard[] = [
     srcSet: num23Srcset,
     title: "SitusAMC: Habitat for Humanity ATL",
     description:
-      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony α7S IIIs & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
+      "Members of SitusAMC’s Atlanta team joined Habitat for Humanity to help build a home for a family in need. SkySee Video shot on the ground with Sony A7S IIIs & Sony G Master lenses, and in the air with DJI Mavic Pro 2.",
     path: "/project/situsamc-habitat-for-humanity-atl/",
     videoUrl: "https://player.vimeo.com/video/810145426?h=64456897b1&dnt=1",
   },
