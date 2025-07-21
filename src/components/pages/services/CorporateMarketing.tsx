@@ -46,7 +46,7 @@ export const CorporateMarketing: React.FC<Props> = ({}) => {
                 through professionally produced videos.
               </p>
               <p>
-                At SkySee Video, we offer complete, broadcast quality video, on
+                At SkySee Video, we offer complete, broadcast-quality video, on
                 the ground and in the air, for all corporate marketing purposes.
                 If you need raw footage or beginning-to-end production support,
                 we can help.

@@ -24,9 +24,7 @@ export const Documentaries: React.FC<Props> = ({}) => {
 
         <div className="flex max-w-[70em] flex-col gap-8 pb-20">
           <div className="flex w-full flex-col gap-4 px-6">
-            <p className="text-3xl font-medium text-blue-700">
-              Documentaries
-            </p>
+            <p className="text-3xl font-medium text-blue-700">Documentaries</p>
             <div className="flex flex-col gap-3 text-lg">
               <p>
                 Cinematography in the film and entertainment industry grows more
@@ -47,12 +45,12 @@ export const Documentaries: React.FC<Props> = ({}) => {
               Explore the Possibilities
             </h2>
             <p>
-              With exceptional on the ground and aerial footage, you can reach
-              your audience in new and unexpected ways. Our high end cameras are
+              With exceptional on-the-ground and aerial footage, you can reach
+              your audience in new and unexpected ways. Our high-end cameras are
               capable of shooting scenes underwater, on the ground, in the air,
-              and even in low light situations, allowing for minimal intrusion
+              and even in low-light situations, allowing for minimal intrusion
               on the subject in their natural surroundings. We’ll also provide
-              viewers with broadcast quality aerial imagery, including panoramic
+              viewers with broadcast-quality aerial imagery, including panoramic
               and birds eye views of landscapes. Set the mood for a touching,
               humorous, or devastating moment with drone footage that follows
               and centers the subject as they walk, run, drive, and engage in

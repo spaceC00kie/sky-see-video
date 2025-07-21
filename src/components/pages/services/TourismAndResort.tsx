@@ -47,7 +47,7 @@ export const TourismAndResort: React.FC<Props> = ({}) => {
               </p>
               <p>
                 Show off sparkling blue-green waters, a beautiful fall skyline,
-                or your fall boutique product lineup with a custom-produced
+                or your spring boutique product lineup with a custom-produced
                 video made with your value proposition in mind. Take viewers on
                 a local zip-line or give them a behind-the-scenes view of a chef
                 artfully cooking steak flambé. Come to SkySee Video for all your
