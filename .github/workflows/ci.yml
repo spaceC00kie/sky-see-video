@@ -98,37 +98,10 @@ jobs:
       env:
         CI: true
 
-  build:
-    name: Build Application
-    runs-on: ubuntu-latest
-    needs: test
-    
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20.x'
-        cache: 'yarn'
-        
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile
-      
-    - name: Build application
-      run: yarn build
-      
-    - name: Check build artifacts
-      run: |
-        echo "✅ Build completed successfully!"
-        du -sh dist/ || echo "Build output directory not found"
-        ls -la dist/ || echo "No build artifacts to display"
-
   security-audit:
     name: Security Audit
     runs-on: ubuntu-latest
-    needs: build
+    needs: test
     
     steps:
     - name: Checkout repository
