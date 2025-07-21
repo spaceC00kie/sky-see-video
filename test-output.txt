@@ -1,0 +1,264 @@
+PASS src/containers/WindowSize.test.tsx
+  WindowSize
+    √ initializes with current window width (16 ms)
+    √ detects small screens correctly (width < 768) (2 ms)
+    √ detects large screens correctly (width >= 768) (2 ms)
+    √ handles window resize events (3 ms)
+    √ adds resize event listener on mount (3 ms)
+    √ removes resize event listener on unmount (1 ms)
+    √ boundary test: exactly 768px should be large screen (1 ms)
+    √ boundary test: 767px should be small screen (2 ms)
+    √ handles multiple resize events correctly (7 ms)
+
+PASS src/components/ui/Spinner.test.tsx
+  Spinner
+    √ renders without crashing (72 ms)
+    √ has the correct accessibility attributes (8 ms)
+    √ has the correct CSS classes (5 ms)
+
+PASS src/components/forms/Checkbox.test.tsx
+  Checkbox
+    √ renders without crashing (20 ms)
+    √ displays the correct label (14 ms)
+    √ renders as checkbox input type (53 ms)
+    √ applies custom className to container (4 ms)
+    √ forwards all input props correctly (16 ms)
+    √ calls onChange when clicked (14 ms)
+    √ can be checked and unchecked (10 ms)
+    √ has correct default structure and styling (3 ms)
+    √ label is clickable and toggles checkbox (10 ms)
+    √ handles default className correctly (4 ms)
+
+PASS src/components/pages/home/HomeCard1.test.tsx
+  HomeCard1
+    √ renders without crashing (30 ms)
+    √ displays the title and description (20 ms)
+    √ renders the image/icon (4 ms)
+    √ has correct container structure (3 ms)
+    √ title is rendered as h2 heading (53 ms)
+    √ title has correct styling (14 ms)
+    √ description has correct styling (5 ms)
+    √ icon container has correct styling (5 ms)
+    √ icon background has correct styling (5 ms)
+    √ has hover effect styling (4 ms)
+    √ shadow element has correct styling (5 ms)
+    √ handles long title text (3 ms)
+    √ handles long description text (3 ms)
+    √ renders different icon types correctly (5 ms)
+
+PASS src/components/pages/services/OurServicesCard1.test.tsx
+  OurServicesCard1
+    √ renders without crashing (28 ms)
+    √ displays the correct title (15 ms)
+    √ title is rendered as h2 heading (50 ms)
+    √ displays all bullet points (9 ms)
+    √ renders bullet points as list items (13 ms)
+    √ has correct container structure and styling (8 ms)
+    √ title has correct styling (5 ms)
+    √ list has correct styling (6 ms)
+    √ list items have correct styling (10 ms)
+    √ bullet points have bullet characters (4 ms)
+    √ handles empty bullet points array (9 ms)
+    √ handles single bullet point (7 ms)
+    √ uses correct key for list items (4 ms)
+
+FAIL src/components/forms/TextInput.test.tsx
+  TextInput
+    √ renders without crashing (23 ms)
+    × renders with label when provided (23 ms)
+    √ renders without label when not provided (4 ms)
+    √ applies custom className to input (57 ms)
+    √ applies custom containerClassName (3 ms)
+    √ forwards all input props correctly (18 ms)
+    √ calls onChange when input value changes (14 ms)
+    √ has default styling classes (7 ms)
+    √ label has correct styling (4 ms)
+
+  ● TextInput › renders with label when provided
+
+    TestingLibraryElementError: Found a label with the text of: Test Label, however no form control was found associated to that label. Make sure you're using the "for" attribute or "aria-labelledby" attribute correctly.
+
+    Ignored nodes: comments, script, style
+    [36m<body>[39m
+      [36m<div>[39m
+        [36m<div[39m
+          [33mclass[39m=[32m"flex flex-col gap-2 "[39m
+        [36m>[39m
+          [36m<label[39m
+            [33mclass[39m=[32m"font-semibold"[39m
+          [36m>[39m
+            [0mTest Label[0m
+          [36m</label>[39m
+          [36m<input[39m
+            [33mclass[39m=[32m"border p-2 "[39m
+          [36m/>[39m
+        [36m</div>[39m
+      [36m</div>[39m
+    [36m</body>[39m
+
+    [0m [90m 11 |[39m     [36mconst[39m { getByLabelText[33m,[39m getByText } [33m=[39m render([33m<[39m[33mTextInput[39m label[33m=[39m[32m"Test Label"[39m [33m/[39m[33m>[39m)
+     [90m 12 |[39m     expect(getByText([32m'Test Label'[39m))[33m.[39mtoBeInTheDocument()
+    [31m[1m>[22m[39m[90m 13 |[39m     expect(getByLabelText([32m'Test Label'[39m))[33m.[39mtoBeInTheDocument()
+     [90m    |[39m            [31m[1m^[22m[39m
+     [90m 14 |[39m   })
+     [90m 15 |[39m
+     [90m 16 |[39m   it([32m'renders without label when not provided'[39m[33m,[39m () [33m=>[39m {[0m
+
+      at Object.getElementError (node_modules/@testing-library/dom/dist/config.js:37:19)
+      at getAllByLabelText (node_modules/@testing-library/dom/dist/queries/label-text.js:108:40)
+      at node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+      at node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+      at Object.<anonymous> (src/components/forms/TextInput.test.tsx:13:12)
+
+PASS src/components/common/HeroBanner.test.tsx
+  HeroBanner
+    √ renders without crashing (57 ms)
+    √ renders image with correct attributes (73 ms)
+    √ applies custom height class (5 ms)
+    √ applies default height class when not provided (4 ms)
+    √ renders overlay text when provided (6 ms)
+    √ does not render overlay when text is not provided (3 ms)
+    √ renders with empty alt text by default (3 ms)
+    √ has correct container classes (4 ms)
+    √ image has correct styling classes (8 ms)
+    √ overlay text has correct styling (4 ms)
+
+PASS src/components/pages/about-us/AboutUsCard.test.tsx
+  AboutUsCard
+    √ renders without crashing (28 ms)
+    √ displays all person information (17 ms)
+    √ displays image with correct attributes (56 ms)
+    √ has correct container structure (4 ms)
+    √ image container has correct aspect ratio (10 ms)
+    √ image has correct styling (9 ms)
+    √ name and title have correct styling (4 ms)
+    √ description has correct styling (6 ms)
+    √ name is rendered as h2 heading (13 ms)
+    √ handles long description text (4 ms)
+    √ handles long name and title (4 ms)
+    √ renders all elements in correct order (4 ms)
+    √ has hover effect styling (4 ms)
+
+PASS src/components/forms/Textarea.test.tsx
+  Textarea
+    √ renders without crashing (30 ms)
+    √ renders with label (83 ms)
+    √ applies custom className to textarea (8 ms)
+    √ applies custom containerClassName (3 ms)
+    √ forwards all textarea props correctly (12 ms)
+    √ calls onChange when textarea value changes (9 ms)
+    √ has default styling classes (5 ms)
+    √ label has correct styling (2 ms)
+    √ container has correct default structure (2 ms)
+
+PASS src/components/pages/services/OurServicesCard2.test.tsx
+  OurServicesCard2
+    √ renders without crashing (37 ms)
+    √ displays the correct title and description (23 ms)
+    √ displays image with correct attributes (61 ms)
+    √ has correct navigation links (14 ms)
+    √ title is clickable and navigates correctly (4 ms)
+    √ image is clickable and navigates correctly (6 ms)
+    √ has correct container structure and styling (3 ms)
+    √ image has correct styling (7 ms)
+    √ title has correct styling (4 ms)
+    √ title is rendered as h2 heading (10 ms)
+    √ description has correct styling (3 ms)
+    √ image container has correct styling (3 ms)
+    √ handles long description text (3 ms)
+    √ handles long title text (4 ms)
+    √ maintains accessibility with proper link structure (7 ms)
+
+PASS src/components/common/GalleryCard.test.tsx
+  GalleryCard
+    √ renders without crashing (25 ms)
+    √ displays the correct title and description (14 ms)
+    √ has the correct image attributes (41 ms)
+    √ sets lazy loading when lazy prop is true (12 ms)
+    √ sets eager loading when lazy prop is false (6 ms)
+    √ has correct link navigation (6 ms)
+    √ has proper CSS classes (3 ms)
+    √ title is rendered as h2 heading (8 ms)
+
+PASS src/components/header/Header.test.tsx
+  Header
+    √ renders without crashing (43 ms)
+    √ has correct header structure (10 ms)
+    √ contains header left, middle, and desktop nav components (16 ms)
+    √ renders logo for desktop view (11 ms)
+    √ renders hamburger menu for mobile view (7 ms)
+    √ shows phone number in desktop navigation (10 ms)
+    √ shows navigation links in desktop view (11 ms)
+    √ shows get quote button in desktop view (8 ms)
+    √ hides desktop navigation on mobile (8 ms)
+    √ mobile menu has correct accessibility attributes (6 ms)
+
+PASS src/components/body/MainContent.test.tsx
+  MainContent
+    √ renders without crashing (32 ms)
+    √ has correct main structure (8 ms)
+    √ renders home page by default (8 ms)
+    √ renders about us page for /about-us route (16 ms)
+    √ renders our work page for /our-work route (32 ms)
+    √ renders services page for /services route (30 ms)
+    √ renders contact us page for /contact-us route (31 ms)
+    √ renders construction service page (15 ms)
+    √ renders tourism service page (15 ms)
+    √ renders corporate marketing service page (17 ms)
+    √ renders documentaries service page (15 ms)
+    √ renders project pages for work items (15 ms)
+    √ renders main content container (5 ms)
+    √ renders content wrapper with correct grid structure (2 ms)
+    √ uses Suspense for lazy loading (2 ms)
+
+PASS src/App.test.tsx
+  App
+    √ renders without crashing (77 ms)
+    √ initializes Google Analytics (50 ms)
+    √ has the correct app structure (39 ms)
+
+PASS src/components/pages/our-work/ProjectPage.test.tsx
+  ProjectPage
+    √ renders without crashing (46 ms)
+    √ displays the project title and description (21 ms)
+    √ renders video iframe with correct attributes (12 ms)
+    √ renders share button (59 ms)
+    √ calls navigator.share when share button is clicked and share is available (24 ms)
+    √ falls back to clipboard when navigator.share fails (20 ms)
+    √ falls back to clipboard when navigator.share is not available (15 ms)
+    √ renders carousel with correct visible slides for different screen sizes (14 ms)
+    √ renders carousel with 2 visible slides for tablet (15 ms)
+    √ renders carousel with 1 visible slide for mobile (11 ms)
+    √ renders navigation buttons (11 ms)
+    √ navigation buttons have correct accessibility attributes (9 ms)
+    √ share button has correct styling (14 ms)
+    √ title has correct styling (8 ms)
+    √ description has correct styling (7 ms)
+    √ video container has correct aspect ratio (9 ms)
+    √ sets correct helmet meta tags (10 ms)
+    √ handles long title and description gracefully (8 ms)
+
+PASS src/components/pages/ContactUs.test.tsx
+  ContactUs
+    √ renders without crashing (228 ms)
+    √ displays contact information (62 ms)
+    √ displays social media links (46 ms)
+    √ has correct social media link URLs (45 ms)
+    √ renders all form fields (61 ms)
+    √ renders service checkboxes (45 ms)
+    √ handles form input changes (90 ms)
+    √ handles checkbox changes (80 ms)
+    √ submits form with valid data (189 ms)
+    √ shows success message on successful submission (126 ms)
+    √ shows error message on failed submission (107 ms)
+    √ renders hero banner with correct content (33 ms)
+    √ has proper form accessibility (30 ms)
+    √ displays marketing copy (34 ms)
+    √ social media icons have correct accessibility attributes (36 ms)
+    √ resets form after successful submission (130 ms)
+
+Test Suites: 1 failed, 15 passed, 16 total
+Tests:       1 failed, 174 passed, 175 total
+Snapshots:   0 total
+Time:        5.929 s
+Ran all test suites with tests matching ".*".
