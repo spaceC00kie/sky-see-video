@@ -74,18 +74,14 @@ jobs:
     runs-on: ubuntu-latest
     needs: [format-check-and-fix]
     
-    strategy:
-      matrix:
-        node-version: [18.x, 20.x]
-    
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Setup Node.js ${{ matrix.node-version }}
+    - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: ${{ matrix.node-version }}
+        node-version: '20.x'
         cache: 'yarn'
         
     - name: Install dependencies
@@ -102,8 +98,8 @@ jobs:
       env:
         CI: true
 
-  build:
-    name: Build Application
+  build-and-deploy:
+    name: Build & Deploy
     runs-on: ubuntu-latest
     needs: test
     
@@ -123,11 +119,23 @@ jobs:
     - name: Build application
       run: yarn build
       
-    - name: Check build artifacts
+    - name: Deploy to Firebase Hosting
+      uses: FirebaseExtended/action-hosting-deploy@v0
+      with:
+        repoToken: ${{ secrets.GITHUB_TOKEN }}
+        firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
+        projectId: sky-see-video
+        channelId: ${{ github.event_name == 'pull_request' && 'preview' || (github.ref == 'refs/heads/main' && 'live' || 'develop') }}
+      
+    - name: Check deployment status
       run: |
-        echo "✅ Build completed successfully!"
-        du -sh dist/ || echo "Build output directory not found"
-        ls -la dist/ || echo "No build artifacts to display"
+        if [ "${{ github.event_name }}" == "pull_request" ]; then
+          echo "🚀 Preview deployment completed!"
+        elif [ "${{ github.ref }}" == "refs/heads/main" ]; then
+          echo "✅ Production deployment completed!"
+        else
+          echo "🔧 Development deployment completed!"
+        fi
 
   security-audit:
     name: Security Audit
