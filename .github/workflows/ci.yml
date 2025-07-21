@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main, develop ]
 
+permissions:
+  contents: write
+  pull-requests: write
+
 jobs:
   format-check-and-fix:
     name: Format & Lint Code
@@ -64,18 +68,6 @@ jobs:
         git add .
         git commit -m "style: auto-format code with Prettier [skip ci]"
         git push
-        
-    - name: Comment on PR with formatting fix (for PRs only)
-      if: github.event_name == 'pull_request' && steps.verify-changes.outputs.changes-made == 'true'
-      uses: actions/github-script@v7
-      with:
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '🔧 **Code Formatting Fixed**\n\nPrettier has automatically formatted your code to match the project standards. The changes have been applied and tests will run with the formatted code.'
-          })
 
   test:
     name: Run Tests & Coverage
