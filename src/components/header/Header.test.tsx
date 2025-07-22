@@ -164,9 +164,11 @@ describe("Header", () => {
     fireEvent.click(menuButton)
 
     // Find the backdrop and click it to test the setOpen(false) function
-    const backdrop = container.querySelector(".fixed.inset-0.z-50.bg-black\\/50")
+    const backdrop = container.querySelector(
+      ".fixed.inset-0.z-50.bg-black\\/50",
+    )
     expect(backdrop).toBeInTheDocument()
-    
+
     if (backdrop) {
       fireEvent.click(backdrop)
     }
