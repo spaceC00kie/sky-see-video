@@ -1,6 +1,6 @@
 interface Props extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
-  label: string;
-  containerClassName?: string;
+  label: string
+  containerClassName?: string
 }
 
 export const Textarea: React.FC<Props> = ({
@@ -13,4 +13,4 @@ export const Textarea: React.FC<Props> = ({
     <label className="font-semibold">{label}</label>
     <textarea {...props} className={`border p-2 ${className ?? ""}`} />
   </div>
-);
+)

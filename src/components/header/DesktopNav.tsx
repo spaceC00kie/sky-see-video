@@ -1,15 +1,19 @@
-import { NavLink } from "react-router-dom";
-import { WindowSize } from "../../containers/WindowSize";
-import { NAV_ITEMS, QUOTE_ITEM } from "../common/NavItems";
+import { NavLink } from "react-router-dom"
+import { WindowSize } from "../../containers/WindowSize"
+import { NAV_ITEMS, QUOTE_ITEM } from "../common/NavItems"
 
 export const DesktopNav: React.FC = () => {
-  const { isSmall } = WindowSize.useContainer();
-  if (isSmall) return null;
+  const { isSmall } = WindowSize.useContainer()
+  if (isSmall) return null
 
   return (
     <div className="mx-1 flex flex-auto flex-wrap items-end justify-end gap-6 px-2 text-xs">
       {NAV_ITEMS.map(({ label, path }) => (
-        <NavLink key={path} to={path} className="whitespace-nowrap pb-2 hover:text-blue-400">
+        <NavLink
+          key={path}
+          to={path}
+          className="whitespace-nowrap pb-2 hover:text-blue-400"
+        >
           {label}
         </NavLink>
       ))}
@@ -23,5 +27,5 @@ export const DesktopNav: React.FC = () => {
         </NavLink>
       </div>
     </div>
-  );
-};
+  )
+}
