@@ -11,7 +11,12 @@ export default defineConfig({
     preload(),
     VitePWA({
       registerType: "autoUpdate",
-      includeAssets: ["favicon.svg","favicon.ico","robots.txt","apple-touch-icon.png"],
+      includeAssets: [
+        "favicon.svg",
+        "favicon.ico",
+        "robots.txt",
+        "apple-touch-icon.png",
+      ],
       manifest: {
         id: "/",
         name: "SkySeeVideo",
@@ -22,18 +27,18 @@ export default defineConfig({
         display: "standalone",
         icons: [
           { src: "pwa-192x192.png", sizes: "192x192", type: "image/png" },
-          { src: "pwa-512x512.png", sizes: "512x512", type: "image/png" }
-        ]
+          { src: "pwa-512x512.png", sizes: "512x512", type: "image/png" },
+        ],
       },
       workbox: {
         runtimeCaching: [
           {
             urlPattern: ({ request }) => request.destination === "image",
             handler: "CacheFirst",
-            options: { cacheName: "images", expiration: { maxEntries: 200 } }
-          }
-        ]
-      }
-    })
-  ]
+            options: { cacheName: "images", expiration: { maxEntries: 200 } },
+          },
+        ],
+      },
+    }),
+  ],
 })

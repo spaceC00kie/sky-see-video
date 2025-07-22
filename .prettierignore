@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+yarn.lock
+package-lock.json
+
+# Build outputs
+dist/
+build/
+
+# Logs
+*.log
+pglite-debug.log
+
+# Coverage reports
+coverage/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Generated files
+public/
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
