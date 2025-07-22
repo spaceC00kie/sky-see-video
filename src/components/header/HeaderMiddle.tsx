@@ -15,6 +15,7 @@ export const HeaderMiddle: React.FC = () => {
           <img src={skyseeLogo} alt="Sky See Video" className="h-12 w-auto" />
         </Link>
       )}
+      <div>sanity check</div>
     </div>
   )
 }
