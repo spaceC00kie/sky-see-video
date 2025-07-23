@@ -26,6 +26,14 @@ export interface WorkCard {
 }
 
 /* ——— gallery thumbnails ——— */
+import num16 from "/src/assets/our-work/examples/16.png?w=600&format=webp"
+import num16Srcset from "/src/assets/our-work/examples/16.png?w=300;600&format=webp&as=srcset"
+import num17 from "/src/assets/our-work/examples/17.png?w=600&format=webp"
+import num17Srcset from "/src/assets/our-work/examples/17.png?w=300;600&format=webp&as=srcset"
+import num18 from "/src/assets/our-work/examples/18.png?w=600&format=webp"
+import num18Srcset from "/src/assets/our-work/examples/18.png?w=300;600&format=webp&as=srcset"
+import num19 from "/src/assets/our-work/examples/19.png?w=600&format=webp"
+import num19Srcset from "/src/assets/our-work/examples/19.png?w=300;600&format=webp&as=srcset"
 import num20 from "/src/assets/our-work/examples/20.jpg?w=600&format=webp"
 import num20Srcset from "/src/assets/our-work/examples/20.jpg?w=300;600&format=webp&as=srcset"
 import num21 from "/src/assets/our-work/examples/21.png?w=600&format=webp"
@@ -157,6 +165,42 @@ export const logos: readonly Logo[] = [
 ] as const
 
 export const cards: readonly WorkCard[] = [
+  {
+    image: num16,
+    srcSet: num16Srcset,
+    title: "Oddly Compelling: The Denis Kitchen Story",
+    description:
+      "Publisher & Underground Cartoonist Denis Kitchen has been taking on the establishment for decades. Now the all-new documentary Oddly Compelling highlights Kitchen’s long, strange trip; from his early days as a hippie cartoonist, to his thirty years as one of the most important independent comic book publishers, and his work as a fierce advocate for the First Amendment.",
+    path: "/project/oddly-compelling-the-denis-kitchen-story/",
+    videoUrl: "https://player.vimeo.com/video/1101385110?dnt=1",
+  },
+  {
+    image: num17,
+    srcSet: num17Srcset,
+    title: "UGA We Are More: Connie's Mission",
+    description:
+      "Air Force veteran Connie Baptiste is on a mission to bring much-needed aid and support to veterans suffering from depression. Born in a sharecropper’s home she rose up the ranks and served her country with distinction. Now retired, her new mission is to build a mini retreat for veterans on the 50 acres of land she purchased in south Georgia. She hopes to put her culinary skills to use at the “Stay @ Hunter Family Farm” to give veterans a moment of peace to break bread and be a part of a community filled with caring people.",
+    path: "/project/uga-we-are-more-connies-mission/",
+    videoUrl: "https://player.vimeo.com/video/1100726765?dnt=1",
+  },
+  {
+    image: num18,
+    srcSet: num18Srcset,
+    title: "UGA We Are More: True Grit",
+    description:
+      "American farmers are facing a crisis, but they’re suffering in silence from the stigma of seeking help. The crucial therapy that can help them learn how to cope with the daily stresses of operating a farm is avoided, leading to severe depression and even suicide. UGA has created a program to offer hope to individuals struggling and is seeing positive results from its actions.",
+    path: "/project/uga-we-are-more-true-grit/",
+    videoUrl: "https://player.vimeo.com/video/1100728337?dnt=1",
+  },
+  {
+    image: num19,
+    srcSet: num19Srcset,
+    title: "Databrick Sizzle Reel",
+    description:
+      "Highlights of day 2 at the Databricks Data + AI Summit at the Moscone Center in San Francisco.",
+    path: "/project/databrick-sizzle-reel/",
+    videoUrl: "https://www.youtube.com/embed/5tpTkuLkZ8o",
+  },
   {
     image: num20,
     srcSet: num20Srcset,

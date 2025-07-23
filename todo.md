@@ -1,2 +1,1 @@
-- get soren to have the domain transferred to us
-- add 3 recent projects soren requested
+complete!
