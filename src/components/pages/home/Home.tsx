@@ -58,15 +58,15 @@ export const Home: React.FC<Props> = () => (
           <div className="flex flex-col gap-7 text-2xl">
             <p>
               SkySee Video produces award-winning videos that promote people,
-              products & services. Our brand-driven video packaging highlights
-              the best of our corporate clients, reinforcing the quality and
-              value of what they offer potential clients. We support marketing
-              teams, agencies, and organizations with the creative and technical
-              firepower to bring ideas to life, building upon the strategies and
-              brand-driven direction developed by internal marketing
-              departments. We’re team players, communicating that vision to let
-              current, and potential, clients know that “This is the company we
-              want to partner with for our company’s future.”
+              products, and services. Our brand-driven video packaging
+              highlights the best of our corporate clients, reinforcing the
+              quality and value of what they offer potential clients. We support
+              marketing teams, agencies, and organizations with the creative and
+              technical firepower to bring ideas to life, building upon the
+              strategies and brand-driven direction developed by internal
+              marketing departments. We’re team players, communicating that
+              vision to let current and potential clients know “This is the
+              company we want to partner with for our company’s future.”
             </p>
             <p>
               SkySee Video also produces cinematic documentary footage that
@@ -74,7 +74,7 @@ export const Home: React.FC<Props> = () => (
               shoot 4K 3-camera interviews, walk ‘n talks with gimbals for
               smooth sequences, and eye-catching aerial footage that draws in
               viewers and reinforces the subject at hand. Our services include
-              complete packages, including pre-production, production and
+              complete packages, including pre-production, production, and
               post-production, but we’re also delighted to jump aboard and
               provide a la carte services to get your team across the finish
               line.

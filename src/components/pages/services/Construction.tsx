@@ -35,16 +35,16 @@ export const Construction: React.FC<Props> = ({}) => {
                 high-quality marketing materials to grow their business.
               </p>
               <p>
-                SkySee Video provides premier quality on the ground and aerial
+                SkySee Video provides premier-quality on-the-ground and aerial
                 cinematography that elevates your brand’s image. We help
-                companies create emotional connections with its viewers by
+                companies create emotional connections with their viewers by
                 allowing builders and their marketing teams to tell their unique
-                stories and focusing on key selling points of the property. We
+                stories and by focusing on key selling points of the property. We
                 provide 3-camera interviews with motorized sliders, as well as
                 smooth walking/talking interviews with gimbals to keep the
                 energy going, as key areas provided by the marketing team are
                 featured. Our videos are complemented with compelling aerial
-                views for perspective, motion graphics and animations. We offer
+                views for perspective, motion graphics, and animations. We offer
                 customized aerial and ground-based video services for a range of
                 construction industry needs.
               </p>
@@ -70,7 +70,7 @@ export const Construction: React.FC<Props> = ({}) => {
                   platforms, conventions, and more. SkySee Video also offers
                   retainer packages to tell the complete story of a project that
                   includes time lapse aerial videos to highlight the project’s
-                  progress. With location locked broadcast quality cameras on
+                  progress. With location-locked broadcast-quality cameras on
                   the ground and specialized drones we can fly duplicate aerial
                   patterns during key phases of the project to create a seamless
                   video of the build from start to finish.
@@ -78,13 +78,13 @@ export const Construction: React.FC<Props> = ({}) => {
               </li>
               <li>
                 <span className="font-bold m-2">
-                  Full Service Video Production.
+                  Full-Service Video Production.
                 </span>
                 <span>
-                  SkySee Video offers complete pre and post-production services
+                  SkySee Video offers complete pre- and post-production services
                   to clients looking to leverage their marketing dollars. With
                   more than 2 decades of advertising and on-air promotion
-                  experience we’ll develop advertising materials, work on
+                  experience, we’ll develop advertising materials, work on
                   sponsorship projects, and create complete video packages,
                   including editing, GFX (logos & contact info) and music/sound
                   design.

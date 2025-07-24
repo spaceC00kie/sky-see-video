@@ -36,7 +36,7 @@ describe("OurServices", () => {
 
     expect(getByText(/SkySee Video offers pre-production/)).toBeInTheDocument()
     expect(
-      getByText(/production and post-production services/),
+      getByText(/production, and post-production services/),
     ).toBeInTheDocument()
   })
 
