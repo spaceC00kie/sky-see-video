@@ -45,12 +45,12 @@ export const Documentaries: React.FC<Props> = ({}) => {
               Explore the Possibilities
             </h2>
             <p>
-              With exceptional on the ground and aerial footage, you can reach
-              your audience in new and unexpected ways. Our high end cameras are
+              With exceptional on-the-ground and aerial footage, you can reach
+              your audience in new and unexpected ways. Our high-end cameras are
               capable of shooting scenes underwater, on the ground, in the air,
-              and even in low light situations, allowing for minimal intrusion
+              and even in low-light situations, allowing for minimal intrusion
               on the subject in their natural surroundings. We’ll also provide
-              viewers with broadcast quality aerial imagery, including panoramic
+              viewers with broadcast-quality aerial imagery, including panoramic
               and birds eye views of landscapes. Set the mood for a touching,
               humorous, or devastating moment with drone footage that follows
               and centers the subject as they walk, run, drive, and engage in
