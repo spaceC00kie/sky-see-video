@@ -64,7 +64,7 @@ export const Home: React.FC<Props> = () => (
               marketing teams, agencies, and organizations with the creative and
               technical firepower to bring ideas to life, building upon the
               strategies and brand-driven direction developed by internal
-              marketing departments. We’re team players, communicating this
+              marketing departments. We’re team players, communicating that
               vision to let current and potential clients know “This is the
               company we want to partner with for our company’s future.”
             </p>
@@ -76,7 +76,7 @@ export const Home: React.FC<Props> = () => (
               viewers and reinforces the subject at hand. Our services include
               complete packages, including pre-production, production, and
               post-production, but we’re also delighted to jump aboard and
-              provide à la carte services to get your team across the finish
+              provide a la carte services to get your team across the finish
               line.
             </p>
           </div>

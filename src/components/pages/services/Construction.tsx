@@ -38,8 +38,8 @@ export const Construction: React.FC<Props> = ({}) => {
                 SkySee Video provides premier-quality on-the-ground and aerial
                 cinematography that elevates your brand’s image. We help
                 companies create emotional connections with their viewers by
-                allowing builders and marketing teams to tell their unique
-                stories and focusing on key selling points of the property. We
+                allowing builders and their marketing teams to tell their unique
+                stories and by focusing on key selling points of the property. We
                 provide 3-camera interviews with motorized sliders, as well as
                 smooth walking/talking interviews with gimbals to keep the
                 energy going, as key areas provided by the marketing team are
