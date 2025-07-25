@@ -1,0 +1,7 @@
+
+C:\Users\null\Repos\sky-see-video\src\setupTests.ts
+  85:23  warning  Unexpected console statement  no-console
+
+✖ 1 problem (0 errors, 1 warning)
+
+ESLint found too many warnings (maximum: 0).

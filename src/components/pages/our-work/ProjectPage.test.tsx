@@ -1,5 +1,4 @@
 import { render } from "@testing-library/react"
-import { waitFor } from "@testing-library/react"
 import { BrowserRouter } from "react-router-dom"
 import { HelmetProvider } from "react-helmet-async"
 import { WindowSize } from "../../../containers/WindowSize"

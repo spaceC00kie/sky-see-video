@@ -11,6 +11,14 @@ export const MobileMenu: React.FC<Props> = ({ open, onClose }) => (
   <>
     <div
       onClick={onClose}
+      onKeyDown={(e) => {
+        if (e.key === "Escape" || e.key === "Enter" || e.key === " ") {
+          onClose()
+        }
+      }}
+      role="button"
+      tabIndex={0}
+      aria-label="Close mobile menu overlay"
       className={`fixed inset-0 z-50 bg-black/50 transition-opacity duration-300 ${
         open ? "opacity-100" : "pointer-events-none opacity-0"
       }`}

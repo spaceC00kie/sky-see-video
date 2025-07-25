@@ -1,0 +1,167 @@
+[36mvite v7.0.4 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 1390 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mmanifest.webmanifest                            [39m[1m[2m  0.34 kB[22m[1m[22m
+[2mdist/[22m[32massets/hln-logo-Dld4QUXq.webp                   [39m[1m[2m  0.84 kB[22m[1m[22m
+[2mdist/[22m[32massets/channel-7-logo-DCT_8hOZ.webp             [39m[1m[2m  1.15 kB[22m[1m[22m
+[2mdist/[22m[32massets/starz-logo-VDnxShMa.webp                 [39m[1m[2m  1.52 kB[22m[1m[22m
+[2mdist/[22m[32massets/hyundai-construction-logo-DN5A2uSc.webp  [39m[1m[2m  1.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/emory-university-logo-Cigoffjo.webp      [39m[1m[2m  1.84 kB[22m[1m[22m
+[2mdist/[22m[32massets/espn-logo-zklhcsRm.webp                  [39m[1m[2m  1.86 kB[22m[1m[22m
+[2mdist/[22m[32massets/alhurra-logo-DGlBYaeD.webp               [39m[1m[2m  1.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/horizon-roofing-logo-D-N5_2gs.webp       [39m[1m[2m  1.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/cnn-logo-CrTJJWUZ.webp                   [39m[1m[2m  1.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/national-geographic-logo-CJHge2Uq.webp   [39m[1m[2m  2.07 kB[22m[1m[22m
+[2mdist/[22m[32massets/cbsn-logo-Zz99_GRw.webp                  [39m[1m[2m  2.26 kB[22m[1m[22m
+[2mdist/[22m[32massets/fox-sports-logo-C-gQMEMi.webp            [39m[1m[2m  2.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/raising-canes-logo-C4ymIuSf.webp         [39m[1m[2m  2.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/pbs-logo-COVGMjNH.webp                   [39m[1m[2m  2.90 kB[22m[1m[22m
+[2mdist/[22m[32mindex.html                                      [39m[1m[2m  3.08 kB[22m[1m[22m[2m │ gzip:   0.97 kB[22m
+[2mdist/[22m[32massets/blue-key-logo-CCFm0o14.webp              [39m[1m[2m  3.14 kB[22m[1m[22m
+[2mdist/[22m[32massets/19-MN6l3Egt.webp                         [39m[1m[2m  3.21 kB[22m[1m[22m
+[2mdist/[22m[32massets/20-GHld9hLg.webp                         [39m[1m[2m  3.39 kB[22m[1m[22m
+[2mdist/[22m[32massets/bally-sports-logo-BQe-qmv0.webp          [39m[1m[2m  3.49 kB[22m[1m[22m
+[2mdist/[22m[32massets/skysee-7-6H36QIA-.webp                   [39m[1m[2m  4.37 kB[22m[1m[22m
+[2mdist/[22m[32massets/45-DwrQu7TP.webp                         [39m[1m[2m  4.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/31-Cr2sWTKX.webp                         [39m[1m[2m  4.78 kB[22m[1m[22m
+[2mdist/[22m[32massets/18-B3pfq2zU.webp                         [39m[1m[2m  5.15 kB[22m[1m[22m
+[2mdist/[22m[32massets/ted-intorcio-lLpx6IXJ.webp               [39m[1m[2m  5.90 kB[22m[1m[22m
+[2mdist/[22m[32massets/42-BVObotDc.webp                         [39m[1m[2m  5.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/48-DKVTME_R.webp                         [39m[1m[2m  6.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/47-BeJgszQ0.webp                         [39m[1m[2m  6.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/30-D2m6Du9B.webp                         [39m[1m[2m  6.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/22-BXcdNncM.webp                         [39m[1m[2m  6.78 kB[22m[1m[22m
+[2mdist/[22m[32massets/39-DXspTPAD.webp                         [39m[1m[2m  6.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/20-DBj3vSBV.webp                         [39m[1m[2m  7.04 kB[22m[1m[22m
+[2mdist/[22m[32massets/29-Bm_0LWak.webp                         [39m[1m[2m  7.14 kB[22m[1m[22m
+[2mdist/[22m[32massets/69-DnS-n8Sv.webp                         [39m[1m[2m  7.33 kB[22m[1m[22m
+[2mdist/[22m[32massets/40-0PAXYNxS.webp                         [39m[1m[2m  7.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/50-DPLHSDER.webp                         [39m[1m[2m  7.55 kB[22m[1m[22m
+[2mdist/[22m[32massets/66-BiX4iWfX.webp                         [39m[1m[2m  7.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/19-YwZVQCsY.webp                         [39m[1m[2m  7.81 kB[22m[1m[22m
+[2mdist/[22m[32massets/54-af3T8Av3.webp                         [39m[1m[2m  7.90 kB[22m[1m[22m
+[2mdist/[22m[32massets/26-DhshRcLf.webp                         [39m[1m[2m  7.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/robinson-vil-Bri4i7jg.webp               [39m[1m[2m  8.11 kB[22m[1m[22m
+[2mdist/[22m[32massets/37-BL1kYRY6.webp                         [39m[1m[2m  8.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/32-DyMb5YAu.webp                         [39m[1m[2m  8.49 kB[22m[1m[22m
+[2mdist/[22m[32massets/52-q3AsOsFG.webp                         [39m[1m[2m  8.65 kB[22m[1m[22m
+[2mdist/[22m[32massets/16-C67-T6X2.webp                         [39m[1m[2m  8.71 kB[22m[1m[22m
+[2mdist/[22m[32massets/49-ZvXFNAeg.webp                         [39m[1m[2m  8.91 kB[22m[1m[22m
+[2mdist/[22m[32massets/34-CXV-RzgN.webp                         [39m[1m[2m  9.00 kB[22m[1m[22m
+[2mdist/[22m[32massets/17-B4VtAhFb.webp                         [39m[1m[2m  9.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/charles-frederick-Ctdk6TLV.webp          [39m[1m[2m  9.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/63-BNHJwe5u.webp                         [39m[1m[2m  9.99 kB[22m[1m[22m
+[2mdist/[22m[32massets/45-DhUDCWPU.webp                         [39m[1m[2m 10.04 kB[22m[1m[22m
+[2mdist/[22m[32massets/33-lQgkfYH3.webp                         [39m[1m[2m 10.05 kB[22m[1m[22m
+[2mdist/[22m[32massets/60-xPqb659i.webp                         [39m[1m[2m 10.39 kB[22m[1m[22m
+[2mdist/[22m[32massets/68-BHQIf2JG.webp                         [39m[1m[2m 10.46 kB[22m[1m[22m
+[2mdist/[22m[32massets/51-BKgjujxS.webp                         [39m[1m[2m 10.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/43-DaMHCRz-.webp                         [39m[1m[2m 10.55 kB[22m[1m[22m
+[2mdist/[22m[32massets/59-CLB9DKWM.webp                         [39m[1m[2m 10.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/28--bLNpYRJ.webp                         [39m[1m[2m 10.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/65-D3pKiI_G.webp                         [39m[1m[2m 10.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/38-DZYy78wd.webp                         [39m[1m[2m 10.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/31-CylntfxE.webp                         [39m[1m[2m 11.01 kB[22m[1m[22m
+[2mdist/[22m[32massets/53-DlRcqRZA.webp                         [39m[1m[2m 11.35 kB[22m[1m[22m
+[2mdist/[22m[32massets/36-Cth34W6e.webp                         [39m[1m[2m 11.38 kB[22m[1m[22m
+[2mdist/[22m[32massets/71--9cGLvKr.webp                         [39m[1m[2m 12.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/62-DLpE8rF3.webp                         [39m[1m[2m 12.87 kB[22m[1m[22m
+[2mdist/[22m[32massets/18-8DWeDhpE.webp                         [39m[1m[2m 12.90 kB[22m[1m[22m
+[2mdist/[22m[32massets/construction-BiauTq0B.webp               [39m[1m[2m 13.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/25-CKLXYJQa.webp                         [39m[1m[2m 13.71 kB[22m[1m[22m
+[2mdist/[22m[32massets/67-ZtYtXyCq.webp                         [39m[1m[2m 13.83 kB[22m[1m[22m
+[2mdist/[22m[32massets/44-CzuI-brC.webp                         [39m[1m[2m 14.01 kB[22m[1m[22m
+[2mdist/[22m[32massets/35-BBiTmrZZ.webp                         [39m[1m[2m 14.06 kB[22m[1m[22m
+[2mdist/[22m[32massets/41-ix8ugsld.webp                         [39m[1m[2m 14.23 kB[22m[1m[22m
+[2mdist/[22m[32massets/42-u8Qt-LHh.webp                         [39m[1m[2m 14.48 kB[22m[1m[22m
+[2mdist/[22m[32massets/58-D8wfkvSU.webp                         [39m[1m[2m 14.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/services-banner-C5go-sui.webp            [39m[1m[2m 14.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/48-D5q8F7Zx.webp                         [39m[1m[2m 14.85 kB[22m[1m[22m
+[2mdist/[22m[32massets/24-BhFbfzda.webp                         [39m[1m[2m 14.92 kB[22m[1m[22m
+[2mdist/[22m[32massets/29-Co_bE3YT.webp                         [39m[1m[2m 15.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/55-BDkl7ZNi.webp                         [39m[1m[2m 15.29 kB[22m[1m[22m
+[2mdist/[22m[32massets/23-BgaZIJbE.webp                         [39m[1m[2m 15.50 kB[22m[1m[22m
+[2mdist/[22m[32massets/corporate-pBQpa02R.webp                  [39m[1m[2m 15.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/27-DtfvEXfi.webp                         [39m[1m[2m 15.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/54-Ba0VBAKq.webp                         [39m[1m[2m 16.03 kB[22m[1m[22m
+[2mdist/[22m[32massets/47-1xA94k0g.webp                         [39m[1m[2m 16.28 kB[22m[1m[22m
+[2mdist/[22m[32massets/40-ClhLKja0.webp                         [39m[1m[2m 16.67 kB[22m[1m[22m
+[2mdist/[22m[32massets/21-DankZfFz.webp                         [39m[1m[2m 16.74 kB[22m[1m[22m
+[2mdist/[22m[32massets/70-B5v7iYa3.webp                         [39m[1m[2m 16.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/57-CA8eLnGI.webp                         [39m[1m[2m 17.40 kB[22m[1m[22m
+[2mdist/[22m[32massets/soren-christiansen-0AXcnj0R.webp         [39m[1m[2m 17.62 kB[22m[1m[22m
+[2mdist/[22m[32massets/39-C8bZuwQ7.webp                         [39m[1m[2m 17.69 kB[22m[1m[22m
+[2mdist/[22m[32massets/30-BB0WJ7tL.webp                         [39m[1m[2m 18.86 kB[22m[1m[22m
+[2mdist/[22m[32massets/64-DAT79bZ_.webp                         [39m[1m[2m 18.87 kB[22m[1m[22m
+[2mdist/[22m[32massets/37-D4Va7yJO.webp                         [39m[1m[2m 20.05 kB[22m[1m[22m
+[2mdist/[22m[32massets/50-IfVduLuH.webp                         [39m[1m[2m 20.45 kB[22m[1m[22m
+[2mdist/[22m[32massets/34-DQGLA6EV.webp                         [39m[1m[2m 20.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/49-ChCnF-TU.webp                         [39m[1m[2m 20.78 kB[22m[1m[22m
+[2mdist/[22m[32massets/contact-us-banner-CNeJt6RD.webp          [39m[1m[2m 21.29 kB[22m[1m[22m
+[2mdist/[22m[32massets/69-Cgo15AGN.webp                         [39m[1m[2m 22.61 kB[22m[1m[22m
+[2mdist/[22m[32massets/32-wT_GReGm.webp                         [39m[1m[2m 23.20 kB[22m[1m[22m
+[2mdist/[22m[32massets/43-DJy_tP10.webp                         [39m[1m[2m 23.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/61-wRTNvMt8.webp                         [39m[1m[2m 23.75 kB[22m[1m[22m
+[2mdist/[22m[32massets/16-JmiCW5-m.webp                         [39m[1m[2m 24.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/52-eM1_vkwO.webp                         [39m[1m[2m 24.73 kB[22m[1m[22m
+[2mdist/[22m[32massets/22-aSvjeHZN.webp                         [39m[1m[2m 24.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/33-BAYz6L4O.webp                         [39m[1m[2m 25.17 kB[22m[1m[22m
+[2mdist/[22m[32massets/documentaries-BQkYJB9W.webp              [39m[1m[2m 25.56 kB[22m[1m[22m
+[2mdist/[22m[32massets/28-bcEGDZPD.webp                         [39m[1m[2m 25.60 kB[22m[1m[22m
+[2mdist/[22m[32massets/66-_GEP1tg3.webp                         [39m[1m[2m 25.79 kB[22m[1m[22m
+[2mdist/[22m[32massets/65-Dal9451j.webp                         [39m[1m[2m 27.95 kB[22m[1m[22m
+[2mdist/[22m[32massets/services-banner-C6V8WIVd.webp            [39m[1m[2m 27.98 kB[22m[1m[22m
+[2mdist/[22m[32massets/53-5t16vyZG.webp                         [39m[1m[2m 29.09 kB[22m[1m[22m
+[2mdist/[22m[32massets/38-CiEecNzn.webp                         [39m[1m[2m 29.32 kB[22m[1m[22m
+[2mdist/[22m[32massets/60-349B0Ats.webp                         [39m[1m[2m 29.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/35-CyIiDv4p.webp                         [39m[1m[2m 29.66 kB[22m[1m[22m
+[2mdist/[22m[32massets/63-BBt5GpDu.webp                         [39m[1m[2m 29.80 kB[22m[1m[22m
+[2mdist/[22m[32massets/68-CybfZceL.webp                         [39m[1m[2m 30.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/36-CQcTGkrS.webp                         [39m[1m[2m 31.64 kB[22m[1m[22m
+[2mdist/[22m[32massets/17-B-HzfaF9.webp                         [39m[1m[2m 32.01 kB[22m[1m[22m
+[2mdist/[22m[32massets/59-Btq1usr_.webp                         [39m[1m[2m 32.77 kB[22m[1m[22m
+[2mdist/[22m[32massets/25-CGDpsXAu.webp                         [39m[1m[2m 32.90 kB[22m[1m[22m
+[2mdist/[22m[32massets/51-BnCHJltC.webp                         [39m[1m[2m 35.96 kB[22m[1m[22m
+[2mdist/[22m[32massets/about-us-banner-DqjP7EVD.webp            [39m[1m[2m 37.68 kB[22m[1m[22m
+[2mdist/[22m[32massets/71-CQDDgaa-.webp                         [39m[1m[2m 38.47 kB[22m[1m[22m
+[2mdist/[22m[32massets/27-BUhvtWK0.webp                         [39m[1m[2m 38.83 kB[22m[1m[22m
+[2mdist/[22m[32massets/24-CJ4bo5mL.webp                         [39m[1m[2m 39.13 kB[22m[1m[22m
+[2mdist/[22m[32massets/44-CT4eGuN3.webp                         [39m[1m[2m 39.88 kB[22m[1m[22m
+[2mdist/[22m[32massets/23-Dg3zackr.webp                         [39m[1m[2m 40.07 kB[22m[1m[22m
+[2mdist/[22m[32massets/41-CQbHQMNd.webp                         [39m[1m[2m 41.02 kB[22m[1m[22m
+[2mdist/[22m[32massets/21-YDCnXW6B.webp                         [39m[1m[2m 41.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/58-ZSlmIOIt.webp                         [39m[1m[2m 42.12 kB[22m[1m[22m
+[2mdist/[22m[32massets/67-ep8KYhSX.webp                         [39m[1m[2m 43.72 kB[22m[1m[22m
+[2mdist/[22m[32massets/62-BHdtLhLO.webp                         [39m[1m[2m 44.41 kB[22m[1m[22m
+[2mdist/[22m[32massets/55-DHRFXXMr.webp                         [39m[1m[2m 45.20 kB[22m[1m[22m
+[2mdist/[22m[32massets/services-banner-Blg1nd8x.webp            [39m[1m[2m 48.54 kB[22m[1m[22m
+[2mdist/[22m[32massets/contact-us-banner-AaonHVPd.webp          [39m[1m[2m 51.76 kB[22m[1m[22m
+[2mdist/[22m[32massets/57-B1Kwdjjm.webp                         [39m[1m[2m 56.45 kB[22m[1m[22m
+[2mdist/[22m[32massets/tourism-BhWC_LR-.webp                    [39m[1m[2m 60.27 kB[22m[1m[22m
+[2mdist/[22m[32massets/26-BlwNip5M.webp                         [39m[1m[2m 63.60 kB[22m[1m[22m
+[2mdist/[22m[32massets/70-CJm3jQEt.webp                         [39m[1m[2m 65.59 kB[22m[1m[22m
+[2mdist/[22m[32massets/64-CriQ-EpM.webp                         [39m[1m[2m 67.56 kB[22m[1m[22m
+[2mdist/[22m[32massets/about-us-banner-ChpzfZEp.webp            [39m[1m[2m 81.26 kB[22m[1m[22m
+[2mdist/[22m[32massets/61-CgVBRq8q.webp                         [39m[1m[2m 82.83 kB[22m[1m[22m
+[2mdist/[22m[32massets/contact-us-banner-DHyCfnNP.webp          [39m[1m[2m110.51 kB[22m[1m[22m
+[2mdist/[22m[32massets/about-us-banner-Dop_dea6.webp            [39m[1m[2m175.20 kB[22m[1m[22m
+[2mdist/[22m[35massets/index-DE2tMKku.css                       [39m[1m[2m 22.57 kB[22m[1m[22m[2m │ gzip:   5.14 kB[22m
+[2mdist/[22m[36massets/HeroBanner-CWOYxcp0.js                   [39m[1m[2m  0.66 kB[22m[1m[22m[2m │ gzip:   0.41 kB[22m
+[2mdist/[22m[36massets/GalleryCard-DLmPYlnp.js                  [39m[1m[2m  0.82 kB[22m[1m[22m[2m │ gzip:   0.47 kB[22m
+[2mdist/[22m[36massets/OurWork-DtMcK-9l.js                      [39m[1m[2m  1.45 kB[22m[1m[22m[2m │ gzip:   0.68 kB[22m
+[2mdist/[22m[36massets/OurServices-BTdS3HGV.js                  [39m[1m[2m  5.10 kB[22m[1m[22m[2m │ gzip:   2.06 kB[22m
+[2mdist/[22m[36massets/AboutUs-BmLUYWOU.js                      [39m[1m[2m  5.31 kB[22m[1m[22m[2m │ gzip:   2.30 kB[22m
+[2mdist/[22m[36massets/workbox-window.prod.es5-B9K5rw8f.js      [39m[1m[2m  5.72 kB[22m[1m[22m[2m │ gzip:   2.35 kB[22m
+[2mdist/[22m[36massets/Home-DDvDJgQq.js                         [39m[1m[2m  7.55 kB[22m[1m[22m[2m │ gzip:   3.33 kB[22m
+[2mdist/[22m[36massets/index-D97af2Q5.js                        [39m[1m[2m403.50 kB[22m[1m[22m[2m │ gzip: 130.92 kB[22m
+[2mdist/[22m[36massets/ContactUs-MHlpOSqJ.js                    [39m[1m[2m447.81 kB[22m[1m[22m[2m │ gzip: 128.40 kB[22m
+[32m✓ built in 9.16s[39m
+
+PWA v1.0.1
+mode      generateSW
+precache  17 entries (884.72 KiB)
+files generated
+  dist/sw.js
+  dist/workbox-74f2ef77.js

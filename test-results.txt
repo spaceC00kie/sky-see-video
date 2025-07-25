@@ -1,0 +1,424 @@
+PASS src/containers/WindowSize.test.tsx
+  WindowSize
+    √ initializes with current window width (27 ms)
+    √ detects small screens correctly (width < 768) (3 ms)
+    √ detects large screens correctly (width >= 768) (3 ms)
+    √ handles window resize events (6 ms)
+    √ adds resize event listener on mount (5 ms)
+    √ removes resize event listener on unmount (4 ms)
+    √ boundary test: exactly 768px should be large screen (9 ms)
+    √ boundary test: 767px should be small screen (2 ms)
+    √ handles multiple resize events correctly (6 ms)
+
+PASS src/components/ScrollToTop.test.tsx
+  ScrollToTop
+    √ renders without crashing (45 ms)
+    √ returns null (no visual output) (5 ms)
+    √ scrolls to top when pathname changes (4 ms)
+    √ calls window.scrollTo with correct parameters (4 ms)
+
+PASS src/components/ui/Spinner.test.tsx
+  Spinner
+    √ renders without crashing (118 ms)
+    √ has the correct accessibility attributes (12 ms)
+    √ has the correct CSS classes (19 ms)
+
+PASS src/components/pages/about-us/AboutUsCard.test.tsx
+  AboutUsCard
+    √ renders without crashing (41 ms)
+    √ displays all person information (26 ms)
+    √ displays image with correct attributes (85 ms)
+    √ has correct container structure (4 ms)
+    √ image container has correct aspect ratio (6 ms)
+    √ image has correct styling (11 ms)
+    √ name and title have correct styling (5 ms)
+    √ description has correct styling (4 ms)
+    √ name is rendered as h2 heading (27 ms)
+    √ handles long description text (7 ms)
+    √ handles long name and title (5 ms)
+    √ renders all elements in correct order (4 ms)
+    √ has hover effect styling (5 ms)
+
+PASS src/components/pages/services/OurServicesCard1.test.tsx
+  OurServicesCard1
+    √ renders without crashing (42 ms)
+    √ displays the correct title (28 ms)
+    √ title is rendered as h2 heading (90 ms)
+    √ displays all bullet points (13 ms)
+    √ renders bullet points as list items (19 ms)
+    √ has correct container structure and styling (5 ms)
+    √ title has correct styling (15 ms)
+    √ list has correct styling (10 ms)
+    √ list items have correct styling (12 ms)
+    √ bullet points have bullet characters (6 ms)
+    √ handles empty bullet points array (9 ms)
+    √ handles single bullet point (9 ms)
+    √ uses correct key for list items (4 ms)
+
+PASS src/components/forms/Checkbox.test.tsx
+  Checkbox
+    √ renders without crashing (36 ms)
+    √ displays the correct label (23 ms)
+    √ renders as checkbox input type (91 ms)
+    √ applies custom className to container (8 ms)
+    √ forwards all input props correctly (12 ms)
+    √ calls onChange when clicked (17 ms)
+    √ can be checked and unchecked (10 ms)
+    √ has correct default structure and styling (4 ms)
+    √ label is clickable and toggles checkbox (10 ms)
+    √ handles default className correctly (8 ms)
+
+PASS src/components/forms/Textarea.test.tsx
+  Textarea
+    √ renders without crashing (34 ms)
+    √ renders with label (120 ms)
+    √ applies custom className to textarea (18 ms)
+    √ applies custom containerClassName (4 ms)
+    √ forwards all textarea props correctly (12 ms)
+    √ calls onChange when textarea value changes (14 ms)
+    √ has default styling classes (8 ms)
+    √ label has correct styling (4 ms)
+    √ container has correct default structure (4 ms)
+
+PASS src/components/pages/home/HomeCard1.test.tsx
+  HomeCard1
+    √ renders without crashing (42 ms)
+    √ displays the title and description (26 ms)
+    √ renders the image/icon (6 ms)
+    √ has correct container structure (8 ms)
+    √ title is rendered as h2 heading (82 ms)
+    √ title has correct styling (17 ms)
+    √ description has correct styling (7 ms)
+    √ icon container has correct styling (6 ms)
+    √ icon background has correct styling (6 ms)
+    √ has hover effect styling (5 ms)
+    √ shadow element has correct styling (4 ms)
+    √ handles long title text (4 ms)
+    √ handles long description text (5 ms)
+    √ renders different icon types correctly (3 ms)
+
+PASS src/components/forms/TextInput.test.tsx
+  TextInput
+    √ renders without crashing (33 ms)
+    √ renders with label when provided (27 ms)
+    √ renders without label when not provided (6 ms)
+    √ applies custom className to input (99 ms)
+    √ applies custom containerClassName (7 ms)
+    √ forwards all input props correctly (15 ms)
+    √ calls onChange when input value changes (21 ms)
+    √ has default styling classes (6 ms)
+    √ label has correct styling (4 ms)
+
+PASS src/components/common/HeroBanner.test.tsx
+  HeroBanner
+    √ renders without crashing (94 ms)
+    √ renders image with correct attributes (102 ms)
+    √ applies custom height class (5 ms)
+    √ applies default height class when not provided (4 ms)
+    √ renders overlay text when provided (6 ms)
+    √ does not render overlay when text is not provided (3 ms)
+    √ renders with empty alt text by default (3 ms)
+    √ has correct container classes (2 ms)
+    √ image has correct styling classes (6 ms)
+    √ overlay text has correct styling (4 ms)
+
+PASS src/components/pages/services/OurServicesCard2.test.tsx
+  OurServicesCard2
+    √ renders without crashing (51 ms)
+    √ displays the correct title and description (26 ms)
+    √ displays image with correct attributes (83 ms)
+    √ has correct navigation links (21 ms)
+    √ title is clickable and navigates correctly (7 ms)
+    √ image is clickable and navigates correctly (8 ms)
+    √ has correct container structure and styling (4 ms)
+    √ image has correct styling (8 ms)
+    √ title has correct styling (4 ms)
+    √ title is rendered as h2 heading (12 ms)
+    √ description has correct styling (5 ms)
+    √ image container has correct styling (5 ms)
+    √ handles long description text (4 ms)
+    √ handles long title text (4 ms)
+    √ maintains accessibility with proper link structure (11 ms)
+
+PASS src/components/pages/services/Documentaries.test.tsx
+  Documentaries
+    √ renders without crashing (55 ms)
+    √ sets correct helmet meta tags (15 ms)
+    √ renders video iframe with correct attributes (11 ms)
+    √ has correct video container layout (11 ms)
+    √ has loading placeholder background (17 ms)
+    √ iframe has correct positioning and styling (17 ms)
+    √ has responsive design classes (16 ms)
+
+PASS src/components/common/GalleryCard.test.tsx
+  GalleryCard
+    √ renders without crashing (43 ms)
+    √ displays the correct title and description (23 ms)
+    √ has the correct image attributes (55 ms)
+    √ sets lazy loading when lazy prop is true (7 ms)
+    √ sets eager loading when lazy prop is false (7 ms)
+    √ has correct link navigation (6 ms)
+    √ has proper CSS classes (4 ms)
+    √ title is rendered as h2 heading (9 ms)
+
+PASS src/components/pages/services/CorporateMarketing.test.tsx
+  CorporateMarketing
+    √ renders without crashing (49 ms)
+    √ sets correct helmet meta tags (18 ms)
+    √ renders video iframe with correct attributes (12 ms)
+    √ has correct video container layout (14 ms)
+    √ displays corporate marketing title (11 ms)
+    √ iframe has correct positioning and styling (11 ms)
+
+PASS src/components/pages/about-us/TedsAboutUsCard.test.tsx
+  TedsAboutUsCard
+    √ renders without crashing (24 ms)
+    √ displays Ted's name and title (18 ms)
+    √ displays Ted's image with correct attributes (9 ms)
+    √ displays Ted's description (6 ms)
+    √ includes external link to portfolio (51 ms)
+    √ has correct styling classes (3 ms)
+    √ has proper image container styling (3 ms)
+    √ has blue text for name and title (3 ms)
+    √ has correct description styling (3 ms)
+    √ portfolio link has correct styling (9 ms)
+    √ mentions client names in description (4 ms)
+    √ has hover effect element (3 ms)
+
+PASS src/components/pages/services/Construction.test.tsx
+  Construction
+    √ renders without crashing (66 ms)
+    √ sets correct helmet meta tags (21 ms)
+    √ renders video iframe with correct attributes (16 ms)
+    √ has correct video container layout (18 ms)
+    √ has loading placeholder background (15 ms)
+    √ iframe has correct positioning and styling (16 ms)
+    √ has responsive aspect ratio container (14 ms)
+    √ sets proper iframe accessibility attributes (14 ms)
+
+PASS src/components/pages/services/TourismAndResort.test.tsx
+  TourismAndResort
+    √ renders without crashing (65 ms)
+    √ sets correct helmet meta tags (20 ms)
+    √ renders video iframe with correct attributes (17 ms)
+    √ has correct video container layout (19 ms)
+    √ has loading placeholder background (17 ms)
+    √ iframe has correct positioning and styling (15 ms)
+    √ has responsive design classes (21 ms)
+
+PASS src/components/pages/our-work/OurWork.test.tsx
+  OurWork
+    √ renders without crashing (61 ms)
+    √ sets correct helmet meta tags (12 ms)
+    √ displays client logos (11 ms)
+    √ displays intro copy text (11 ms)
+    √ renders gallery cards (8 ms)
+    √ has correct main layout structure (11 ms)
+    √ has correct logo grid layout (9 ms)
+    √ has correct gallery grid layout (5 ms)
+    √ logo images have correct styling (5 ms)
+    √ intro text has correct styling (8 ms)
+    √ includes decorative horizontal rule (7 ms)
+    √ sets preload links for all images (6 ms)
+    √ gallery cards have lazy loading configuration (7 ms)
+    √ uses content-visibility-auto for performance (7 ms)
+    √ has proper responsive design classes (4 ms)
+
+PASS src/components/body/MainContent.test.tsx
+  MainContent
+    √ renders without crashing (51 ms)
+    √ has correct main structure (9 ms)
+    √ renders home page by default (9 ms)
+    √ renders about us page for /about-us route (35 ms)
+    √ renders our work page for /our-work route (30 ms)
+    √ renders services page for /services route (30 ms)
+    √ renders contact us page for /contact-us route (31 ms)
+    √ renders construction service page (15 ms)
+    √ renders tourism service page (16 ms)
+    √ renders corporate marketing service page (15 ms)
+    √ renders documentaries service page (16 ms)
+    √ renders project pages for work items (15 ms)
+    √ renders main content container (3 ms)
+    √ renders content wrapper with correct grid structure (4 ms)
+    √ uses Suspense for lazy loading (2 ms)
+
+PASS src/components/pages/about-us/AboutUs.test.tsx
+  AboutUs
+    √ renders without crashing (80 ms)
+    √ sets correct helmet meta tags (14 ms)
+    √ displays main heading (12 ms)
+    √ displays company description (9 ms)
+    √ displays team member cards (15 ms)
+    √ displays team member titles (8 ms)
+    √ displays team member descriptions (16 ms)
+    √ renders hero banner (8 ms)
+    √ has correct layout structure (8 ms)
+    √ includes Ted's about us card (7 ms)
+    √ sets preload links for images (6 ms)
+    √ has proper semantic structure with heading hierarchy (5 ms)
+    √ displays company description with proper styling (6 ms)
+
+PASS src/components/pages/our-work/FadeSlider.test.tsx
+  FadeSlider
+    √ renders without crashing (105 ms)
+    √ displays project cards (28 ms)
+    √ renders images with correct attributes (18 ms)
+    √ uses lazy loading for images after index 4 (15 ms)
+    √ renders correct number of slides (18 ms)
+    √ renders gradient overlays when visibleSlides > 1 (24 ms)
+    √ does not render gradient overlays when visibleSlides = 1 (17 ms)
+    √ has correct link structure (13 ms)
+    √ displays project descriptions (15 ms)
+    √ has proper responsive classes (13 ms)
+    √ handles picture elements with srcSet (12 ms)
+    √ has correct heading styles (13 ms)
+    √ has correct description styles (14 ms)
+    √ has correct image container aspect ratio (12 ms)
+    √ has hover effects on links (9 ms)
+    √ manages gradient opacity based on carousel position (9 ms)
+
+PASS src/components/pages/services/OurServices.test.tsx
+  OurServices
+    √ renders without crashing (83 ms)
+    √ sets correct helmet meta tags (16 ms)
+    √ displays main headings (17 ms)
+    √ displays main service description (23 ms)
+    √ renders service cards for pre-production and post-production (20 ms)
+    √ renders industry service cards (28 ms)
+    √ renders hero banner (10 ms)
+    √ has correct main layout structure (17 ms)
+    √ has service cards container with proper styling (11 ms)
+    √ has industry grid layout (12 ms)
+    √ displays horizontal rule separator (11 ms)
+    √ main heading has correct styling (14 ms)
+    √ industries heading has correct styling (17 ms)
+    √ main description has correct styling (17 ms)
+    √ sets preload links for banner images (9 ms)
+    √ includes outlet for nested routes (8 ms)
+    √ mentions specific services in description (14 ms)
+    √ has responsive design classes (8 ms)
+    √ service cards mention specific production elements (15 ms)
+
+PASS src/components/pages/our-work/ProjectPage.test.tsx
+  ProjectPage
+    √ renders without crashing (61 ms)
+    √ displays the project title and description (23 ms)
+    √ renders video iframe with correct attributes (13 ms)
+    √ renders share button (79 ms)
+    √ calls navigator.share when share button is clicked and share is available (37 ms)
+    √ falls back to clipboard when navigator.share fails (22 ms)
+    √ falls back to clipboard when navigator.share is not available (17 ms)
+    √ renders carousel with correct visible slides for different screen sizes (17 ms)
+    √ renders carousel with 2 visible slides for tablet (16 ms)
+    √ renders carousel with 1 visible slide for mobile (15 ms)
+    √ renders navigation buttons (8 ms)
+    √ navigation buttons have correct accessibility attributes (9 ms)
+    √ share button has correct styling (18 ms)
+    √ title has correct styling (12 ms)
+    √ description has correct styling (11 ms)
+    √ video container has correct aspect ratio (13 ms)
+    √ sets correct helmet meta tags (8 ms)
+    √ handles long title and description gracefully (11 ms)
+
+PASS src/components/header/Header.test.tsx
+  Header
+    √ renders without crashing (43 ms)
+    √ has correct header structure (13 ms)
+    √ contains header left, middle, and desktop nav components (17 ms)
+    √ renders logo for desktop view (12 ms)
+    √ renders hamburger menu for mobile view (8 ms)
+    √ opens mobile menu when hamburger button is clicked (15 ms)
+    √ mobile menu can be closed (10 ms)
+    √ closes mobile menu when close button is clicked (56 ms)
+    √ closes mobile menu when backdrop is clicked (14 ms)
+    √ shows phone number in desktop navigation (9 ms)
+    √ shows navigation links in desktop view (12 ms)
+    √ shows get quote button in desktop view (8 ms)
+    √ hides desktop navigation on mobile (5 ms)
+    √ mobile menu has correct accessibility attributes (4 ms)
+    √ manages mobile menu state correctly (9 ms)
+    √ renders both HeaderLeft and MobileMenu components (8 ms)
+    √ has correct z-index for sticky positioning (7 ms)
+    √ maintains responsive design classes (9 ms)
+
+PASS src/App.test.tsx
+  App
+    √ renders without crashing (89 ms)
+    √ initializes Google Analytics (48 ms)
+    √ has the correct app structure (27 ms)
+
+PASS src/components/pages/ContactUs.test.tsx
+  ContactUs
+    √ renders without crashing (231 ms)
+    √ displays contact information (60 ms)
+    √ displays social media links (46 ms)
+    √ has correct social media link URLs (42 ms)
+    √ renders all form fields (62 ms)
+    √ renders service checkboxes (43 ms)
+    √ handles form input changes (84 ms)
+    √ handles checkbox changes (76 ms)
+    √ submits form with valid data (175 ms)
+    √ shows success message on successful submission (112 ms)
+    √ shows error message on failed submission (91 ms)
+    √ renders hero banner with correct content (31 ms)
+    √ has proper form accessibility (32 ms)
+    √ displays marketing copy (30 ms)
+    √ social media icons have correct accessibility attributes (36 ms)
+    √ resets form after successful submission (105 ms)
+
+-------------------------------|---------|----------|---------|---------|-------------------
+File                           | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------------------|---------|----------|---------|---------|-------------------
+All files                      |   98.61 |    85.07 |   96.38 |   98.71 |                   
+ src                           |     100 |      100 |     100 |     100 |                   
+  App.tsx                      |     100 |      100 |     100 |     100 |                   
+ src/components                |     100 |      100 |     100 |     100 |                   
+  ScrollToTop.tsx              |     100 |      100 |     100 |     100 |                   
+ src/components/body           |     100 |      100 |     100 |     100 |                   
+  MainContent.tsx              |     100 |      100 |     100 |     100 |                   
+ src/components/common         |     100 |     87.5 |     100 |     100 |                   
+  GalleryCard.tsx              |     100 |       75 |     100 |     100 | 39                
+  HeroBanner.tsx               |     100 |      100 |     100 |     100 |                   
+  NavItems.ts                  |     100 |      100 |     100 |     100 |                   
+ src/components/forms          |     100 |      100 |     100 |     100 |                   
+  Checkbox.tsx                 |     100 |      100 |     100 |     100 |                   
+  TextInput.tsx                |     100 |      100 |     100 |     100 |                   
+  Textarea.tsx                 |     100 |      100 |     100 |     100 |                   
+ src/components/header         |   95.65 |    66.66 |      90 |      95 |                   
+  DesktopNav.tsx               |     100 |      100 |     100 |     100 |                   
+  Header.tsx                   |     100 |      100 |     100 |     100 |                   
+  HeaderLeft.tsx               |     100 |      100 |     100 |     100 |                   
+  HeaderMiddle.tsx             |     100 |      100 |     100 |     100 |                   
+  MobileMenu.tsx               |   77.77 |    44.44 |   66.66 |      75 | 15-16             
+ src/components/pages          |   93.18 |    91.66 |   84.61 |   92.85 |                   
+  ContactUs.tsx                |   93.18 |    91.66 |   84.61 |   92.85 | 74,136,273        
+ src/components/pages/about-us |     100 |      100 |     100 |     100 |                   
+  AboutUs.tsx                  |     100 |      100 |     100 |     100 |                   
+  AboutUsCard.tsx              |     100 |      100 |     100 |     100 |                   
+  TedsAboutUsCard.tsx          |     100 |      100 |     100 |     100 |                   
+ src/components/pages/home     |     100 |      100 |     100 |     100 |                   
+  Home.tsx                     |     100 |      100 |     100 |     100 |                   
+  HomeCard1.tsx                |     100 |      100 |     100 |     100 |                   
+ src/components/pages/our-work |   99.45 |    83.33 |     100 |     100 |                   
+  FadeSlider.tsx               |     100 |       80 |     100 |     100 | 67-72             
+  OurWork.tsx                  |     100 |      100 |     100 |     100 |                   
+  ProjectPage.tsx              |   96.55 |     87.5 |     100 |     100 | 31                
+  ourWorkData.ts               |     100 |      100 |     100 |     100 |                   
+ src/components/pages/services |     100 |      100 |     100 |     100 |                   
+  Construction.tsx             |     100 |      100 |     100 |     100 |                   
+  CorporateMarketing.tsx       |     100 |      100 |     100 |     100 |                   
+  Documentaries.tsx            |     100 |      100 |     100 |     100 |                   
+  OurServices.tsx              |     100 |      100 |     100 |     100 |                   
+  OurServicesCard1.tsx         |     100 |      100 |     100 |     100 |                   
+  OurServicesCard2.tsx         |     100 |      100 |     100 |     100 |                   
+  TourismAndResort.tsx         |     100 |      100 |     100 |     100 |                   
+ src/components/ui             |     100 |      100 |     100 |     100 |                   
+  Spinner.tsx                  |     100 |      100 |     100 |     100 |                   
+ src/containers                |     100 |      100 |     100 |     100 |                   
+  WindowSize.tsx               |     100 |      100 |     100 |     100 |                   
+-------------------------------|---------|----------|---------|---------|-------------------
+Test Suites: 26 passed, 26 total
+Tests:       290 passed, 290 total
+Snapshots:   0 total
+Time:        7.42 s
+Ran all test suites.

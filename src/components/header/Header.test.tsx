@@ -135,14 +135,14 @@ describe("Header", () => {
       value: 600,
     })
 
-    const { getByLabelText } = renderWithProviders(<Header />)
+    const { getByLabelText, getByRole } = renderWithProviders(<Header />)
     const menuButton = getByLabelText("Open menu")
 
     // Click to open menu
     fireEvent.click(menuButton)
 
     // Find and click the close button to test the setOpen(false) function
-    const closeButton = getByLabelText("Close menu")
+    const closeButton = getByRole("button", { name: "Close menu" })
     fireEvent.click(closeButton)
 
     // Verify the close button is still available (menu functionality works)

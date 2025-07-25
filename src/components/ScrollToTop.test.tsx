@@ -6,7 +6,7 @@ import { ScrollToTop } from "./ScrollToTop"
 const mockScrollTo = jest.fn()
 Object.defineProperty(window, "scrollTo", { value: mockScrollTo })
 
-const renderWithRouter = (initialEntries = ["/"]) => {
+const renderWithRouter = () => {
   return render(
     <BrowserRouter>
       <ScrollToTop />
@@ -30,7 +30,7 @@ describe("ScrollToTop", () => {
   })
 
   it("scrolls to top when pathname changes", () => {
-    renderWithRouter(["/"])
+    renderWithRouter()
     expect(mockScrollTo).toHaveBeenCalledWith(0, 0)
 
     // The component should have called scrollTo during mount
@@ -38,7 +38,7 @@ describe("ScrollToTop", () => {
   })
 
   it("calls window.scrollTo with correct parameters", () => {
-    renderWithRouter(["/some-page"])
+    renderWithRouter()
     expect(mockScrollTo).toHaveBeenCalledWith(0, 0)
   })
 })

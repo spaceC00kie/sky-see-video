@@ -1,8 +1,6 @@
 import { Helmet } from "react-helmet-async"
 
-interface Props {}
-
-export const TourismAndResort: React.FC<Props> = ({}) => {
+export const TourismAndResort: React.FC = () => {
   return (
     <>
       <Helmet>

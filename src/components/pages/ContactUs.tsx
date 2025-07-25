@@ -78,13 +78,13 @@ export const ContactUs: React.FC = () => {
       .filter(([, v]) => v)
       .map(
         ([k]) =>
-          ((
-            {
+          (
+            ({
               preProduction: "Pre-Production",
               production: "Production",
               postProduction: "Post-Production",
-            } as const
-          )[k]),
+            }) as const
+          )[k],
       )
 
     const servicesText = servicesArr.join(", ") || "N/A"
