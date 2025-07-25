@@ -34,11 +34,41 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Auto-fix formatting and linting
+      - name: Check if formatting is needed
+        id: format-check
         run: |
-          echo "🔧 Auto-fixing code quality issues..."
-          yarn lint:fix || true
-          yarn format || true
+          if yarn format:check; then
+            echo "needs-formatting=false" >> $GITHUB_OUTPUT
+            echo "✅ Code is properly formatted"
+          else
+            echo "needs-formatting=true" >> $GITHUB_OUTPUT
+            echo "❌ Code needs formatting"
+          fi
+        continue-on-error: true
+
+      - name: Check if linting is needed
+        id: lint-check
+        run: |
+          if yarn lint; then
+            echo "needs-linting=false" >> $GITHUB_OUTPUT
+            echo "✅ Code passes linting"
+          else
+            echo "needs-linting=true" >> $GITHUB_OUTPUT
+            echo "❌ Code has linting issues"
+          fi
+        continue-on-error: true
+
+      - name: Auto-fix formatting
+        if: steps.format-check.outputs.needs-formatting == 'true'
+        run: |
+          echo "🎨 Auto-fixing code formatting..."
+          yarn format
+
+      - name: Auto-fix linting
+        if: steps.lint-check.outputs.needs-linting == 'true'
+        run: |
+          echo "🔧 Auto-fixing linting issues..."
+          yarn lint:fix
 
       - name: Check for changes after auto-fix
         id: verify-changes
@@ -57,7 +87,22 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "🤖 Auto-fix: format and lint code [skip ci]"
+          
+          # Create descriptive commit message based on what was fixed
+          COMMIT_MSG="🤖 Auto-fix:"
+          if [ "${{ steps.format-check.outputs.needs-formatting }}" == "true" ]; then
+            COMMIT_MSG="$COMMIT_MSG format"
+          fi
+          if [ "${{ steps.lint-check.outputs.needs-linting }}" == "true" ]; then
+            if [ "${{ steps.format-check.outputs.needs-formatting }}" == "true" ]; then
+              COMMIT_MSG="$COMMIT_MSG and lint"
+            else
+              COMMIT_MSG="$COMMIT_MSG lint"
+            fi
+          fi
+          COMMIT_MSG="$COMMIT_MSG code [skip ci]"
+          
+          git commit -m "$COMMIT_MSG"
           git push
 
       - name: Run type checking
