@@ -2,9 +2,10 @@ name: CI/CD Pipeline
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened]
     branches: [main, develop]
   push:
-    branches: ['**']
+    branches: [main]
 
 permissions:
   contents: write
@@ -28,40 +29,7 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Check Prettier formatting
         id: prettier-check
-        run: |
-          if [ "${{ github.ref }}" == "refs/heads/main" ] || [ "${{ github.ref }}" == "refs/heads/develop" ]; then
-            # On main/develop: only check, fail if not formatted
-            yarn format:check
-          else
-            # On feature branches: check and set output for potential auto-fix
-            if yarn format:check; then
-              echo "formatting-needed=false" >> $GITHUB_OUTPUT
-            else
-              echo "formatting-needed=true" >> $GITHUB_OUTPUT
-              exit 0  # Don't fail here, we'll auto-fix
-            fi
-          fi
-      - name: Auto-fix formatting if needed
-        if: steps.prettier-check.outputs.formatting-needed == 'true' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop'
-        run: yarn format
-      - name: Check for changes after formatting
-        if: steps.prettier-check.outputs.formatting-needed == 'true' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop'
-        id: verify-changes
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            echo "changes-made=true" >> $GITHUB_OUTPUT
-          else
-            echo "changes-made=false" >> $GITHUB_OUTPUT
-          fi
-      - name: Commit formatting changes (for feature branches only)
-        if: github.event_name == 'push' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop' && steps.verify-changes.outputs.changes-made == 'true'
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add .
-          git commit -m "style: auto-format code with Prettier [skip ci]"
-          git push
-
+        run: yarn format:check
   test:
     name: Run Tests & Coverage
     runs-on: ubuntu-latest
