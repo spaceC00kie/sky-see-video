@@ -39,9 +39,9 @@ export const Construction: React.FC<Props> = ({}) => {
                 cinematography that elevates your brand’s image. We help
                 companies create emotional connections with their viewers by
                 allowing builders and their marketing teams to tell their unique
-                stories and by focusing on key selling points of the property. We
-                provide 3-camera interviews with motorized sliders, as well as
-                smooth walking/talking interviews with gimbals to keep the
+                stories and by focusing on key selling points of the property.
+                We provide 3-camera interviews with motorized sliders, as well
+                as smooth walking/talking interviews with gimbals to keep the
                 energy going, as key areas provided by the marketing team are
                 featured. Our videos are complemented with compelling aerial
                 views for perspective, motion graphics, and animations. We offer
