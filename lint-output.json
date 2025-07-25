@@ -1,1 +1,71 @@
-[{"filePath":"C:\\Users\\null\\Repos\\sky-see-video\\src\\setupTests.ts","messages":[{"ruleId":"@typescript-eslint/no-explicit-any","severity":1,"message":"Unexpected any. Specify a different type.","line":69,"column":13,"nodeType":"TSAnyKeyword","messageId":"unexpectedAny","endLine":69,"endColumn":16,"suggestions":[{"messageId":"suggestUnknown","fix":{"range":[1662,1665],"text":"unknown"},"desc":"Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."},{"messageId":"suggestNever","fix":{"range":[1662,1665],"text":"never"},"desc":"Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."}]},{"ruleId":"no-console","severity":1,"message":"Unexpected console statement.","line":85,"column":23,"nodeType":"MemberExpression","messageId":"unexpected","endLine":85,"endColumn":36},{"ruleId":"no-console","severity":1,"message":"Unexpected console statement.","line":87,"column":3,"nodeType":"MemberExpression","messageId":"unexpected","endLine":87,"endColumn":16},{"ruleId":"no-console","severity":1,"message":"Unexpected console statement.","line":96,"column":3,"nodeType":"MemberExpression","messageId":"unexpected","endLine":96,"endColumn":16}],"suppressedMessages":[],"errorCount":0,"fatalErrorCount":0,"warningCount":4,"fixableErrorCount":0,"fixableWarningCount":0,"source":"import \"@testing-library/jest-dom\"\n\n// Polyfill for TextEncoder/TextDecoder for jest environment\nif (typeof TextEncoder === \"undefined\") {\n  // Simple polyfill for tests\n  Object.assign(global, {\n    TextEncoder: class {\n      encode(input: string) {\n        return new Uint8Array(Buffer.from(input, \"utf8\"))\n      }\n    },\n    TextDecoder: class {\n      decode(input: Uint8Array) {\n        return Buffer.from(input).toString(\"utf8\")\n      }\n    },\n  })\n}\n\n// Mock window.matchMedia\nObject.defineProperty(window, \"matchMedia\", {\n  writable: true,\n  value: jest.fn().mockImplementation((query) => ({\n    matches: false,\n    media: query,\n    onchange: null,\n    addListener: jest.fn(), // deprecated\n    removeListener: jest.fn(), // deprecated\n    addEventListener: jest.fn(),\n    removeEventListener: jest.fn(),\n    dispatchEvent: jest.fn(),\n  })),\n})\n\n// Mock window.navigator.share\nObject.defineProperty(window.navigator, \"share\", {\n  writable: true,\n  value: jest.fn().mockResolvedValue(undefined),\n})\n\n// Mock window.navigator.clipboard\nObject.defineProperty(window.navigator, \"clipboard\", {\n  value: {\n    writeText: jest.fn().mockResolvedValue(undefined),\n  },\n})\n\n// Mock ResizeObserver\nObject.defineProperty(window, \"ResizeObserver\", {\n  writable: true,\n  value: jest.fn().mockImplementation(() => ({\n    observe: jest.fn(),\n    unobserve: jest.fn(),\n    disconnect: jest.fn(),\n  })),\n})\n\n// Mock IntersectionObserver\nObject.defineProperty(window, \"IntersectionObserver\", {\n  writable: true,\n  value: jest.fn().mockImplementation(() => ({\n    observe: jest.fn(),\n    unobserve: jest.fn(),\n    disconnect: jest.fn(),\n  })),\n})\n\n// Mock fetch\n;(window as any).fetch = jest.fn()\n\n// Mock Google Analytics\njest.mock(\"react-ga4\", () => ({\n  initialize: jest.fn(),\n  pageview: jest.fn(),\n  event: jest.fn(),\n}))\n\n// Mock sweet alert\njest.mock(\"sweetalert2\", () => ({\n  fire: jest.fn().mockResolvedValue({ isConfirmed: true }),\n  close: jest.fn(),\n}))\n\n// Silence console errors during tests unless we're specifically testing them\nconst originalError = console.error\nbeforeAll(() => {\n  console.error = (...args) => {\n    if (typeof args[0] === \"string\" && args[0].includes(\"Warning:\")) {\n      return\n    }\n    originalError.call(console, ...args)\n  }\n})\n\nafterAll(() => {\n  console.error = originalError\n})\n","usedDeprecatedRules":[]}]
+[
+  {
+    "filePath": "C:\\Users\\null\\Repos\\sky-see-video\\src\\setupTests.ts",
+    "messages": [
+      {
+        "ruleId": "@typescript-eslint/no-explicit-any",
+        "severity": 1,
+        "message": "Unexpected any. Specify a different type.",
+        "line": 69,
+        "column": 13,
+        "nodeType": "TSAnyKeyword",
+        "messageId": "unexpectedAny",
+        "endLine": 69,
+        "endColumn": 16,
+        "suggestions": [
+          {
+            "messageId": "suggestUnknown",
+            "fix": { "range": [1662, 1665], "text": "unknown" },
+            "desc": "Use `unknown` instead, this will force you to explicitly, and safely assert the type is correct."
+          },
+          {
+            "messageId": "suggestNever",
+            "fix": { "range": [1662, 1665], "text": "never" },
+            "desc": "Use `never` instead, this is useful when instantiating generic type parameters that you don't need to know the type of."
+          }
+        ]
+      },
+      {
+        "ruleId": "no-console",
+        "severity": 1,
+        "message": "Unexpected console statement.",
+        "line": 85,
+        "column": 23,
+        "nodeType": "MemberExpression",
+        "messageId": "unexpected",
+        "endLine": 85,
+        "endColumn": 36
+      },
+      {
+        "ruleId": "no-console",
+        "severity": 1,
+        "message": "Unexpected console statement.",
+        "line": 87,
+        "column": 3,
+        "nodeType": "MemberExpression",
+        "messageId": "unexpected",
+        "endLine": 87,
+        "endColumn": 16
+      },
+      {
+        "ruleId": "no-console",
+        "severity": 1,
+        "message": "Unexpected console statement.",
+        "line": 96,
+        "column": 3,
+        "nodeType": "MemberExpression",
+        "messageId": "unexpected",
+        "endLine": 96,
+        "endColumn": 16
+      }
+    ],
+    "suppressedMessages": [],
+    "errorCount": 0,
+    "fatalErrorCount": 0,
+    "warningCount": 4,
+    "fixableErrorCount": 0,
+    "fixableWarningCount": 0,
+    "source": "import \"@testing-library/jest-dom\"\n\n// Polyfill for TextEncoder/TextDecoder for jest environment\nif (typeof TextEncoder === \"undefined\") {\n  // Simple polyfill for tests\n  Object.assign(global, {\n    TextEncoder: class {\n      encode(input: string) {\n        return new Uint8Array(Buffer.from(input, \"utf8\"))\n      }\n    },\n    TextDecoder: class {\n      decode(input: Uint8Array) {\n        return Buffer.from(input).toString(\"utf8\")\n      }\n    },\n  })\n}\n\n// Mock window.matchMedia\nObject.defineProperty(window, \"matchMedia\", {\n  writable: true,\n  value: jest.fn().mockImplementation((query) => ({\n    matches: false,\n    media: query,\n    onchange: null,\n    addListener: jest.fn(), // deprecated\n    removeListener: jest.fn(), // deprecated\n    addEventListener: jest.fn(),\n    removeEventListener: jest.fn(),\n    dispatchEvent: jest.fn(),\n  })),\n})\n\n// Mock window.navigator.share\nObject.defineProperty(window.navigator, \"share\", {\n  writable: true,\n  value: jest.fn().mockResolvedValue(undefined),\n})\n\n// Mock window.navigator.clipboard\nObject.defineProperty(window.navigator, \"clipboard\", {\n  value: {\n    writeText: jest.fn().mockResolvedValue(undefined),\n  },\n})\n\n// Mock ResizeObserver\nObject.defineProperty(window, \"ResizeObserver\", {\n  writable: true,\n  value: jest.fn().mockImplementation(() => ({\n    observe: jest.fn(),\n    unobserve: jest.fn(),\n    disconnect: jest.fn(),\n  })),\n})\n\n// Mock IntersectionObserver\nObject.defineProperty(window, \"IntersectionObserver\", {\n  writable: true,\n  value: jest.fn().mockImplementation(() => ({\n    observe: jest.fn(),\n    unobserve: jest.fn(),\n    disconnect: jest.fn(),\n  })),\n})\n\n// Mock fetch\n;(window as any).fetch = jest.fn()\n\n// Mock Google Analytics\njest.mock(\"react-ga4\", () => ({\n  initialize: jest.fn(),\n  pageview: jest.fn(),\n  event: jest.fn(),\n}))\n\n// Mock sweet alert\njest.mock(\"sweetalert2\", () => ({\n  fire: jest.fn().mockResolvedValue({ isConfirmed: true }),\n  close: jest.fn(),\n}))\n\n// Silence console errors during tests unless we're specifically testing them\nconst originalError = console.error\nbeforeAll(() => {\n  console.error = (...args) => {\n    if (typeof args[0] === \"string\" && args[0].includes(\"Warning:\")) {\n      return\n    }\n    originalError.call(console, ...args)\n  }\n})\n\nafterAll(() => {\n  console.error = originalError\n})\n",
+    "usedDeprecatedRules": []
+  }
+]
