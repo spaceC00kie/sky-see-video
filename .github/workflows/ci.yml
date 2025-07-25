@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: [main, develop]
   push:
-    branches: [main]
+    branches: ['**']
 
 permissions:
   contents: write
@@ -29,17 +29,23 @@ jobs:
       - name: Check Prettier formatting
         id: prettier-check
         run: |
-          if yarn format:check; then
-            echo "formatting-needed=false" >> $GITHUB_OUTPUT
+          if [ "${{ github.ref }}" == "refs/heads/main" ] || [ "${{ github.ref }}" == "refs/heads/develop" ]; then
+            # On main/develop: only check, fail if not formatted
+            yarn format:check
           else
-            echo "formatting-needed=true" >> $GITHUB_OUTPUT
+            # On feature branches: check and set output for potential auto-fix
+            if yarn format:check; then
+              echo "formatting-needed=false" >> $GITHUB_OUTPUT
+            else
+              echo "formatting-needed=true" >> $GITHUB_OUTPUT
+              exit 0  # Don't fail here, we'll auto-fix
+            fi
           fi
-        continue-on-error: true
       - name: Auto-fix formatting if needed
-        if: steps.prettier-check.outputs.formatting-needed == 'true'
+        if: steps.prettier-check.outputs.formatting-needed == 'true' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop'
         run: yarn format
       - name: Check for changes after formatting
-        if: steps.prettier-check.outputs.formatting-needed == 'true'
+        if: steps.prettier-check.outputs.formatting-needed == 'true' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop'
         id: verify-changes
         run: |
           if [ -n "$(git status --porcelain)" ]; then
@@ -47,8 +53,8 @@ jobs:
           else
             echo "changes-made=false" >> $GITHUB_OUTPUT
           fi
-      - name: Commit formatting changes (for pushes only)
-        if: github.event_name == 'push' && steps.verify-changes.outputs.changes-made == 'true'
+      - name: Commit formatting changes (for feature branches only)
+        if: github.event_name == 'push' && github.ref != 'refs/heads/main' && github.ref != 'refs/heads/develop' && steps.verify-changes.outputs.changes-made == 'true'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
