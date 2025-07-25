@@ -7,6 +7,7 @@ import { Construction } from "../pages/services/Construction"
 import { TourismAndResort } from "../pages/services/TourismAndResort"
 import { CorporateMarketing } from "../pages/services/CorporateMarketing"
 import { Documentaries } from "../pages/services/Documentaries"
+import { NotFound } from "../pages/NotFound"
 
 const Home = lazy(() =>
   import("../pages/home/Home").then((m) => ({ default: m.Home })),
@@ -56,6 +57,7 @@ export const MainContent: React.FC = () => (
               element={<ProjectPage key={card.path} {...card} />}
             />
           ))}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </div>
