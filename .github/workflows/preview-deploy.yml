@@ -33,9 +33,12 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: deploy-preview
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          repoToken: ""
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
           projectId: sky-see-video
+          expires: 30d
+          channelId: pr${{ github.event.number }}-${{ github.head_ref }}
+          entryPoint: ./
 
       - name: Comment Preview URL on PR
         uses: actions/github-script@v7
