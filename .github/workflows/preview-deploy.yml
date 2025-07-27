@@ -35,18 +35,30 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: deploy-preview
         with:
-          repoToken: ""
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
           projectId: sky-see-video
           expires: 30d
+          channelId: preview-${{ github.event.number }}
+        continue-on-error: false
 
       - name: Debug Firebase outputs
         run: |
           echo "Deploy preview outputs:"
           echo "Details URL: ${{ steps.deploy-preview.outputs.details_url }}"
           echo "Expire time: ${{ steps.deploy-preview.outputs.expire_time }}"
+          echo "Deploy step result: ${{ steps.deploy-preview.outcome }}"
+          
+          if [ -z "${{ steps.deploy-preview.outputs.details_url }}" ]; then
+            echo "❌ ERROR: No preview URL was generated!"
+            echo "This usually means the Firebase deployment failed."
+            exit 1
+          else
+            echo "✅ Preview URL successfully generated"
+          fi
 
       - name: Comment Preview URL on PR
+        if: steps.deploy-preview.outputs.details_url != ''
         uses: actions/github-script@v7
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -71,6 +83,7 @@ jobs:
             const previewUrl = '${{ steps.deploy-preview.outputs.details_url }}';
             if (!previewUrl) {
               console.error('No preview URL found from Firebase deployment!');
+              core.setFailed('Preview URL is empty - deployment may have failed');
               return;
             }
 
@@ -80,7 +93,10 @@ jobs:
 
             **🔗 Preview URL:** ${previewUrl}
 
-            This preview will be automatically updated with new commits to this PR.`;
+            This preview will be automatically updated with new commits to this PR and will expire in 30 days.
+            
+            ---
+            *Deployed from commit: ${{ github.sha }}*`;
 
             if (botComment) {
               console.log('Updating existing comment with ID:', botComment.id);
@@ -101,3 +117,28 @@ jobs:
             }
 
             console.log('Preview comment process completed!');
+
+      - name: Comment on deployment failure
+        if: failure() && steps.deploy-preview.outcome == 'failure'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const body = `## ❌ Preview Deployment Failed
+
+            Unfortunately, the preview deployment failed. Please check the [workflow logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more details.
+            
+            Common issues:
+            - Firebase configuration problems
+            - Build errors
+            - Missing Firebase service account permissions
+            
+            ---
+            *Failed deployment from commit: ${{ github.sha }}*`;
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: body
+            });
