@@ -16,7 +16,24 @@ jobs:
   deploy-preview:
     name: Deploy Preview
     runs-on: ubuntu-latest
+    # Add concurrency to prevent multiple simultaneous deploys for the same PR
+    concurrency:
+      group: preview-deploy-${{ github.event.number }}
+      cancel-in-progress: true
     steps:
+      - name: Debug PR Event
+        run: |
+          echo "=== PR Event Debug ==="
+          echo "Event: ${{ github.event_name }}"
+          echo "Action: ${{ github.event.action }}"
+          echo "PR Number: ${{ github.event.number }}"
+          echo "PR State: ${{ github.event.pull_request.state }}"
+          echo "Base Branch: ${{ github.event.pull_request.base.ref }}"
+          echo "Head Branch: ${{ github.event.pull_request.head.ref }}"
+          echo "Workflow Run ID: ${{ github.run_id }}"
+          echo "Workflow Run Number: ${{ github.run_number }}"
+          echo "========================"
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
