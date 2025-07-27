@@ -48,7 +48,7 @@ jobs:
           echo "Details URL: ${{ steps.deploy-preview.outputs.details_url }}"
           echo "Expire time: ${{ steps.deploy-preview.outputs.expire_time }}"
           echo "Deploy step result: ${{ steps.deploy-preview.outcome }}"
-          
+
           if [ -z "${{ steps.deploy-preview.outputs.details_url }}" ]; then
             echo "❌ ERROR: No preview URL was generated!"
             echo "This usually means the Firebase deployment failed."
@@ -94,7 +94,7 @@ jobs:
             **🔗 Preview URL:** ${previewUrl}
 
             This preview will be automatically updated with new commits to this PR and will expire in 30 days.
-            
+
             ---
             *Deployed from commit: ${{ github.sha }}*`;
 
@@ -127,12 +127,12 @@ jobs:
             const body = `## ❌ Preview Deployment Failed
 
             Unfortunately, the preview deployment failed. Please check the [workflow logs](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for more details.
-            
+
             Common issues:
             - Firebase configuration problems
             - Build errors
             - Missing Firebase service account permissions
-            
+
             ---
             *Failed deployment from commit: ${{ github.sha }}*`;
 
