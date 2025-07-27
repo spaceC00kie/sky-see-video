@@ -57,11 +57,11 @@ jobs:
 
             const previewUrl = '${{ steps.deploy-preview.outputs.details_url }}';
             const body = `## 🚀 Preview Deployment
-            
+
             ✅ Your preview deployment is ready!
-            
+
             **🔗 Preview URL:** ${previewUrl}
-            
+
             This preview will be automatically updated with new commits to this PR.`;
 
             if (botComment) {
