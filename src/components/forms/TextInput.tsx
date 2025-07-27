@@ -16,7 +16,7 @@ export const TextInput: React.FC<Props> = ({
   const inputId = id || autoId
 
   return (
-  <div className={`flex flex-col gap-2 ${containerClassName ?? ""}`}>
+    <div className={`flex flex-col gap-2 ${containerClassName ?? ""}`}>
       {label && (
         <label htmlFor={inputId} className="font-semibold">
           {label}
