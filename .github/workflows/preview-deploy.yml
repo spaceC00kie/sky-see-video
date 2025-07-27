@@ -32,13 +32,25 @@ jobs:
       - name: Build for preview
         run: yarn build
 
+      - name: Debug environment
+        run: |
+          echo "=== GitHub Event Debug ==="
+          echo "Event name: ${{ github.event_name }}"
+          echo "PR number: ${{ github.event.number }}"
+          echo "Base ref: ${{ github.base_ref }}"
+          echo "Head ref: ${{ github.head_ref }}"
+          echo "Repository: ${{ github.repository }}"
+          echo "=== Firebase Config Check ==="
+          ls -la firebase.json
+          echo "=== Build Output Check ==="
+          ls -la dist/
+
       - name: Deploy to Firebase Preview
         uses: FirebaseExtended/action-hosting-deploy@v0
         id: deploy-preview
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
-          projectId: sky-see-video
           expires: 30d
           channelId: preview-${{ github.event.number }}
         continue-on-error: false
