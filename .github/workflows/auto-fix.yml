@@ -11,6 +11,8 @@ jobs:
   auto-fix-and-check:
     name: Auto-fix Code Quality & Run Checks
     runs-on: ubuntu-latest
+    # Skip if the last commit was from GitHub Action (auto-fix bot)
+    if: ${{ !contains(github.event.head_commit.author.name, 'GitHub Action') }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -62,7 +64,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "🤖 Auto-fix: code quality (lint + format) [skip ci]"
+          git commit -m "🤖 Auto-fix: code quality (lint + format)"
           git push
 
       - name: Run type checking
