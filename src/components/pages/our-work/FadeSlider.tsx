@@ -56,7 +56,7 @@ export const FadeSlider: React.FC<Props> = ({ visibleSlides }) => {
                 </p>
               </div>
             </Link>
-        </Slide>
+          </Slide>
         ))}
       </Slider>
 
