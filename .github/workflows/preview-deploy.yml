@@ -4,6 +4,7 @@ on:
   pull_request:
     branches: ["**"] # All branches can receive PRs
     types: [opened, synchronize, reopened] # Trigger on PR creation and updates
+  # Explicitly exclude push events - only PRs should trigger this workflow
 
 permissions:
   contents: read
