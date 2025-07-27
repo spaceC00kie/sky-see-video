@@ -26,7 +26,7 @@ export const TextInput: React.FC<Props> = ({
         {...props}
         id={inputId}
         className={`border p-2 ${className ?? ""}`}
-      />
+    />
     </div>
   )
 }
