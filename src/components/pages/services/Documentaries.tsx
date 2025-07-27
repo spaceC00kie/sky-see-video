@@ -1,8 +1,6 @@
 import { Helmet } from "react-helmet-async"
 
-interface Props {}
-
-export const Documentaries: React.FC<Props> = ({}) => {
+export const Documentaries: React.FC = () => {
   return (
     <>
       <Helmet>

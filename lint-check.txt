@@ -1,0 +1,9 @@
+
+C:\Users\null\Repos\sky-see-video\src\setupTests.ts
+  85:23  warning  Unexpected console statement                                                   no-console
+  92:5   warning  Unused eslint-disable directive (no problems were reported from 'no-console')
+
+✖ 2 problems (0 errors, 2 warnings)
+  0 errors and 1 warning potentially fixable with the `--fix` option.
+
+ESLint found too many warnings (maximum: 0).

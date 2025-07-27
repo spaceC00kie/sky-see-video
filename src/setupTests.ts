@@ -66,7 +66,7 @@ Object.defineProperty(window, "IntersectionObserver", {
 })
 
 // Mock fetch
-;(window as any).fetch = jest.fn()
+;(global as typeof globalThis & { fetch: jest.Mock }).fetch = jest.fn()
 
 // Mock Google Analytics
 jest.mock("react-ga4", () => ({
@@ -82,9 +82,11 @@ jest.mock("sweetalert2", () => ({
 }))
 
 // Silence console errors during tests unless we're specifically testing them
+// eslint-disable-next-line no-console
 const originalError = console.error
 beforeAll(() => {
-  console.error = (...args) => {
+  // eslint-disable-next-line no-console
+  console.error = (...args: unknown[]) => {
     if (typeof args[0] === "string" && args[0].includes("Warning:")) {
       return
     }
@@ -93,5 +95,6 @@ beforeAll(() => {
 })
 
 afterAll(() => {
+  // eslint-disable-next-line no-console
   console.error = originalError
 })

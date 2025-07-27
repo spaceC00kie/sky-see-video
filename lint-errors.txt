@@ -1,0 +1,50 @@
+
+C:\Users\null\Repos\sky-see-video\src\components\ScrollToTop.test.tsx
+  9:27  error  'initialEntries' is assigned a value but never used                                        no-unused-vars
+  9:27  error  'initialEntries' is assigned a value but never used. Allowed unused args must match /^_/u  @typescript-eslint/no-unused-vars
+
+C:\Users\null\Repos\sky-see-video\src\components\header\MobileMenu.tsx
+  12:5  warning  Visible, non-interactive elements with click handlers must have at least one keyboard listener                                                                                                     jsx-a11y/click-events-have-key-events
+  12:5  warning  Avoid non-native interactive elements. If using native HTML is not possible, add an appropriate role and support for tabbing, mouse, keyboard, and touch inputs to an interactive content element  jsx-a11y/no-static-element-interactions
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\ContactUs.test.tsx
+   90:54  error    'container' is assigned a value but never used  no-unused-vars
+   90:54  error    'container' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  191:40  error    'getByRole' is assigned a value but never used  no-unused-vars
+  191:40  error    'getByRole' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  224:58  warning  Unexpected any. Specify a different type        @typescript-eslint/no-explicit-any
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\our-work\ProjectPage.test.tsx
+  2:10  error  'waitFor' is defined but never used  no-unused-vars
+  2:10  error  'waitFor' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\our-work\ourWorkData.ts
+   89:8  error  'num46' is defined but never used        no-unused-vars
+   89:8  error  'num46' is defined but never used        @typescript-eslint/no-unused-vars
+   90:8  error  'num46Srcset' is defined but never used  no-unused-vars
+   90:8  error  'num46Srcset' is defined but never used  @typescript-eslint/no-unused-vars
+  109:8  error  'num56' is defined but never used        no-unused-vars
+  109:8  error  'num56' is defined but never used        @typescript-eslint/no-unused-vars
+  110:8  error  'num56Srcset' is defined but never used  no-unused-vars
+  110:8  error  'num56Srcset' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\services\Construction.tsx
+  5:47  warning  Unexpected empty object pattern  no-empty-pattern
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\services\CorporateMarketing.tsx
+  5:53  warning  Unexpected empty object pattern  no-empty-pattern
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\services\Documentaries.tsx
+  5:48  warning  Unexpected empty object pattern  no-empty-pattern
+
+C:\Users\null\Repos\sky-see-video\src\components\pages\services\TourismAndResort.tsx
+  5:51  warning  Unexpected empty object pattern  no-empty-pattern
+
+C:\Users\null\Repos\sky-see-video\src\setupTests.ts
+  69:13  warning  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  85:23  warning  Unexpected console statement              no-console
+  87:3   warning  Unexpected console statement              no-console
+  96:3   warning  Unexpected console statement              no-console
+
+✖ 27 problems (16 errors, 11 warnings)
+

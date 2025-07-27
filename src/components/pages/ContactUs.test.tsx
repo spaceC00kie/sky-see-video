@@ -87,8 +87,9 @@ describe("ContactUs", () => {
   })
 
   it("renders all form fields", () => {
-    const { getByLabelText, getByText, getAllByText, container } =
-      renderWithProviders(<ContactUs />)
+    const { getByLabelText, getByText, getAllByText } = renderWithProviders(
+      <ContactUs />,
+    )
 
     expect(getByLabelText("First Name *")).toBeInTheDocument()
     expect(getByLabelText("Last Name *")).toBeInTheDocument()
@@ -188,9 +189,7 @@ describe("ContactUs", () => {
   })
 
   it("shows success message on successful submission", async () => {
-    const { getByLabelText, getByText, getByRole } = renderWithProviders(
-      <ContactUs />,
-    )
+    const { getByLabelText, getByText } = renderWithProviders(<ContactUs />)
 
     // Fill form
     fireEvent.change(getByLabelText("First Name *"), {
@@ -221,7 +220,7 @@ describe("ContactUs", () => {
     )
 
     // Check that the text contains the expected message (to avoid apostrophe encoding issues)
-    const secondCall = mockSwal.fire.mock.calls[1][0] as any
+    const secondCall = mockSwal.fire.mock.calls[1][0] as { text?: string }
     expect(secondCall?.text).toContain("Your project details were sent")
     expect(secondCall?.text).toContain("be in touch soon")
   })
