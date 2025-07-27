@@ -20,7 +20,7 @@ export const TextInput: React.FC<Props> = ({
       {label && (
         <label htmlFor={inputId} className="font-semibold">
           {label}
-      </label>
+        </label>
       )}
       <input
         {...props}
