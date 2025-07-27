@@ -1,4 +1,4 @@
-name: Auto-fix Code Quality
+name: Code Quality Auto-fix
 
 on:
   push:

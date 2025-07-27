@@ -4,7 +4,7 @@ on:
   pull_request:
     branches: ["**"] # All branches can receive PRs
     types: [opened, synchronize, reopened] # Trigger on PR creation and updates
-  # Explicitly exclude push events - only PRs should trigger this workflow
+  # Explicitly exclude ALL push events - ONLY PR events should trigger this
 
 permissions:
   contents: read
@@ -16,6 +16,8 @@ jobs:
   deploy-preview:
     name: Deploy Preview
     runs-on: ubuntu-latest
+    # Only run on actual pull request events, not push events
+    if: github.event_name == 'pull_request'
     # Add concurrency to prevent multiple simultaneous deploys for the same PR
     concurrency:
       group: preview-deploy-${{ github.event.number }}
