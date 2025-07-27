@@ -24,13 +24,14 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Run quality checks before production deploy
-        run: |
-          echo "🔍 Running final quality checks before production deploy..."
-          yarn type-check
-          yarn lint
-          yarn format:check
-          yarn test:ci
+      - name: Run tests
+        run: yarn test:ci
+
+      - name: Type check
+        run: yarn type-check
+
+      - name: Lint check
+        run: yarn lint
 
       - name: Build for production
         run: yarn build
@@ -38,12 +39,6 @@ jobs:
       - name: Deploy to Firebase Production
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          repoToken: ""
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
           channelId: live
-          projectId: sky-see-video
-
-      - name: Notify deployment success
-        run: |
-          echo "🎉 Successfully deployed to production!"
-          echo "🌐 Live site: https://sky-see-video.web.app"
