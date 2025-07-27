@@ -1,4 +1,4 @@
-import { useMemo } from "react"
+import { useMemo, useRef, useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import { Helmet } from "react-helmet-async"
 import { CarouselProvider, ButtonBack, ButtonNext } from "pure-react-carousel"
@@ -21,6 +21,23 @@ export const ProjectPage: React.FC<Props> = ({
 }) => {
   const { windowWidth } = WindowSize.useContainer()
   const location = useLocation()
+  const carouselRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const handleMouseUp = (event: MouseEvent) => {
+      if (!carouselRef.current) return
+      if (!carouselRef.current.contains(event.target as Node)) return
+
+      if (event.button === 3) {
+        window.history.back()
+      } else if (event.button === 4) {
+        window.history.forward()
+      }
+    }
+
+    window.addEventListener("mouseup", handleMouseUp, true)
+    return () => window.removeEventListener("mouseup", handleMouseUp, true)
+  }, [])
   const visibleSlides = windowWidth < 640 ? 1 : windowWidth < 1024 ? 2 : 3
 
   const currentProjectIndex = useMemo(() => {
@@ -79,7 +96,10 @@ export const ProjectPage: React.FC<Props> = ({
           <p className="max-w-4xl text-center">{description}</p>
         </div>
 
-        <div className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10">
+        <div
+          ref={carouselRef}
+          className="relative w-full max-w-6xl flex-shrink-0 overflow-hidden py-10"
+        >
           <CarouselProvider
             naturalSlideWidth={4}
             naturalSlideHeight={5}
