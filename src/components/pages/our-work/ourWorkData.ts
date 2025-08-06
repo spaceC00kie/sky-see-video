@@ -166,15 +166,6 @@ export const logos: readonly Logo[] = [
 
 export const cards: readonly WorkCard[] = [
   {
-    image: num16,
-    srcSet: num16Srcset,
-    title: "Oddly Compelling: The Denis Kitchen Story",
-    description:
-      "Publisher & Underground Cartoonist Denis Kitchen has been taking on the establishment for decades. Now the all-new documentary Oddly Compelling highlights Kitchen’s long, strange trip; from his early days as a hippie cartoonist, to his thirty years as one of the most important independent comic book publishers, and his work as a fierce advocate for the First Amendment.",
-    path: "/project/oddly-compelling-the-denis-kitchen-story/",
-    videoUrl: "https://player.vimeo.com/video/1101385110?dnt=1",
-  },
-  {
     image: num17,
     srcSet: num17Srcset,
     title: "UGA We Are More: Connie's Mission",
@@ -182,6 +173,15 @@ export const cards: readonly WorkCard[] = [
       "Air Force veteran Connie Baptiste is on a mission to bring much-needed aid and support to veterans suffering from depression. Born in a sharecropper’s home she rose up the ranks and served her country with distinction. Now retired, her new mission is to build a mini retreat for veterans on the 50 acres of land she purchased in south Georgia. She hopes to put her culinary skills to use at the “Stay @ Hunter Family Farm” to give veterans a moment of peace to break bread and be a part of a community filled with caring people.",
     path: "/project/uga-we-are-more-connies-mission/",
     videoUrl: "https://player.vimeo.com/video/1100726765?dnt=1",
+  },
+  {
+    image: num16,
+    srcSet: num16Srcset,
+    title: "Oddly Compelling: The Denis Kitchen Story",
+    description:
+      "Publisher & Underground Cartoonist Denis Kitchen has been taking on the establishment for decades. Now the all-new documentary Oddly Compelling highlights Kitchen’s long, strange trip; from his early days as a hippie cartoonist, to his thirty years as one of the most important independent comic book publishers, and his work as a fierce advocate for the First Amendment.",
+    path: "/project/oddly-compelling-the-denis-kitchen-story/",
+    videoUrl: "https://player.vimeo.com/video/1101385110?dnt=1",
   },
   {
     image: num18,

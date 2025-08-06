@@ -21,7 +21,7 @@ export default defineConfig({
         id: "/",
         name: "SkySeeVideo",
         short_name: "SkySeeVideo",
-        description: "Make an Impact",
+        description: "Professional Video. Powerful Results.",
         theme_color: "#ffffff",
         background_color: "#ffffff",
         display: "standalone",
