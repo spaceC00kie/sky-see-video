@@ -1,43 +1,19 @@
 name: Lint Auto-Fix
 
 on:
-  push:
-    branches: ["**"]
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
   lint-fix:
-    name: Automatic Lint Fixes
+    name: Automatic Lint Fixes (manual)
     runs-on: ubuntu-latest
     concurrency:
       group: lint-fix-${{ github.ref }}
       cancel-in-progress: false
-    if: ${{ !contains(github.event.head_commit.author.name, 'GitHub Action') }}
     steps:
-      - uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - uses: actions/setup-node@v4
-        with:
-          node-version: "20.x"
-          cache: "yarn"
-
-      - run: yarn install --frozen-lockfile
-
-      - name: Auto-fix linting issues
+      - name: Notice
         run: |
-          echo "Running lint auto-fix..."
-          yarn lint --fix || true
-
-      - name: Commit fixes if needed
-        run: |
-          if [ -n "$(git status --porcelain)" ]; then
-            git config --local user.email "action@github.com"
-            git config --local user.name "GitHub Action"
-            git add .
-            git commit -m "🤖 Auto-fix: lint issues"
-            git push
-          fi
+          echo "This workflow is manual-only. CI on pull_request handles checks."

@@ -1,0 +1,20 @@
+name: Code Quality Auto-fix
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  code-quality-check:
+    name: Code Quality Check & Auto-fix (manual)
+    runs-on: ubuntu-latest
+    concurrency:
+      group: code-quality-${{ github.ref }}
+      cancel-in-progress: false
+    steps:
+      - name: Notice
+        run: |
+          echo "This workflow is manual-only and deprecated. Use CI on pull_request instead."
+          echo "Run manually if you explicitly want to perform an auto-fix commit."

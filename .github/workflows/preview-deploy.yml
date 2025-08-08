@@ -1,90 +1,15 @@
-name: Preview Deploy
+name: Preview Deploy (Deprecated)
 
 on:
-  pull_request:
-    branches: ["**"] # All branches can receive PRs
-    types: [opened, synchronize, reopened] # Trigger on PR creation and updates
-  # Explicitly exclude ALL push events - ONLY PR events should trigger this
+  workflow_dispatch:
 
 permissions:
   contents: read
-  pull-requests: write
-  checks: write
-  actions: read
 
 jobs:
-  deploy-preview:
-    name: Deploy Preview
+  deprecated:
     runs-on: ubuntu-latest
-    # Only run on actual pull request events, not push events
-    if: github.event_name == 'pull_request'
-    # Add concurrency to prevent multiple simultaneous deploys for the same PR
-    concurrency:
-      group: preview-deploy-${{ github.event.number }}
-      cancel-in-progress: true
     steps:
-      - name: Debug PR Event
+      - name: Notice
         run: |
-          echo "=== PR Event Debug ==="
-          echo "Event: ${{ github.event_name }}"
-          echo "Action: ${{ github.event.action }}"
-          echo "PR Number: ${{ github.event.number }}"
-          echo "PR State: ${{ github.event.pull_request.state }}"
-          echo "Base Branch: ${{ github.event.pull_request.base.ref }}"
-          echo "Head Branch: ${{ github.event.pull_request.head.ref }}"
-          echo "Workflow Run ID: ${{ github.run_id }}"
-          echo "Workflow Run Number: ${{ github.run_number }}"
-          echo "========================"
-
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20.x"
-          cache: "yarn"
-
-      - name: Install dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build for preview
-        run: yarn build
-
-      - name: Debug environment
-        run: |
-          echo "=== GitHub Event Debug ==="
-          echo "Event name: ${{ github.event_name }}"
-          echo "PR number: ${{ github.event.number }}"
-          echo "Base ref: ${{ github.base_ref }}"
-          echo "Head ref: ${{ github.head_ref }}"
-          echo "Repository: ${{ github.repository }}"
-          echo "=== Firebase Config Check ==="
-          ls -la firebase.json
-          echo "=== Build Output Check ==="
-          ls -la dist/
-
-      - name: Deploy to Firebase Preview
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        id: deploy-preview
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_SKY_SEE_VIDEO }}
-          expires: 30d
-          channelId: preview-${{ github.event.number }}
-        continue-on-error: false
-
-      - name: Debug Firebase outputs
-        run: |
-          echo "Deploy preview outputs:"
-          echo "Details URL: ${{ steps.deploy-preview.outputs.details_url }}"
-          echo "Expire time: ${{ steps.deploy-preview.outputs.expire_time }}"
-          echo "Deploy step result: ${{ steps.deploy-preview.outcome }}"
-
-          if [ -z "${{ steps.deploy-preview.outputs.details_url }}" ]; then
-            echo "❌ ERROR: No preview URL was generated!"
-            echo "This usually means the Firebase deployment failed."
-            exit 1
-          else
-            echo "✅ Preview URL successfully generated"
-          fi
+          echo "This workflow is deprecated. Use CI (pull_request) which handles preview/live deploys in one job."
