@@ -73,13 +73,3 @@ jobs:
         run: |
           echo "Deployed channel: ${{ steps.channel.outputs.CHANNEL }}"
           echo "Preview details URL (if preview): ${{ steps.firebase-deploy.outputs.details_url }}"
-
-      - name: Comment preview URL on PR
-        if: ${{ steps.firebase-deploy.outcome == 'success' && steps.channel.outputs.CHANNEL != 'live' && steps.firebase-deploy.outputs.details_url != '' }}
-        uses: marocchino/sticky-pull-request-comment@v2
-        with:
-          header: preview-deploy
-          message: |
-            ✅ Preview deployed
-            URL: ${{ steps.firebase-deploy.outputs.details_url }}
-            Expires: ${{ steps.firebase-deploy.outputs.expire_time }}
